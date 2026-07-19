@@ -22,12 +22,14 @@
                 extend: {
                     colors: {
                         refire: {
-                            dark: '#003135',       // Dark Teal / Deep Forest
+                            dark: '#001F21',       // Extremely Deep Forest Teal/Black
+                            card: '#003135',       // Dark Teal Container Base
                             teal: '#024950',       // Main Theme Teal
-                            rust: '#964734',       // Accent Rust / Terracotta Orange
-                            cyan: '#0FA4AF',       // Bright Interactive Cyan
+                            rust: '#D15B41',       // High-contrast Dark-mode Terracotta/Rust
+                            cyan: '#0FA4AF',       // Bright Interactive Cyber-Cyan
                             ice: '#AFDDE5',        // Soft Ice Blue Accent
-                            bg: '#f1f7f8'          // Custom Soft Background for Neumorphism
+                            light: '#EDF7F8',      // Primary High-contrast Light Text
+                            bg: '#00181A'          // Master Background Canvas
                         }
                     },
                     fontFamily: {
@@ -42,50 +44,51 @@
 
     <style>
         body {
-            background-color: #f1f7f8;
-            color: #003135;
+            background-color: #00181A;
+            color: #EDF7F8;
         }
 
-        /* High quality Neumorphic Shadows configured for the custom #f1f7f8 background */
+        /* High quality Neumorphic Shadows configured for Dark Mode (#00181A canvas) */
         .nm-flat {
-            background: #f1f7f8;
-            box-shadow: 6px 6px 12px #d1d9da, -6px -6px 12px #ffffff;
+            background: #001f21;
+            box-shadow: 6px 6px 12px #000c0d, -6px -6px 12px #003235;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
+        /* Accent containers with extra depth and glow boundaries */
         .nm-flat-accent {
-            background: #f8fbfb;
-            box-shadow: 6px 6px 12px rgba(2, 73, 80, 0.08), -6px -6px 12px #ffffff;
+            background: #003135;
+            box-shadow: 6px 6px 12px #00191b, -6px -6px 12px #00494f;
             transition: all 0.3s ease;
         }
 
         .nm-inset {
-            background: #f1f7f8;
-            box-shadow: inset 4px 4px 8px #d1d9da, inset -4px -4px 8px #ffffff;
+            background: #001517;
+            box-shadow: inset 4px 4px 8px #000a0b, inset -4px -4px 8px #002c2f;
         }
 
         .nm-button {
-            background: #f1f7f8;
-            box-shadow: 5px 5px 10px #d1d9da, -5px -5px 10px #ffffff;
+            background: #002d30;
+            box-shadow: 5px 5px 10px #001416, -5px -5px 10px #00464a;
             transition: all 0.2s ease;
         }
 
         .nm-button:hover {
-            box-shadow: 2px 2px 5px #d1d9da, -2px -2px 5px #ffffff;
+            box-shadow: 2px 2px 5px #001416, -2px -2px 5px #00464a;
             transform: translateY(1px);
         }
 
         .nm-button:active {
-            box-shadow: inset 3px 3px 6px #d1d9da, inset -3px -3px 6px #ffffff;
+            box-shadow: inset 3px 3px 6px #001416, inset -3px -3px 6px #00464a;
             transform: translateY(2px);
         }
 
         .nm-active {
-            box-shadow: inset 3px 3px 6px #d1d9da, inset -3px -3px 6px #ffffff;
-            color: #964734;
+            box-shadow: inset 3px 3px 6px #001416, inset -3px -3px 6px #00464a;
+            color: #D15B41;
         }
 
-        /* Language and dynamic visibility styling */
+        /* Language visibility and animation rules */
         .lang-en, .lang-sa {
             transition: opacity 0.4s ease;
         }
@@ -94,34 +97,34 @@
             display: none !important;
         }
 
-        /* Premium Scrollbars styled with Deep Teal palette */
+        /* Custom scrollbars for dark mode */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #f1f7f8;
+            background: #00181A;
         }
         ::-webkit-scrollbar-thumb {
-            background: #AFDDE5;
+            background: #024950;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #024950;
+            background: #0FA4AF;
         }
     </style>
 </head>
 <body class="font-sans antialiased min-h-screen">
 
-    <nav class="sticky top-0 z-50 px-4 py-3 md:py-4 bg-[#f1f7f8]/90 backdrop-blur-md border-b border-white/40">
+    <nav class="sticky top-0 z-50 px-4 py-3 md:py-4 bg-[#00181A]/90 backdrop-blur-md border-b border-[#0FA4AF]/20">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- Brand Mark / Theme Title -->
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full nm-flat flex items-center justify-center text-refire-teal">
+                <div class="w-10 h-10 rounded-full nm-flat flex items-center justify-center text-refire-cyan">
                     <i class="fa-solid fa-leaf text-lg animate-pulse"></i>
                 </div>
                 <div>
-                    <span class="font-bold text-refire-teal text-sm md:text-base block tracking-wider lang-en">SAMANVAYA 2026</span>
-                    <span class="font-bold font-devanagari text-refire-teal text-sm md:text-base hidden-lang tracking-wider lang-sa">समन्वयः २०२६</span>
+                    <span class="font-bold text-refire-light text-sm md:text-base block tracking-wider lang-en">SAMANVAYA 2026</span>
+                    <span class="font-bold font-devanagari text-refire-light text-sm md:text-base hidden-lang tracking-wider lang-sa">समन्वयः २०२६</span>
                     <span class="text-xs text-refire-cyan block leading-none lang-en font-medium">Vedic Ecology & Technology</span>
                     <span class="text-xs text-refire-cyan font-devanagari hidden-lang leading-none lang-sa">वैदिकपर्यावरणं च प्रौद्योगिकी</span>
                 </div>
@@ -129,20 +132,20 @@
 
             <!-- Quick Links (Desktop) -->
             <div class="hidden lg:flex items-center gap-6">
-                <a href="#about" class="text-sm font-semibold text-refire-teal hover:text-refire-rust transition-colors lang-en">About</a>
-                <a href="#about" class="text-sm font-semibold font-devanagari text-refire-teal hover:text-refire-rust transition-colors hidden-lang lang-sa">अवलोकनम्</a>
+                <a href="#about" class="text-sm font-semibold text-refire-ice hover:text-refire-rust transition-colors lang-en">About</a>
+                <a href="#about" class="text-sm font-semibold font-devanagari text-refire-ice hover:text-refire-rust transition-colors hidden-lang lang-sa">अवलोकनम्</a>
                 
-                <a href="#schedule" class="text-sm font-semibold text-refire-teal hover:text-refire-rust transition-colors lang-en">Schedule</a>
-                <a href="#schedule" class="text-sm font-semibold font-devanagari text-refire-teal hover:text-refire-rust transition-colors hidden-lang lang-sa">अनुसूची</a>
+                <a href="#schedule" class="text-sm font-semibold text-refire-ice hover:text-refire-rust transition-colors lang-en">Schedule</a>
+                <a href="#schedule" class="text-sm font-semibold font-devanagari text-refire-ice hover:text-refire-rust transition-colors hidden-lang lang-sa">अनुसूची</a>
                 
-                <a href="#speakers" class="text-sm font-semibold text-refire-teal hover:text-refire-rust transition-colors lang-en">Speakers</a>
-                <a href="#speakers" class="text-sm font-semibold font-devanagari text-refire-teal hover:text-refire-rust transition-colors hidden-lang lang-sa">वक्तारः</a>
+                <a href="#speakers" class="text-sm font-semibold text-refire-ice hover:text-refire-rust transition-colors lang-en">Speakers</a>
+                <a href="#speakers" class="text-sm font-semibold font-devanagari text-refire-ice hover:text-refire-rust transition-colors hidden-lang lang-sa">वक्तारः</a>
                 
-                <a href="#committees" class="text-sm font-semibold text-refire-teal hover:text-refire-rust transition-colors lang-en">Committee</a>
-                <a href="#committees" class="text-sm font-semibold font-devanagari text-refire-teal hover:text-refire-rust transition-colors hidden-lang lang-sa">समितिः</a>
+                <a href="#committees" class="text-sm font-semibold text-refire-ice hover:text-refire-rust transition-colors lang-en">Committee</a>
+                <a href="#committees" class="text-sm font-semibold font-devanagari text-refire-ice hover:text-refire-rust transition-colors hidden-lang lang-sa">समितिः</a>
                 
-                <a href="#registration" class="text-sm font-semibold text-refire-teal hover:text-refire-rust transition-colors lang-en">Register</a>
-                <a href="#registration" class="text-sm font-semibold font-devanagari text-refire-teal hover:text-refire-rust transition-colors hidden-lang lang-sa">पञ्जीकरणम्</a>
+                <a href="#registration" class="text-sm font-semibold text-refire-ice hover:text-refire-rust transition-colors lang-en">Register</a>
+                <a href="#registration" class="text-sm font-semibold font-devanagari text-refire-ice hover:text-refire-rust transition-colors hidden-lang lang-sa">पञ्जीकरणम्</a>
             </div>
 
             <!-- Language & Action Control panel -->
@@ -152,13 +155,13 @@
                     <button onclick="switchLanguage('en')" id="btn-lang-en" class="w-1/2 text-xs font-bold rounded-full py-1 z-10 transition-all text-refire-rust nm-active">
                         EN
                     </button>
-                    <button onclick="switchLanguage('sa')" id="btn-lang-sa" class="w-1/2 text-xs font-bold font-devanagari rounded-full py-1 z-10 transition-all text-refire-dark/70">
+                    <button onclick="switchLanguage('sa')" id="btn-lang-sa" class="w-1/2 text-xs font-bold font-devanagari rounded-full py-1 z-10 transition-all text-refire-cyan">
                         संस्कृतम्
                     </button>
                 </div>
 
                 <!-- Registration Quick Action Button -->
-                <a href="#registration" class="nm-button px-4 py-2 rounded-xl text-xs md:text-sm font-bold text-refire-rust hover:text-refire-teal">
+                <a href="#registration" class="nm-button px-4 py-2 rounded-xl text-xs md:text-sm font-bold text-refire-rust hover:text-refire-cyan">
                     <i class="fa-solid fa-file-signature mr-1"></i>
                     <span class="lang-en">Apply</span>
                     <span class="font-devanagari hidden-lang lang-sa">पञ्जीकरणम्</span>
@@ -171,51 +174,51 @@
         <!-- Logo Bar -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 items-center">
             <!-- MAIT LOGO -->
-            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300">
-                <img src="MAITlogo.png" alt="MAIT Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/f1f7f8/024950?text=MAIT'">
-                <p class="text-[10px] md:text-xs font-bold text-refire-teal">MAIT</p>
-                <p class="text-[9px] text-refire-cyan font-medium tracking-tight lang-en">Maharaja Agrasen Institute of Tech.</p>
-                <p class="text-[9px] text-refire-cyan font-devanagari font-medium tracking-tight hidden-lang lang-sa">महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्</p>
+            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300 border border-refire-cyan/10">
+                <img src="MAITlogo.png" alt="MAIT Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-lg filter brightness-95" onerror="this.onerror=null; this.src='https://placehold.co/150x150/001f21/EDF7F8?text=MAIT'">
+                <p class="text-[10px] md:text-xs font-bold text-refire-cyan">MAIT</p>
+                <p class="text-[9px] text-refire-ice font-medium tracking-tight lang-en">Maharaja Agrasen Institute of Tech.</p>
+                <p class="text-[9px] text-refire-ice font-devanagari font-medium tracking-tight hidden-lang lang-sa">महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्</p>
             </div>
             
             <!-- MATES LOGO -->
-            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300">
-                <img src="MATESlogo.png" alt="MATES Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/f1f7f8/024950?text=MATES'">
-                <p class="text-[10px] md:text-xs font-bold text-refire-teal">MATES</p>
-                <p class="text-[9px] text-refire-cyan font-medium tracking-tight lang-en">Maharaja Agrasen Technical Ed. Society</p>
-                <p class="text-[9px] text-refire-cyan font-devanagari font-medium tracking-tight hidden-lang lang-sa">महाराजा अग्रसेन प्राविधिक शिक्षा समितिः</p>
+            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300 border border-refire-cyan/10">
+                <img src="MATESlogo.png" alt="MATES Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-lg filter brightness-95" onerror="this.onerror=null; this.src='https://placehold.co/150x150/001f21/EDF7F8?text=MATES'">
+                <p class="text-[10px] md:text-xs font-bold text-refire-cyan">MATES</p>
+                <p class="text-[9px] text-refire-ice font-medium tracking-tight lang-en">Maharaja Agrasen Technical Ed. Society</p>
+                <p class="text-[9px] text-refire-ice font-devanagari font-medium tracking-tight hidden-lang lang-sa">महाराजा अग्रसेन प्राविधिक शिक्षा समितिः</p>
             </div>
 
             <!-- AICTE LOGO -->
-            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300">
-                <img src="All_India_Council_for_Technical_Education_logo.png" alt="AICTE Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/f1f7f8/024950?text=AICTE'">
-                <p class="text-[10px] md:text-xs font-bold text-refire-teal">AICTE Sponsored</p>
-                <p class="text-[9px] text-refire-cyan font-medium tracking-tight lang-en">All India Council for Technical Education</p>
-                <p class="text-[9px] text-refire-cyan font-devanagari font-medium tracking-tight hidden-lang lang-sa">अखिल भारतीय तकनीकी शिक्षा परिषद</p>
+            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300 border border-refire-cyan/10">
+                <img src="All_India_Council_for_Technical_Education_logo.png" alt="AICTE Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-lg" onerror="this.onerror=null; this.src='https://placehold.co/150x150/001f21/EDF7F8?text=AICTE'">
+                <p class="text-[10px] md:text-xs font-bold text-refire-cyan">AICTE Sponsored</p>
+                <p class="text-[9px] text-refire-ice font-medium tracking-tight lang-en">All India Council for Technical Education</p>
+                <p class="text-[9px] text-refire-ice font-devanagari font-medium tracking-tight hidden-lang lang-sa">अखिल भारतीय तकनीकी शिक्षा परिषद</p>
             </div>
 
             <!-- ATAL LOGO -->
-            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300">
-                <img src="ATAL logo.png" alt="ATAL Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/f1f7f8/024950?text=ATAL'">
-                <p class="text-[10px] md:text-xs font-bold text-refire-teal">ATAL Academy</p>
-                <p class="text-[9px] text-refire-cyan font-medium tracking-tight lang-en">AICTE Training & Learning Academy</p>
-                <p class="text-[9px] text-refire-cyan font-devanagari font-medium tracking-tight hidden-lang lang-sa">एआईसीटीई प्रशिक्षण तथा शिक्षण अकादमी</p>
+            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300 border border-refire-cyan/10">
+                <img src="ATAL logo.png" alt="ATAL Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-lg" onerror="this.onerror=null; this.src='https://placehold.co/150x150/001f21/EDF7F8?text=ATAL'">
+                <p class="text-[10px] md:text-xs font-bold text-refire-cyan">ATAL Academy</p>
+                <p class="text-[9px] text-refire-ice font-medium tracking-tight lang-en">AICTE Training & Learning Academy</p>
+                <p class="text-[9px] text-refire-ice font-devanagari font-medium tracking-tight hidden-lang lang-sa">एआईसीटीई प्रशिक्षण तथा शिक्षण अकादमी</p>
             </div>
         </div>
 
         <!-- Seminar Headline & Banner Card -->
-        <div class="nm-flat p-6 md:p-12 rounded-3xl relative overflow-hidden border border-white/50">
-            <!-- Semi-transparent decorative pattern with new palette colors -->
-            <div class="absolute right-0 top-0 w-64 h-64 bg-refire-teal/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="nm-flat p-6 md:p-12 rounded-3xl relative overflow-hidden border border-refire-cyan/20">
+            <!-- Semi-transparent decorative pattern with updated colors -->
+            <div class="absolute right-0 top-0 w-64 h-64 bg-refire-cyan/5 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute left-10 bottom-0 w-80 h-80 bg-refire-rust/5 rounded-full blur-3xl pointer-events-none"></div>
 
             <!-- Top Tagline & Motto -->
-            <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-8 border-b border-refire-teal/10 pb-6">
+            <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-8 border-b border-refire-cyan/20 pb-6">
                 <div class="text-center md:text-left">
-                    <span class="inline-block bg-refire-teal/10 text-refire-teal text-xs px-3 py-1 rounded-full font-semibold mb-2 uppercase tracking-widest lang-en">
+                    <span class="inline-block bg-refire-teal/40 text-refire-ice text-xs px-3 py-1 rounded-full font-semibold mb-2 uppercase tracking-widest lang-en border border-refire-cyan/30">
                         AICTE - Vibrant Advocacy for Advancement and Nurturing of Indian Languages (VAANI)
                     </span>
-                    <span class="inline-block bg-refire-teal/10 text-refire-teal text-xs px-3 py-1 font-devanagari rounded-full font-semibold mb-2 uppercase tracking-widest hidden-lang lang-sa">
+                    <span class="inline-block bg-refire-teal/40 text-refire-ice text-xs px-3 py-1 font-devanagari rounded-full font-semibold mb-2 uppercase tracking-widest hidden-lang lang-sa border border-refire-cyan/30">
                         भारतीय भाषाणां संवर्धनं तथा संरक्षणाय एआईसीटीई-प्रयासः (वाणी)
                     </span>
                     <h3 class="text-sm font-bold italic text-refire-rust lang-en">Two Days National Seminar</h3>
@@ -224,7 +227,7 @@
                 
                 <!-- Motto of MAIT -->
                 <div class="nm-inset px-4 py-2 rounded-2xl text-center border-l-4 border-refire-rust">
-                    <p class="font-devanagari text-xs md:text-sm text-refire-teal font-bold tracking-wide">"उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः"</p>
+                    <p class="font-devanagari text-xs md:text-sm text-refire-light font-bold tracking-wide">"उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः"</p>
                     <p class="text-[9px] md:text-[10px] text-refire-cyan font-semibold lang-en">Success is achieved by effort, not mere desires</p>
                     <p class="text-[9px] md:text-[10px] text-refire-cyan font-semibold font-devanagari hidden-lang lang-sa">परिश्रमेणैव कार्याणि सिध्यन्ति, केवलं मनोरथैः न</p>
                 </div>
@@ -234,7 +237,7 @@
             <div class="text-center my-6">
                 <!-- English Version Title -->
                 <div class="lang-en max-w-4xl mx-auto">
-                    <h1 class="text-3xl md:text-5xl font-black text-refire-dark leading-tight mb-4 tracking-tight">
+                    <h1 class="text-3xl md:text-5xl font-black text-refire-light leading-tight mb-4 tracking-tight">
                         SAMANVAYA
                     </h1>
                     <p class="text-lg md:text-2xl font-serif text-refire-rust font-semibold leading-relaxed">
@@ -244,7 +247,7 @@
 
                 <!-- Sanskrit Version Title -->
                 <div class="hidden-lang lang-sa max-w-4xl mx-auto font-devanagari">
-                    <h1 class="text-3xl md:text-5xl font-black text-refire-dark leading-tight mb-4 tracking-wide">
+                    <h1 class="text-3xl md:text-5xl font-black text-refire-light leading-tight mb-4 tracking-wide">
                         समन्वयः
                     </h1>
                     <p class="text-xl md:text-2xl font-bold text-refire-rust leading-relaxed">
@@ -257,21 +260,21 @@
             <div class="mt-10 mb-6 flex justify-center">
                 <div class="nm-inset p-4 md:p-6 rounded-2xl flex items-center gap-6 md:gap-12 text-center">
                     <div>
-                        <span id="countdown-days" class="block text-xl md:text-3xl font-extrabold text-refire-teal">00</span>
-                        <span class="text-[10px] md:text-xs text-refire-cyan font-bold uppercase tracking-wider lang-en">Days</span>
-                        <span class="text-[10px] md:text-xs text-refire-cyan font-bold font-devanagari hidden-lang lang-sa">दिनानि</span>
+                        <span id="countdown-days" class="block text-xl md:text-3xl font-extrabold text-refire-cyan">00</span>
+                        <span class="text-[10px] md:text-xs text-refire-ice font-bold uppercase tracking-wider lang-en">Days</span>
+                        <span class="text-[10px] md:text-xs text-refire-ice font-bold font-devanagari hidden-lang lang-sa">दिनानि</span>
                     </div>
                     <div class="text-refire-cyan/40 text-xl font-bold">:</div>
                     <div>
-                        <span id="countdown-hours" class="block text-xl md:text-3xl font-extrabold text-refire-teal">00</span>
-                        <span class="text-[10px] md:text-xs text-refire-cyan font-bold uppercase tracking-wider lang-en">Hours</span>
-                        <span class="text-[10px] md:text-xs text-refire-cyan font-bold font-devanagari hidden-lang lang-sa">होराः</span>
+                        <span id="countdown-hours" class="block text-xl md:text-3xl font-extrabold text-refire-cyan">00</span>
+                        <span class="text-[10px] md:text-xs text-refire-ice font-bold uppercase tracking-wider lang-en">Hours</span>
+                        <span class="text-[10px] md:text-xs text-refire-ice font-bold font-devanagari hidden-lang lang-sa">होराः</span>
                     </div>
                     <div class="text-refire-cyan/40 text-xl font-bold">:</div>
                     <div>
-                        <span id="countdown-minutes" class="block text-xl md:text-3xl font-extrabold text-refire-teal">00</span>
-                        <span class="text-[10px] md:text-xs text-refire-cyan font-bold uppercase tracking-wider lang-en">Minutes</span>
-                        <span class="text-[10px] md:text-xs text-refire-cyan font-bold font-devanagari hidden-lang lang-sa">निमेषाः</span>
+                        <span id="countdown-minutes" class="block text-xl md:text-3xl font-extrabold text-refire-cyan">00</span>
+                        <span class="text-[10px] md:text-xs text-refire-ice font-bold uppercase tracking-wider lang-en">Minutes</span>
+                        <span class="text-[10px] md:text-xs text-refire-ice font-bold font-devanagari hidden-lang lang-sa">निमेषाः</span>
                     </div>
                 </div>
             </div>
@@ -279,41 +282,41 @@
             <!-- Quick Meta Info Row -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
                 <!-- Date -->
-                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-refire-teal/10 flex items-center justify-center text-refire-teal">
+                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-refire-cyan/10">
+                    <div class="w-12 h-12 rounded-xl bg-refire-cyan/10 flex items-center justify-center text-refire-cyan">
                         <i class="fa-solid fa-calendar-days text-xl"></i>
                     </div>
                     <div>
-                        <span class="block text-[10px] text-refire-cyan font-bold uppercase tracking-wider lang-en">Event Dates</span>
-                        <span class="block text-[10px] font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">कार्यक्रमस्य तिथयः</span>
-                        <span class="font-bold text-refire-teal lang-en">July 27-28, 2026</span>
-                        <span class="font-bold font-devanagari text-refire-teal hidden-lang lang-sa">२७-२८ जुलाई २०२६</span>
+                        <span class="block text-[10px] text-refire-ice font-bold uppercase tracking-wider lang-en">Event Dates</span>
+                        <span class="block text-[10px] font-devanagari text-refire-ice font-bold hidden-lang lang-sa">कार्यक्रमस्य तिथयः</span>
+                        <span class="font-bold text-refire-light lang-en">July 27-28, 2026</span>
+                        <span class="font-bold font-devanagari text-refire-light hidden-lang lang-sa">२७-२८ जुलाई २०२६</span>
                     </div>
                 </div>
 
                 <!-- Venue -->
-                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4">
+                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-refire-cyan/10">
                     <div class="w-12 h-12 rounded-xl bg-refire-rust/10 flex items-center justify-center text-refire-rust">
                         <i class="fa-solid fa-map-location-dot text-xl"></i>
                     </div>
                     <div>
-                        <span class="block text-[10px] text-refire-cyan font-bold uppercase tracking-wider lang-en">Location</span>
-                        <span class="block text-[10px] font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">स्थानम्</span>
-                        <span class="font-bold text-refire-teal block truncate max-w-[200px] lang-en">Main Auditorium, MAIT</span>
-                        <span class="font-bold font-devanagari text-refire-teal block truncate max-w-[200px] hidden-lang lang-sa">मुख्य-सभागारः, MAIT</span>
+                        <span class="block text-[10px] text-refire-ice font-bold uppercase tracking-wider lang-en">Location</span>
+                        <span class="block text-[10px] font-devanagari text-refire-ice font-bold hidden-lang lang-sa">स्थानम्</span>
+                        <span class="font-bold text-refire-light block truncate max-w-[200px] lang-en">Main Auditorium, MAIT</span>
+                        <span class="font-bold font-devanagari text-refire-light block truncate max-w-[200px] hidden-lang lang-sa">मुख्य-सभागारः, MAIT</span>
                     </div>
                 </div>
 
                 <!-- Organizing Body -->
-                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-refire-cyan/10 flex items-center justify-center text-refire-teal">
+                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-refire-cyan/10">
+                    <div class="w-12 h-12 rounded-xl bg-refire-cyan/10 flex items-center justify-center text-refire-cyan">
                         <i class="fa-solid fa-graduation-cap text-xl"></i>
                     </div>
                     <div>
-                        <span class="block text-[10px] text-refire-cyan font-bold uppercase tracking-wider lang-en">Organized By</span>
-                        <span class="block text-[10px] font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">आयोजकः</span>
-                        <span class="font-bold text-refire-teal lang-en">Department of ITE</span>
-                        <span class="font-bold font-devanagari text-refire-teal hidden-lang lang-sa">इनफार्मेशन टेक्नोलॉजी विभागः</span>
+                        <span class="block text-[10px] text-refire-ice font-bold uppercase tracking-wider lang-en">Organized By</span>
+                        <span class="block text-[10px] font-devanagari text-refire-ice font-bold hidden-lang lang-sa">आयोजकः</span>
+                        <span class="font-bold text-refire-light lang-en">Department of ITE</span>
+                        <span class="font-bold font-devanagari text-refire-light hidden-lang lang-sa">इनफार्मेशन टेक्नोलॉजी विभागः</span>
                     </div>
                 </div>
             </div>
@@ -327,22 +330,22 @@
         <section id="about" class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             
             <!-- Seminar Overview Card -->
-            <div class="nm-flat p-6 md:p-8 rounded-3xl flex flex-col justify-between border border-white/40">
+            <div class="nm-flat p-6 md:p-8 rounded-3xl flex flex-col justify-between border border-refire-cyan/10">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="p-3 rounded-2xl bg-refire-teal/10 text-refire-teal">
+                        <span class="p-3 rounded-2xl bg-refire-teal/40 text-refire-cyan border border-refire-cyan/20">
                             <i class="fa-solid fa-book-open text-xl"></i>
                         </span>
                         <div>
-                            <h2 class="text-xl md:text-2xl font-bold text-refire-teal lang-en">Seminar Overview</h2>
-                            <h2 class="text-xl md:text-2xl font-bold font-devanagari text-refire-teal hidden-lang lang-sa">अवलोकनम् (Overview)</h2>
+                            <h2 class="text-xl md:text-2xl font-bold text-refire-light lang-en">Seminar Overview</h2>
+                            <h2 class="text-xl md:text-2xl font-bold font-devanagari text-refire-light hidden-lang lang-sa">अवलोकनम् (Overview)</h2>
                             <p class="text-xs text-refire-cyan font-bold lang-en">Integrating Ancient & Modern Systems</p>
                             <p class="text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">प्राचीन-नवीन-ज्ञानयोः समन्वयः</p>
                         </div>
                     </div>
 
                     <!-- English Description -->
-                    <div class="text-sm text-refire-dark leading-relaxed space-y-4 lang-en font-medium">
+                    <div class="text-sm text-refire-ice leading-relaxed space-y-4 lang-en font-medium">
                         <p>
                             This theme explores the integration of <strong>Vedic ecological wisdom</strong> with <strong>modern technology</strong> to build comprehensive disaster resilience. Vedic literature emphasizes the protection of nature, the balance of water, forests, and land, and sustainable ways of living.
                         </p>
@@ -352,7 +355,7 @@
                     </div>
 
                     <!-- Sanskrit Description -->
-                    <div class="text-base font-devanagari text-refire-dark leading-relaxed space-y-4 hidden-lang lang-sa">
+                    <div class="text-base font-devanagari text-refire-ice leading-relaxed space-y-4 hidden-lang lang-sa">
                         <p>
                             अयं विषयः वैदिक-पर्यावरण-प्रज्ञायाः तथा आधुनिक-प्रौद्योगिक्याः समन्वयेन समग्र आपद्-प्रतिरोधक्षमतायाः विकासं प्रतिपादयति। वैदिक-साहित्ये प्रकृतेः संरक्षणम्, जल-वन-भूमि-सन्तुलनम्, तथा सतत-जीवन-पद्धतयः विशेषतया वर्णिताः सन्ति।
                         </p>
@@ -362,29 +365,29 @@
                     </div>
                 </div>
 
-                <div class="mt-8 pt-4 border-t border-refire-teal/10 flex items-center justify-between">
+                <div class="mt-8 pt-4 border-t border-refire-cyan/15 flex items-center justify-between">
                     <span class="text-xs font-semibold text-refire-cyan lang-en">Focus Areas: Geoinformatics, AI, Vedic Wisdom</span>
                     <span class="text-xs font-semibold font-devanagari text-refire-cyan hidden-lang lang-sa">मुख्यबिन्दवः: भू-स्थानिकविज्ञानम्, ए.आई., वैदिकप्रज्ञा</span>
                 </div>
             </div>
 
             <!-- About MAIT Card -->
-            <div class="nm-flat p-6 md:p-8 rounded-3xl flex flex-col justify-between border border-white/40">
+            <div class="nm-flat p-6 md:p-8 rounded-3xl flex flex-col justify-between border border-refire-cyan/10">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="p-3 rounded-2xl bg-refire-rust/10 text-refire-rust">
+                        <span class="p-3 rounded-2xl bg-refire-rust/20 text-refire-rust border border-refire-rust/30">
                             <i class="fa-solid fa-university text-xl"></i>
                         </span>
                         <div>
-                            <h2 class="text-xl md:text-2xl font-bold text-refire-teal lang-en">About the Institute</h2>
-                            <h2 class="text-xl md:text-2xl font-bold font-devanagari text-refire-teal hidden-lang lang-sa">संस्थानस्य विषय (MAIT)</h2>
+                            <h2 class="text-xl md:text-2xl font-bold text-refire-light lang-en">About the Institute</h2>
+                            <h2 class="text-xl md:text-2xl font-bold font-devanagari text-refire-light hidden-lang lang-sa">संस्थानस्य विषय (MAIT)</h2>
                             <p class="text-xs text-refire-cyan font-bold lang-en">Maharaja Agrasen Institute of Technology</p>
                             <p class="text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्</p>
                         </div>
                     </div>
 
                     <!-- English About MAIT -->
-                    <div class="text-sm text-refire-dark leading-relaxed space-y-4 lang-en font-medium">
+                    <div class="text-sm text-refire-ice leading-relaxed space-y-4 lang-en font-medium">
                         <p>
                             Maharaja Agrasen Institute of Technology, New Delhi was established in 1999 with a vision to develop engineering fraternity of academic excellence and ethical values by imparting best engineering education to its students through an optimal infrastructure, well-equipped labs, and competent faculty.
                         </p>
@@ -394,7 +397,7 @@
                     </div>
 
                     <!-- Sanskrit About MAIT -->
-                    <div class="text-base font-devanagari text-refire-dark leading-relaxed space-y-4 hidden-lang lang-sa">
+                    <div class="text-base font-devanagari text-refire-ice leading-relaxed space-y-4 hidden-lang lang-sa">
                         <p>
                             महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्, नवदिल्ली, १९९९ तमे वर्षे इष्टतम-आधारभूत-संरचनायाः, सुसज्जित-प्रयोगशालानां सक्षम-आचार्यवर्गस्य च माध्यमेन स्वछात्रेभ्यः श्रेष्ठतमं अभियांत्रिकी-शिक्षणं प्रदाय शैक्षणिक-उत्कृष्टतायाः नैतिक-मूल्यानां च अभियांत्रिकी-बिरादरीं विकसितुं दृष्ट्या स्थापितम् आसीत्।
                         </p>
@@ -404,7 +407,7 @@
                     </div>
                 </div>
 
-                <div class="mt-8 pt-4 border-t border-refire-teal/10 flex items-center justify-between">
+                <div class="mt-8 pt-4 border-t border-refire-cyan/15 flex items-center justify-between">
                     <span class="text-xs font-semibold text-refire-cyan lang-en">Established in 1999 • Delhi</span>
                     <span class="text-xs font-semibold font-devanagari text-refire-cyan hidden-lang lang-sa">स्थापना वर्ष: १९९९ • नवदिल्ली</span>
                 </div>
@@ -413,13 +416,13 @@
         </section>
 
         <!-- Session-wise Schedule Block -->
-        <section id="schedule" class="nm-flat p-6 md:p-10 rounded-3xl border border-white/40">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-refire-teal/10 pb-6">
+        <section id="schedule" class="nm-flat p-6 md:p-10 rounded-3xl border border-refire-cyan/10">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-refire-cyan/15 pb-6">
                 <div>
-                    <h2 class="text-2xl md:text-3xl font-black text-refire-teal lang-en">Seminar Schedule</h2>
-                    <h2 class="text-2xl md:text-3xl font-black font-devanagari text-refire-teal hidden-lang lang-sa">सेमिनार अनुसूची</h2>
-                    <p class="text-sm text-refire-cyan mt-1 font-medium lang-en">Detailed structure of academic sessions across both days</p>
-                    <p class="text-xs font-devanagari text-refire-cyan mt-1 hidden-lang lang-sa">द्विदिवसीयसत्रस्य विस्तृतविवरणम्</p>
+                    <h2 class="text-2xl md:text-3xl font-black text-refire-light lang-en">Seminar Schedule</h2>
+                    <h2 class="text-2xl md:text-3xl font-black font-devanagari text-refire-light hidden-lang lang-sa">सेमिनार अनुसूची</h2>
+                    <p class="text-sm text-refire-ice mt-1 font-medium lang-en">Detailed structure of academic sessions across both days</p>
+                    <p class="text-xs font-devanagari text-refire-ice mt-1 hidden-lang lang-sa">द्विदिवसीयसत्रस्य विस्तृतविवरणम्</p>
                 </div>
                 
                 <!-- Day Filter Toggles -->
@@ -428,27 +431,27 @@
                         <span class="lang-en">Day 1</span>
                         <span class="font-devanagari hidden-lang lang-sa">प्रथमः दिवसः</span>
                     </button>
-                    <button id="day2-tab" onclick="toggleScheduleDay(2)" class="px-5 py-2 rounded-full text-xs font-bold transition-all text-refire-cyan hover:text-refire-teal">
+                    <button id="day2-tab" onclick="toggleScheduleDay(2)" class="px-5 py-2 rounded-full text-xs font-bold transition-all text-refire-cyan hover:text-refire-light">
                         <span class="lang-en">Day 2</span>
                         <span class="font-devanagari hidden-lang lang-sa">द्वितीयः दिवसः</span>
                     </button>
                 </div>
             </div>
 
-            <!-- DAY 1 TIMELINE (With Interchanged Speaker order for session 1 & 2) -->
+            <!-- DAY 1 TIMELINE (Interchanged Speaker Order Applied) -->
             <div id="day1-schedule" class="space-y-6">
-                <!-- Session 1 (Speaker Interchanged: Dr. Madhubala Singh) -->
-                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-refire-teal hover:scale-[1.01] duration-200">
+                <!-- Session 1 (Interchanged: Dr. Madhubala Singh) -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-refire-cyan hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
-                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-refire-teal font-bold text-sm shrink-0">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-refire-cyan font-bold text-sm shrink-0">
                             I
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-1 rounded bg-refire-teal/10 text-refire-teal text-[10px] font-bold uppercase tracking-wider lang-en">Day 1 Morning • Session I</span>
-                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-teal/10 text-refire-teal text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">प्रथम दिवसः • प्रथम सत्रम्</span>
-                            <h3 class="text-lg font-bold text-refire-dark mt-1 lang-en">Keynote: Vedic Ecology & Modern Resiliency</h3>
-                            <h3 class="text-lg font-bold font-devanagari text-refire-dark mt-1 hidden-lang lang-sa">वैदिक पर्यावरण प्रज्ञा च आधुनिक आपद्-प्रतिरोधक्षमता</h3>
-                            <p class="text-sm text-refire-cyan mt-1 font-medium">
+                            <span class="inline-block px-2.5 py-1 rounded bg-refire-cyan/10 text-refire-cyan text-[10px] font-bold uppercase tracking-wider lang-en border border-refire-cyan/20">Day 1 Morning • Session I</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-cyan/10 text-refire-cyan text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa border border-refire-cyan/20">प्रथम दिवसः • प्रथम सत्रम्</span>
+                            <h3 class="text-lg font-bold text-refire-light mt-1 lang-en">Keynote: Vedic Ecology & Modern Resiliency</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-refire-light mt-1 hidden-lang lang-sa">वैदिक पर्यावरण प्रज्ञा च आधुनिक आपद्-प्रतिरोधक्षमता</h3>
+                            <p class="text-sm text-refire-ice mt-1 font-medium">
                                 <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
                                 <strong class="text-refire-rust font-semibold">Dr. Madhubala Singh</strong> (Professor, Miranda House, University of Delhi)
                             </p>
@@ -457,22 +460,22 @@
                     <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
                         <span class="block text-xs text-refire-cyan uppercase font-bold lang-en">Time Slot</span>
                         <span class="block text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">समयः</span>
-                        <span class="font-bold text-refire-teal text-sm">10:15 AM - 11:30 AM</span>
+                        <span class="font-bold text-refire-light text-sm">10:15 AM - 11:30 AM</span>
                     </div>
                 </div>
 
-                <!-- Session 2 (Speaker Interchanged: Prof. Girish Chandra Pant) -->
-                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-refire-teal hover:scale-[1.01] duration-200">
+                <!-- Session 2 (Interchanged: Prof. Girish Chandra Pant) -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-refire-cyan hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
-                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-refire-teal font-bold text-sm shrink-0">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-refire-cyan font-bold text-sm shrink-0">
                             II
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-1 rounded bg-refire-teal/10 text-refire-teal text-[10px] font-bold uppercase tracking-wider lang-en">Day 1 Morning • Session II</span>
-                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-teal/10 text-refire-teal text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">प्रथम दिवसः • द्वितीय सत्रम्</span>
-                            <h3 class="text-lg font-bold text-refire-dark mt-1 lang-en">Concept and Manifestation of Pancha Mahabhuta</h3>
-                            <h3 class="text-lg font-bold font-devanagari text-refire-dark mt-1 hidden-lang lang-sa">पञ्चमहाभूतानां प्रज्ञा तथा तेषां प्रकटीकरणम्</h3>
-                            <p class="text-sm text-refire-cyan mt-1 font-medium">
+                            <span class="inline-block px-2.5 py-1 rounded bg-refire-cyan/10 text-refire-cyan text-[10px] font-bold uppercase tracking-wider lang-en border border-refire-cyan/20">Day 1 Morning • Session II</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-cyan/10 text-refire-cyan text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa border border-refire-cyan/20">प्रथम दिवसः • द्वितीय सत्रम्</span>
+                            <h3 class="text-lg font-bold text-refire-light mt-1 lang-en">Concept and Manifestation of Pancha Mahabhuta</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-refire-light mt-1 hidden-lang lang-sa">पञ्चमहाभूतानां प्रज्ञा तथा तेषां प्रकटीकरणम्</h3>
+                            <p class="text-sm text-refire-ice mt-1 font-medium">
                                 <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
                                 <strong class="text-refire-rust font-semibold">Prof. Girish Chandra Pant</strong> (Former HOD, Dept. of Sanskrit, Jamia Millia Islamia, New Delhi)
                             </p>
@@ -481,7 +484,7 @@
                     <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
                         <span class="block text-xs text-refire-cyan uppercase font-bold lang-en">Time Slot</span>
                         <span class="block text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">समयः</span>
-                        <span class="font-bold text-refire-teal text-sm">11:45 AM - 01:00 PM</span>
+                        <span class="font-bold text-refire-light text-sm">11:45 AM - 01:00 PM</span>
                     </div>
                 </div>
 
@@ -492,11 +495,11 @@
                             III
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-1 rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider lang-en">Day 1 Afternoon • Session III</span>
-                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">प्रथम दिवसः • तृतीय सत्रम्</span>
-                            <h3 class="text-lg font-bold text-refire-dark mt-1 lang-en">Vedic Literature and Sustainability Systems</h3>
-                            <h3 class="text-lg font-bold font-devanagari text-refire-dark mt-1 hidden-lang lang-sa">वैदिकसाहित्यं सततविकासव्यवस्था च</h3>
-                            <p class="text-sm text-refire-cyan mt-1 font-medium">
+                            <span class="inline-block px-2.5 py-1 rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider lang-en border border-refire-rust/20">Day 1 Afternoon • Session III</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa border border-refire-rust/20">प्रथम दिवसः • तृतीय सत्रम्</span>
+                            <h3 class="text-lg font-bold text-refire-light mt-1 lang-en">Vedic Literature and Sustainability Systems</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-refire-light mt-1 hidden-lang lang-sa">वैदिकसाहित्यं सततविकासव्यवस्था च</h3>
+                            <p class="text-sm text-refire-ice mt-1 font-medium">
                                 <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
                                 <strong class="text-refire-rust font-semibold">Mr. Krishna Mohan Pandey</strong> (Associate Professor, Jawaharlal Nehru University)
                             </p>
@@ -505,7 +508,7 @@
                     <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
                         <span class="block text-xs text-refire-cyan uppercase font-bold lang-en">Time Slot</span>
                         <span class="block text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">समयः</span>
-                        <span class="font-bold text-refire-teal text-sm">01:45 PM - 03:00 PM</span>
+                        <span class="font-bold text-refire-light text-sm">01:45 PM - 03:00 PM</span>
                     </div>
                 </div>
 
@@ -516,11 +519,11 @@
                             IV
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-1 rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider lang-en">Day 1 Afternoon • Session IV</span>
-                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">प्रथम दिवसः • चतुर्थ सत्रम्</span>
-                            <h3 class="text-lg font-bold text-refire-dark mt-1 lang-en">Physics & Applied Geosciences inside Vedic Framework</h3>
-                            <h3 class="text-lg font-bold font-devanagari text-refire-dark mt-1 hidden-lang lang-sa">प्रायोगिक-विज्ञानस्य परिप्रेक्ष्यं वैदिकभूमिका च</h3>
-                            <p class="text-sm text-refire-cyan mt-1 font-medium">
+                            <span class="inline-block px-2.5 py-1 rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider lang-en border border-refire-rust/20">Day 1 Afternoon • Session IV</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa border border-refire-rust/20">प्रथम दिवसः • चतुर्थ सत्रम्</span>
+                            <h3 class="text-lg font-bold text-refire-light mt-1 lang-en">Physics & Applied Geosciences inside Vedic Framework</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-refire-light mt-1 hidden-lang lang-sa">प्रायोगिक-विज्ञानस्य परिप्रेक्ष्यं वैदिकभूमिका च</h3>
+                            <p class="text-sm text-refire-ice mt-1 font-medium">
                                 <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
                                 <strong class="text-refire-rust font-semibold">Dr. Namrata Sharma</strong> (Department of Applied Science, MAIT)
                             </p>
@@ -529,7 +532,7 @@
                     <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
                         <span class="block text-xs text-refire-cyan uppercase font-bold lang-en">Time Slot</span>
                         <span class="block text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">समयः</span>
-                        <span class="font-bold text-refire-teal text-sm">03:15 PM - 04:30 PM</span>
+                        <span class="font-bold text-refire-light text-sm">03:15 PM - 04:30 PM</span>
                     </div>
                 </div>
             </div>
@@ -537,17 +540,17 @@
             <!-- DAY 2 TIMELINE -->
             <div id="day2-schedule" class="space-y-6 hidden-lang">
                 <!-- Session 5 -->
-                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-refire-teal hover:scale-[1.01] duration-200">
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-refire-cyan hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
-                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-refire-teal font-bold text-sm shrink-0">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-refire-cyan font-bold text-sm shrink-0">
                             V
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-1 rounded bg-refire-teal/10 text-refire-teal text-[10px] font-bold uppercase tracking-wider lang-en">Day 2 Morning • Session V</span>
-                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-teal/10 text-refire-teal text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">द्वितीय दिवसः • पञ्चम सत्रम्</span>
-                            <h3 class="text-lg font-bold text-refire-dark mt-1 lang-en">Ancient Ecological Preservation & Sacred Groves</h3>
-                            <h3 class="text-lg font-bold font-devanagari text-refire-dark mt-1 hidden-lang lang-sa">प्राचीनपर्यावरणसंरक्षणम् देववनानि च</h3>
-                            <p class="text-sm text-refire-cyan mt-1 font-medium">
+                            <span class="inline-block px-2.5 py-1 rounded bg-refire-cyan/10 text-refire-cyan text-[10px] font-bold uppercase tracking-wider lang-en border border-refire-cyan/20">Day 2 Morning • Session V</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-cyan/10 text-refire-cyan text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa border border-refire-cyan/20">द्वितीय दिवसः • पञ्चम सत्रम्</span>
+                            <h3 class="text-lg font-bold text-refire-light mt-1 lang-en">Ancient Ecological Preservation & Sacred Groves</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-refire-light mt-1 hidden-lang lang-sa">प्राचीनपर्यावरणसंरक्षणम् देववनानि च</h3>
+                            <p class="text-sm text-refire-ice mt-1 font-medium">
                                 <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
                                 <strong class="text-refire-rust font-semibold">Prof. Om Bimali</strong> (Professor, Department of Sanskrit, University of Delhi)
                             </p>
@@ -556,22 +559,22 @@
                     <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
                         <span class="block text-xs text-refire-cyan uppercase font-bold lang-en">Time Slot</span>
                         <span class="block text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">समयः</span>
-                        <span class="font-bold text-refire-teal text-sm">10:00 AM - 11:15 AM</span>
+                        <span class="font-bold text-refire-light text-sm">10:00 AM - 11:15 AM</span>
                     </div>
                 </div>
 
                 <!-- Session 6 -->
-                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-refire-teal hover:scale-[1.01] duration-200">
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-refire-cyan hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
-                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-refire-teal font-bold text-sm shrink-0">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-refire-cyan font-bold text-sm shrink-0">
                             VI
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-1 rounded bg-refire-teal/10 text-refire-teal text-[10px] font-bold uppercase tracking-wider lang-en">Day 2 Morning • Session VI</span>
-                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-teal/10 text-refire-teal text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">द्वितीय दिवसः • षष्ठ सत्रम्</span>
-                            <h3 class="text-lg font-bold text-refire-dark mt-1 lang-en">Language Modeling and NLP for Vedic Sanskrit Text Mining</h3>
-                            <h3 class="text-lg font-bold font-devanagari text-refire-dark mt-1 hidden-lang lang-sa">संस्कृतग्रन्थानां कृते भाषा-प्रतिरूपणं तथा एन.एल.पी.</h3>
-                            <p class="text-sm text-refire-cyan mt-1 font-medium">
+                            <span class="inline-block px-2.5 py-1 rounded bg-refire-cyan/10 text-refire-cyan text-[10px] font-bold uppercase tracking-wider lang-en border border-refire-cyan/20">Day 2 Morning • Session VI</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-cyan/10 text-refire-cyan text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa border border-refire-cyan/20">द्वितीय दिवसः • षष्ठ सत्रम्</span>
+                            <h3 class="text-lg font-bold text-refire-light mt-1 lang-en">Language Modeling and NLP for Vedic Sanskrit Text Mining</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-refire-light mt-1 hidden-lang lang-sa">संस्कृतग्रन्थानां कृते भाषा-प्रतिरूपणं तथा एन.एल.पी.</h3>
+                            <p class="text-sm text-refire-ice mt-1 font-medium">
                                 <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
                                 <strong class="text-refire-rust font-semibold">Prof. Subhash Chandra</strong> (Professor, Department of Sanskrit, University of Delhi)
                             </p>
@@ -580,7 +583,7 @@
                     <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
                         <span class="block text-xs text-refire-cyan uppercase font-bold lang-en">Time Slot</span>
                         <span class="block text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">समयः</span>
-                        <span class="font-bold text-refire-teal text-sm">11:30 AM - 12:45 PM</span>
+                        <span class="font-bold text-refire-light text-sm">11:30 AM - 12:45 PM</span>
                     </div>
                 </div>
 
@@ -591,11 +594,11 @@
                             VII
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-1 rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider lang-en">Day 2 Afternoon • Session VII</span>
-                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">द्वितीय दिवसः • सप्तम सत्रम्</span>
-                            <h3 class="text-lg font-bold text-refire-dark mt-1 lang-en">IT Disaster Recovery Infrastructure & Best Practices</h3>
-                            <h3 class="text-lg font-bold font-devanagari text-refire-dark mt-1 hidden-lang lang-sa">आईटी आपद्-उद्धार आधारभूत-संरचना</h3>
-                            <p class="text-sm text-refire-cyan mt-1 font-medium">
+                            <span class="inline-block px-2.5 py-1 rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider lang-en border border-refire-rust/20">Day 2 Afternoon • Session VII</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa border border-refire-rust/20">द्वितीय दिवसः • सप्तम सत्रम्</span>
+                            <h3 class="text-lg font-bold text-refire-light mt-1 lang-en">IT Disaster Recovery Infrastructure & Best Practices</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-refire-light mt-1 hidden-lang lang-sa">आईटी आपद्-उद्धार आधारभूत-संरचना</h3>
+                            <p class="text-sm text-refire-ice mt-1 font-medium">
                                 <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
                                 <strong class="text-refire-rust font-semibold">Prof. Neeraj Gupta</strong> (Associate Director, Kyndryl)
                             </p>
@@ -604,7 +607,7 @@
                     <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
                         <span class="block text-xs text-refire-cyan uppercase font-bold lang-en">Time Slot</span>
                         <span class="block text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">समयः</span>
-                        <span class="font-bold text-refire-teal text-sm">01:30 PM - 02:45 PM</span>
+                        <span class="font-bold text-refire-light text-sm">01:30 PM - 02:45 PM</span>
                     </div>
                 </div>
 
@@ -615,11 +618,11 @@
                             VIII
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-1 rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider lang-en">Day 2 Afternoon • Session VIII</span>
-                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">द्वितीय दिवसः • अष्टम सत्रम्</span>
-                            <h3 class="text-lg font-bold text-refire-dark mt-1 lang-en">Geoinformatics & Satellite Remote Sensing for Earth Care</h3>
-                            <h3 class="text-lg font-bold font-devanagari text-refire-dark mt-1 hidden-lang lang-sa">भू-स्थानिकप्रौद्योगिकी तथा सुदूरसंवेदनम्</h3>
-                            <p class="text-sm text-refire-cyan mt-1 font-medium">
+                            <span class="inline-block px-2.5 py-1 rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider lang-en border border-refire-rust/20">Day 2 Afternoon • Session VIII</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-refire-rust/10 text-refire-rust text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa border border-refire-rust/20">द्वितीय दिवसः • अष्टम सत्रम्</span>
+                            <h3 class="text-lg font-bold text-refire-light mt-1 lang-en">Geoinformatics & Satellite Remote Sensing for Earth Care</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-refire-light mt-1 hidden-lang lang-sa">भू-स्थानिकप्रौद्योगिकी तथा सुदूरसंवेदनम्</h3>
+                            <p class="text-sm text-refire-ice mt-1 font-medium">
                                 <span class="lang-en">Speakers:</span><span class="font-devanagari hidden-lang lang-sa">वक्तारौ:</span> 
                                 <strong class="text-refire-rust font-semibold">Prof. Daya Shankar</strong> & <strong class="text-refire-rust font-semibold">Dr. Ravindra Nath Tiwari</strong> (Netra Institute of Geoinformatics, Management & Technologies)
                             </p>
@@ -628,7 +631,7 @@
                     <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
                         <span class="block text-xs text-refire-cyan uppercase font-bold lang-en">Time Slot</span>
                         <span class="block text-xs font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">समयः</span>
-                        <span class="font-bold text-refire-teal text-sm">03:00 PM - 04:15 PM</span>
+                        <span class="font-bold text-refire-light text-sm">03:00 PM - 04:15 PM</span>
                     </div>
                 </div>
             </div>
@@ -637,108 +640,108 @@
         <!-- Featured Speakers Grid Section -->
         <section id="speakers" class="space-y-8">
             <div class="text-center">
-                <h2 class="text-2xl md:text-3xl font-black text-refire-teal lang-en">Keynote & Invited Speakers</h2>
-                <h2 class="text-2xl md:text-3xl font-black font-devanagari text-refire-teal hidden-lang lang-sa">मुख्य तथा आमन्त्रित वक्तारः</h2>
+                <h2 class="text-2xl md:text-3xl font-black text-refire-light lang-en">Keynote & Invited Speakers</h2>
+                <h2 class="text-2xl md:text-3xl font-black font-devanagari text-refire-light hidden-lang lang-sa">मुख्य तथा आमन्त्रित वक्तारः</h2>
                 <p class="text-sm text-refire-cyan font-bold mt-2 lang-en">Eminent academicians and industry pathbreakers</p>
                 <p class="text-xs font-devanagari text-refire-cyan font-bold mt-1 hidden-lang lang-sa">प्रसिद्धविद्वांसः तथा औद्योगिक-विशेषज्ञाः</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Keynote Speaker -->
-                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-white/40">
-                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 relative">
-                        <div class="w-full h-full rounded-full bg-refire-teal/10 flex items-center justify-center text-refire-teal font-bold text-xl">
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-refire-cyan/10">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 relative border border-refire-cyan/10">
+                        <div class="w-full h-full rounded-full bg-refire-teal/30 flex items-center justify-center text-refire-cyan font-bold text-xl">
                             MS
                         </div>
                         <span class="absolute bottom-0 right-0 bg-refire-rust text-[8px] text-white px-1.5 py-0.5 rounded-full font-bold uppercase">Keynote</span>
                     </div>
-                    <h3 class="font-bold text-refire-teal text-base">Dr. Madhubala Singh</h3>
+                    <h3 class="font-bold text-refire-light text-base">Dr. Madhubala Singh</h3>
                     <p class="text-xs font-devanagari font-semibold text-refire-rust">प्राध्यापिका, मिरान्डा हाउस</p>
-                    <p class="text-[10px] text-refire-cyan mt-1 leading-tight font-semibold">Professor, Miranda House, University of Delhi</p>
+                    <p class="text-[10px] text-refire-ice mt-1 leading-tight font-semibold">Professor, Miranda House, University of Delhi</p>
                 </div>
 
                 <!-- Speaker 2 -->
-                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-white/40">
-                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
-                        <div class="w-full h-full rounded-full bg-refire-teal/10 flex items-center justify-center text-refire-teal font-bold text-xl">
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-refire-cyan/10">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-refire-cyan/10">
+                        <div class="w-full h-full rounded-full bg-refire-teal/30 flex items-center justify-center text-refire-cyan font-bold text-xl">
                             GP
                         </div>
                     </div>
-                    <h3 class="font-bold text-refire-teal text-base">Prof. Girish Chandra Pant</h3>
+                    <h3 class="font-bold text-refire-light text-base">Prof. Girish Chandra Pant</h3>
                     <p class="text-xs font-devanagari font-semibold text-refire-rust">पूर्व-विभागाध्यक्षः, संस्कृत-विभागः</p>
-                    <p class="text-[10px] text-refire-cyan mt-1 leading-tight font-semibold">Former HOD, Dept. of Sanskrit, Jamia Millia Islamia</p>
+                    <p class="text-[10px] text-refire-ice mt-1 leading-tight font-semibold">Former HOD, Dept. of Sanskrit, Jamia Millia Islamia</p>
                 </div>
 
                 <!-- Speaker 3 -->
-                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-white/40">
-                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
-                        <div class="w-full h-full rounded-full bg-refire-teal/10 flex items-center justify-center text-refire-teal font-bold text-xl">
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-refire-cyan/10">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-refire-cyan/10">
+                        <div class="w-full h-full rounded-full bg-refire-teal/30 flex items-center justify-center text-refire-cyan font-bold text-xl">
                             KP
                         </div>
                     </div>
-                    <h3 class="font-bold text-refire-teal text-base">Mr. Krishna M. Pandey</h3>
+                    <h3 class="font-bold text-refire-light text-base">Mr. Krishna M. Pandey</h3>
                     <p class="text-xs font-devanagari font-semibold text-refire-rust">सह-प्राध्यापकः, जेएनयू</p>
-                    <p class="text-[10px] text-refire-cyan mt-1 leading-tight font-semibold">Associate Professor, Jawaharlal Nehru University</p>
+                    <p class="text-[10px] text-refire-ice mt-1 leading-tight font-semibold">Associate Professor, Jawaharlal Nehru University</p>
                 </div>
 
                 <!-- Speaker 4 -->
-                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-white/40">
-                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
-                        <div class="w-full h-full rounded-full bg-refire-teal/10 flex items-center justify-center text-refire-teal font-bold text-xl">
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-refire-cyan/10">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-refire-cyan/10">
+                        <div class="w-full h-full rounded-full bg-refire-teal/30 flex items-center justify-center text-refire-cyan font-bold text-xl">
                             OB
                         </div>
                     </div>
-                    <h3 class="font-bold text-refire-teal text-base">Prof. Om Bimali</h3>
+                    <h3 class="font-bold text-refire-light text-base">Prof. Om Bimali</h3>
                     <p class="text-xs font-devanagari font-semibold text-refire-rust">प्राध्यापकः, संस्कृत-विभागः</p>
-                    <p class="text-[10px] text-refire-cyan mt-1 leading-tight font-semibold">Professor, Department of Sanskrit, Delhi University</p>
+                    <p class="text-[10px] text-refire-ice mt-1 leading-tight font-semibold">Professor, Department of Sanskrit, Delhi University</p>
                 </div>
 
                 <!-- Speaker 5 -->
-                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-white/40">
-                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
-                        <div class="w-full h-full rounded-full bg-refire-teal/10 flex items-center justify-center text-refire-teal font-bold text-xl">
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-refire-cyan/10">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-refire-cyan/10">
+                        <div class="w-full h-full rounded-full bg-refire-teal/30 flex items-center justify-center text-refire-cyan font-bold text-xl">
                             SC
                         </div>
                     </div>
-                    <h3 class="font-bold text-refire-teal text-base">Prof. Subhash Chandra</h3>
+                    <h3 class="font-bold text-refire-light text-base">Prof. Subhash Chandra</h3>
                     <p class="text-xs font-devanagari font-semibold text-refire-rust">प्राध्यापकः, संस्कृत-विभागः</p>
-                    <p class="text-[10px] text-refire-cyan mt-1 leading-tight font-semibold">Professor, Department of Sanskrit, Delhi University</p>
+                    <p class="text-[10px] text-refire-ice mt-1 leading-tight font-semibold">Professor, Department of Sanskrit, Delhi University</p>
                 </div>
 
                 <!-- Speaker 6 -->
-                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-white/40">
-                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
-                        <div class="w-full h-full rounded-full bg-refire-teal/10 flex items-center justify-center text-refire-teal font-bold text-xl">
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-refire-cyan/10">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-refire-cyan/10">
+                        <div class="w-full h-full rounded-full bg-refire-teal/30 flex items-center justify-center text-refire-cyan font-bold text-xl">
                             US
                         </div>
                     </div>
-                    <h3 class="font-bold text-refire-teal text-base">Dr. Uma Shankar</h3>
+                    <h3 class="font-bold text-refire-light text-base">Dr. Uma Shankar</h3>
                     <p class="text-xs font-devanagari font-semibold text-refire-rust">प्राध्यापकः, संस्कृत-विभागः</p>
-                    <p class="text-[10px] text-refire-cyan mt-1 leading-tight font-semibold">Professor, Department of Sanskrit, Delhi University</p>
+                    <p class="text-[10px] text-refire-ice mt-1 leading-tight font-semibold">Professor, Department of Sanskrit, Delhi University</p>
                 </div>
 
                 <!-- Speaker 7 -->
-                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-white/40">
-                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
-                        <div class="w-full h-full rounded-full bg-refire-teal/10 flex items-center justify-center text-refire-teal font-bold text-xl">
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-refire-cyan/10">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-refire-cyan/10">
+                        <div class="w-full h-full rounded-full bg-refire-teal/30 flex items-center justify-center text-refire-cyan font-bold text-xl">
                             NG
                         </div>
                     </div>
-                    <h3 class="font-bold text-refire-teal text-base">Prof. Neeraj Gupta</h3>
+                    <h3 class="font-bold text-refire-light text-base">Prof. Neeraj Gupta</h3>
                     <p class="text-xs font-devanagari font-semibold text-refire-rust">सह-निदेशकः, किन्ड्रिल्</p>
-                    <p class="text-[10px] text-refire-cyan mt-1 leading-tight font-semibold">Associate Director, Kyndryl</p>
+                    <p class="text-[10px] text-refire-ice mt-1 leading-tight font-semibold">Associate Director, Kyndryl</p>
                 </div>
 
                 <!-- Speaker 8 -->
-                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-white/40">
-                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
-                        <div class="w-full h-full rounded-full bg-refire-teal/10 flex items-center justify-center text-refire-teal font-bold text-xl">
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-refire-cyan/10">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-refire-cyan/10">
+                        <div class="w-full h-full rounded-full bg-refire-teal/30 flex items-center justify-center text-refire-cyan font-bold text-xl">
                             RT
                         </div>
                     </div>
-                    <h3 class="font-bold text-refire-teal text-base">Dr. Ravindra Nath Tiwari</h3>
+                    <h3 class="font-bold text-refire-light text-base">Dr. Ravindra Nath Tiwari</h3>
                     <p class="text-xs font-devanagari font-semibold text-refire-rust">वैज्ञानिकः, नेत्र-संस्थानम्</p>
-                    <p class="text-[10px] text-refire-cyan mt-1 leading-tight font-semibold font-medium">Netra Institute of Geoinformatics</p>
+                    <p class="text-[10px] text-refire-ice mt-1 leading-tight font-semibold font-medium">Netra Institute of Geoinformatics</p>
                 </div>
             </div>
         </section>
@@ -746,10 +749,10 @@
         <!-- Committee Block -->
         <section id="committees" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            <!-- Patrons Panel (Removed Shri S. P. Aggarwal) -->
-            <div class="nm-flat p-6 rounded-3xl lg:col-span-1 flex flex-col justify-between border border-white/40">
+            <!-- Patrons Panel (S. P. Aggarwal cleanly removed) -->
+            <div class="nm-flat p-6 rounded-3xl lg:col-span-1 flex flex-col justify-between border border-refire-cyan/10">
                 <div>
-                    <h3 class="text-lg font-bold text-refire-teal flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-bold text-refire-light flex items-center gap-2 mb-4">
                         <i class="fa-solid fa-crown text-refire-rust"></i>
                         <span class="lang-en">Advisory & Patrons</span>
                         <span class="font-devanagari hidden-lang lang-sa">संरक्षकाः मुख्यपदाधिकारिणश्च</span>
@@ -759,31 +762,31 @@
                         <div class="p-3 nm-inset rounded-xl">
                             <span class="font-bold text-refire-rust block lang-en">Chief Patron</span>
                             <span class="font-bold font-devanagari text-refire-rust block hidden-lang lang-sa">मुख्य संरक्षकः</span>
-                            <span class="text-refire-teal font-semibold">Dr. Nand Kishore Garg</span>
-                            <p class="text-[10px] text-refire-cyan mt-0.5">Founder Chairman & Chief Advisor MATES, Chancellor MAU</p>
+                            <span class="text-refire-light font-semibold">Dr. Nand Kishore Garg</span>
+                            <p class="text-[10px] text-refire-ice mt-0.5">Founder Chairman & Chief Advisor MATES, Chancellor MAU</p>
                         </div>
 
                         <div class="p-3 nm-inset rounded-xl">
                             <span class="font-bold text-refire-rust block lang-en">Patrons</span>
                             <span class="font-bold font-devanagari text-refire-rust block hidden-lang lang-sa">संरक्षकाः</span>
-                            <ul class="text-refire-teal font-semibold space-y-2 mt-1">
-                                <li>Sh. Vineet Kumar Lohia <span class="text-[10px] text-refire-cyan font-normal block">(Chairman, MATES)</span></li>
-                                <li>Prof. M. L. Goyal <span class="text-[10px] text-refire-cyan font-normal block">(Vice Chairman Academics, MATES)</span></li>
-                                <li>Prof. Vikram Bali <span class="text-[10px] text-refire-cyan font-normal block">(Director, MAIT)</span></li>
+                            <ul class="text-refire-light font-semibold space-y-2 mt-1">
+                                <li>Sh. Vineet Kumar Lohia <span class="text-[10px] text-refire-ice font-normal block">(Chairman, MATES)</span></li>
+                                <li>Prof. M. L. Goyal <span class="text-[10px] text-refire-ice font-normal block">(Vice Chairman Academics, MATES)</span></li>
+                                <li>Prof. Vikram Bali <span class="text-[10px] text-refire-ice font-normal block">(Director, MAIT)</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-6 p-3 nm-inset rounded-xl text-center bg-refire-bg">
-                    <span class="text-[11px] font-bold text-refire-teal lang-en">Sponsored under the aegis of AICTE VAANI</span>
-                    <span class="text-[10px] font-devanagari font-bold text-refire-teal hidden-lang lang-sa">अखिल भारतीय तकनीकी शिक्षा परिषद (एआईसीटीई) द्वारा समर्पितम्</span>
+                    <span class="text-[11px] font-bold text-refire-cyan lang-en">Sponsored under the aegis of AICTE VAANI</span>
+                    <span class="text-[10px] font-devanagari font-bold text-refire-cyan hidden-lang lang-sa">अखिल भारतीय तकनीकी शिक्षा परिषद (एआईसीटीई) द्वारा समर्पितम्</span>
                 </div>
             </div>
 
-            <!-- Program Execution & Organizing Committee (Updated Contact to Dr. Bhoomi Gupta) -->
-            <div class="nm-flat p-6 rounded-3xl lg:col-span-1 border border-white/40">
-                <h3 class="text-lg font-bold text-refire-teal flex items-center gap-2 mb-4">
+            <!-- Program Execution & Organizing Committee (Updated to Dr. Bhoomi Gupta) -->
+            <div class="nm-flat p-6 rounded-3xl lg:col-span-1 border border-refire-cyan/10">
+                <h3 class="text-lg font-bold text-refire-light flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-users text-refire-rust"></i>
                     <span class="lang-en">Organizing Team</span>
                     <span class="font-devanagari hidden-lang lang-sa">आयोजन समितिः</span>
@@ -793,69 +796,69 @@
                     <div class="p-3 nm-inset rounded-xl">
                         <span class="font-bold text-refire-rust block lang-en">Coordinator</span>
                         <span class="font-bold font-devanagari text-refire-rust block hidden-lang lang-sa">समन्वयकः</span>
-                        <span class="text-refire-teal font-semibold">Prof. Sachin Gupta</span>
-                        <p class="text-[10px] text-refire-cyan">Dean (Research & Innovation), MAIT</p>
+                        <span class="text-refire-light font-semibold">Prof. Sachin Gupta</span>
+                        <p class="text-[10px] text-refire-ice">Dean (Research & Innovation), MAIT</p>
                     </div>
 
                     <div class="p-3 nm-inset rounded-xl">
                         <span class="font-bold text-refire-rust block lang-en">Co-Coordinator</span>
                         <span class="font-bold font-devanagari text-refire-rust block hidden-lang lang-sa">सह-समन्वयकः</span>
-                        <span class="text-refire-teal font-semibold">Dr. Bhoomi Gupta</span>
-                        <p class="text-[10px] text-refire-cyan">Head of Department, ITE</p>
+                        <span class="text-refire-light font-semibold">Dr. Bhoomi Gupta</span>
+                        <p class="text-[10px] text-refire-ice">Head of Department, ITE</p>
                     </div>
 
                     <div class="p-3 nm-inset rounded-xl">
                         <span class="font-bold text-refire-rust block lang-en">Organizing Secretary & Contact</span>
                         <span class="font-bold font-devanagari text-refire-rust block hidden-lang lang-sa">आयोजन सचिवः च सम्पर्कः</span>
-                        <span class="text-refire-teal font-extrabold text-xs">Dr. Bhoomi Gupta</span>
-                        <p class="text-[10px] text-refire-cyan font-bold mt-1 leading-normal">Associate Professor and Head, Department of CSE and ITE</p>
+                        <span class="text-refire-light font-extrabold text-xs">Dr. Bhoomi Gupta</span>
+                        <p class="text-[10px] text-refire-ice font-bold mt-1 leading-normal">Associate Professor and Head, Department of CSE and ITE</p>
                     </div>
                 </div>
             </div>
 
             <!-- Advisory Committee -->
-            <div class="nm-flat p-6 rounded-3xl lg:col-span-1 border border-white/40">
-                <h3 class="text-lg font-bold text-refire-teal flex items-center gap-2 mb-4">
+            <div class="nm-flat p-6 rounded-3xl lg:col-span-1 border border-refire-cyan/10">
+                <h3 class="text-lg font-bold text-refire-light flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-graduation-cap text-refire-rust"></i>
                     <span class="lang-en">Advisory Council</span>
                     <span class="font-devanagari hidden-lang lang-sa">सलाहकार-समितिः</span>
                 </h3>
 
                 <div class="p-4 nm-inset rounded-2xl h-[280px] overflow-y-auto space-y-2">
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Prof. Sunil Mathur</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Prof. Sunil Mathur</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">MAIT</span>
                     </div>
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Prof. V. N. Mathur</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Prof. V. N. Mathur</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">MAIT</span>
                     </div>
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Prof. Puja Singh</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Prof. Puja Singh</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">MAIT</span>
                     </div>
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Prof. Amita Goel</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Prof. Amita Goel</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">MAIT</span>
                     </div>
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Prof. Harbhajan Bansal</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Prof. Harbhajan Bansal</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">Dean, Management</span>
                     </div>
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Dr. Vaibhav Jain</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Dr. Vaibhav Jain</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">Associate Prof.</span>
                     </div>
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Dr. Amit Gupta</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Dr. Amit Gupta</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">MAIT</span>
                     </div>
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Dr. V. K. Saini</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Dr. V. K. Saini</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">MAIT</span>
                     </div>
-                    <div class="flex items-center justify-between py-1 border-b border-refire-teal/10">
-                        <span class="text-xs text-refire-teal font-semibold">Dr. Pooja Gupta</span>
+                    <div class="flex items-center justify-between py-1 border-b border-refire-cyan/10">
+                        <span class="text-xs text-refire-light font-semibold">Dr. Pooja Gupta</span>
                         <span class="text-[10px] text-refire-cyan font-semibold">MAIT</span>
                     </div>
                 </div>
@@ -866,9 +869,9 @@
         <section id="registration" class="grid grid-cols-1 lg:grid-cols-5 gap-8">
             
             <!-- Registration Form Area -->
-            <div class="lg:col-span-3 nm-flat p-6 md:p-8 rounded-3xl border border-white/40">
+            <div class="lg:col-span-3 nm-flat p-6 md:p-8 rounded-3xl border border-refire-cyan/10">
                 <div class="mb-6">
-                    <h3 class="text-xl md:text-2xl font-black text-refire-teal">
+                    <h3 class="text-xl md:text-2xl font-black text-refire-light">
                         <span class="lang-en">Seminar Registration</span>
                         <span class="font-devanagari hidden-lang lang-sa">पञ्जीकरण-पत्रम्</span>
                     </h3>
@@ -880,71 +883,71 @@
                 <form id="samanvaya-form" onsubmit="handleRegistrationSubmit(event)" class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-bold text-refire-teal mb-1.5 uppercase tracking-wider">
+                            <label class="block text-xs font-bold text-refire-ice mb-1.5 uppercase tracking-wider">
                                 <span class="lang-en">Full Name *</span>
                                 <span class="font-devanagari hidden-lang lang-sa">पूर्णं नाम *</span>
                             </label>
-                            <input type="text" id="reg-name" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-dark text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
+                            <input type="text" id="reg-name" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-light text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-refire-teal mb-1.5 uppercase tracking-wider">
+                            <label class="block text-xs font-bold text-refire-ice mb-1.5 uppercase tracking-wider">
                                 <span class="lang-en">Mobile Number *</span>
                                 <span class="font-devanagari hidden-lang lang-sa">चलभाष संख्या *</span>
                             </label>
-                            <input type="tel" id="reg-phone" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-dark text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
+                            <input type="tel" id="reg-phone" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-light text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold text-refire-teal mb-1.5 uppercase tracking-wider">
+                        <label class="block text-xs font-bold text-refire-ice mb-1.5 uppercase tracking-wider">
                             <span class="lang-en">Institute / Organization *</span>
                             <span class="font-devanagari hidden-lang lang-sa">संस्थानम् / संगठनम् *</span>
                         </label>
-                        <input type="text" id="reg-org" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-dark text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
+                        <input type="text" id="reg-org" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-light text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold text-refire-teal mb-1.5 uppercase tracking-wider">
+                        <label class="block text-xs font-bold text-refire-ice mb-1.5 uppercase tracking-wider">
                             <span class="lang-en">Postal Address *</span>
                             <span class="font-devanagari hidden-lang lang-sa">पत्रालय-संकेतः (Address) *</span>
                         </label>
-                        <textarea id="reg-address" required rows="2" class="w-full px-4 py-3 rounded-xl nm-inset text-refire-dark text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0 resize-none"></textarea>
+                        <textarea id="reg-address" required rows="2" class="w-full px-4 py-3 rounded-xl nm-inset text-refire-light text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0 resize-none"></textarea>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-bold text-refire-teal mb-1.5 uppercase tracking-wider">
+                            <label class="block text-xs font-bold text-refire-ice mb-1.5 uppercase tracking-wider">
                                 <span class="lang-en">Place / City *</span>
                                 <span class="font-devanagari hidden-lang lang-sa">स्थानम् *</span>
                             </label>
-                            <input type="text" id="reg-place" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-dark text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
+                            <input type="text" id="reg-place" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-light text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-refire-teal mb-1.5 uppercase tracking-wider">
+                            <label class="block text-xs font-bold text-refire-ice mb-1.5 uppercase tracking-wider">
                                 <span class="lang-en">Date of Submission *</span>
                                 <span class="font-devanagari hidden-lang lang-sa">दिनांक *</span>
                             </label>
-                            <input type="date" id="reg-date" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-dark text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0">
+                            <input type="date" id="reg-date" required class="w-full px-4 py-3 rounded-xl nm-inset text-refire-light text-sm outline-none focus:ring-1 focus:ring-refire-rust border-0 bg-[#001517]">
                         </div>
                     </div>
 
                     <div class="pt-4">
-                        <button type="submit" class="w-full nm-button py-3.5 px-6 rounded-2xl text-sm font-extrabold text-refire-rust hover:text-refire-teal uppercase tracking-wider">
+                        <button type="submit" class="w-full nm-button py-3.5 px-6 rounded-2xl text-sm font-extrabold text-refire-rust hover:text-refire-cyan uppercase tracking-wider">
                             <span class="lang-en"><i class="fa-solid fa-paper-plane mr-2"></i>Submit Application</span>
                             <span class="font-devanagari hidden-lang lang-sa"><i class="fa-solid fa-paper-plane mr-2"></i>आवेदनं प्रेषयन्तु</span>
                         </button>
                     </div>
                 </form>
 
-                <!-- Status Banner instead of alert -->
-                <div id="status-alert" class="hidden mt-4 p-4 rounded-xl nm-inset border-l-4 border-emerald-500 text-xs text-emerald-800 flex justify-between items-center">
+                <!-- Status Banner inside form -->
+                <div id="status-alert" class="hidden mt-4 p-4 rounded-xl nm-inset border-l-4 border-emerald-500 text-xs text-emerald-300 flex justify-between items-center">
                     <div>
                         <strong class="block lang-en">Registration successful!</strong>
                         <strong class="block font-devanagari hidden-lang lang-sa">पञ्जीकरणं सफलम्!</strong>
                         <span class="lang-en">Your unique entry pass ticket has been generated on the right card panel.</span>
                         <span class="font-devanagari hidden-lang lang-sa">दक्षिणतः पञ्जीकरण-पत्रम् प्राप्तुं शक्नुवन्ति।</span>
                     </div>
-                    <button onclick="closeStatusAlert()" class="text-refire-cyan hover:text-refire-teal"><i class="fa-solid fa-xmark"></i></button>
+                    <button onclick="closeStatusAlert()" class="text-refire-cyan hover:text-refire-light"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
@@ -952,13 +955,13 @@
             <div class="lg:col-span-2 nm-flat p-6 rounded-3xl flex flex-col justify-between border border-dashed border-refire-cyan/30 relative">
                 <div>
                     <span class="absolute top-4 right-4 text-[10px] font-mono tracking-widest text-refire-cyan uppercase font-bold">Ticket Pass</span>
-                    <h4 class="text-sm font-extrabold text-refire-teal mb-4">
+                    <h4 class="text-sm font-extrabold text-refire-light mb-4">
                         <span class="lang-en">Admission Voucher</span>
                         <span class="font-devanagari hidden-lang lang-sa">प्रवेश पत्रम्</span>
                     </h4>
 
                     <!-- Actual Ticket Card -->
-                    <div id="ticket-card" class="nm-inset p-4 rounded-2xl relative overflow-hidden text-xs">
+                    <div id="ticket-card" class="nm-inset p-4 rounded-2xl relative overflow-hidden text-xs border border-refire-cyan/15">
                         <div class="border-b border-dashed border-refire-cyan/30 pb-3 mb-3 text-center">
                             <span class="text-[10px] text-refire-rust block font-bold tracking-wider lang-en">SAMANVAYA 2026</span>
                             <span class="text-[10px] font-devanagari text-refire-rust block font-bold tracking-wider hidden-lang lang-sa">समन्वयः २०२६</span>
@@ -969,14 +972,14 @@
                             <div>
                                 <span class="block text-[8px] uppercase text-refire-cyan font-bold lang-en">Admitted Candidate</span>
                                 <span class="block text-[8px] font-devanagari uppercase text-refire-cyan font-bold hidden-lang lang-sa">अभ्यर्थी</span>
-                                <span id="ticket-name" class="font-extrabold text-refire-teal text-sm">-</span>
+                                <span id="ticket-name" class="font-extrabold text-refire-light text-sm">-</span>
                             </div>
                             
                             <div class="grid grid-cols-2 gap-2">
                                 <div>
                                     <span class="block text-[8px] uppercase text-refire-cyan font-bold lang-en">Organization</span>
                                     <span class="block text-[8px] font-devanagari uppercase text-refire-cyan font-bold hidden-lang lang-sa">संगठनम्</span>
-                                    <span id="ticket-org" class="font-bold text-refire-dark truncate block">-</span>
+                                    <span id="ticket-org" class="font-bold text-refire-ice truncate block">-</span>
                                 </div>
                                 <div>
                                     <span class="block text-[8px] uppercase text-refire-cyan font-bold lang-en">Reg ID</span>
@@ -989,12 +992,12 @@
                                 <div>
                                     <span class="block text-[8px] uppercase text-refire-cyan font-bold lang-en">Seat Category</span>
                                     <span class="block text-[8px] font-devanagari uppercase text-refire-cyan font-bold hidden-lang lang-sa">स्थान श्रेणी</span>
-                                    <span class="font-bold text-emerald-600 uppercase">Delegate / प्रतिनिधि</span>
+                                    <span class="font-bold text-emerald-400 uppercase">Delegate / प्रतिनिधि</span>
                                 </div>
                                 <div>
                                     <span class="block text-[8px] uppercase text-refire-cyan font-bold lang-en">Venue Hall</span>
                                     <span class="block text-[8px] font-devanagari uppercase text-refire-cyan font-bold hidden-lang lang-sa">स्थानम्</span>
-                                    <span class="font-bold text-refire-teal">Main Auditorium</span>
+                                    <span class="font-bold text-refire-light">Main Auditorium</span>
                                 </div>
                             </div>
                         </div>
@@ -1022,12 +1025,12 @@
                 </div>
 
                 <div class="mt-6 flex gap-3">
-                    <button onclick="window.print()" class="w-1/2 nm-button py-2.5 rounded-xl text-xs font-bold text-refire-teal hover:text-refire-rust">
+                    <button onclick="window.print()" class="w-1/2 nm-button py-2.5 rounded-xl text-xs font-bold text-refire-light hover:text-refire-rust">
                         <i class="fa-solid fa-print mr-1"></i>
                         <span class="lang-en">Print Pass</span>
                         <span class="font-devanagari hidden-lang lang-sa">मुद्रणम्</span>
                     </button>
-                    <button onclick="simulateCopyPass()" class="w-1/2 nm-button py-2.5 rounded-xl text-xs font-bold text-refire-teal hover:text-refire-rust">
+                    <button onclick="simulateCopyPass()" class="w-1/2 nm-button py-2.5 rounded-xl text-xs font-bold text-refire-light hover:text-refire-rust">
                         <i class="fa-solid fa-copy mr-1"></i>
                         <span class="lang-en">Copy Details</span>
                         <span class="font-devanagari hidden-lang lang-sa">प्रतिलिपिः</span>
@@ -1040,62 +1043,62 @@
     </main>
 
     <!-- Venue & Contact Block Footer -->
-    <footer class="border-t border-refire-teal/10 bg-refire-bg/50 pt-12 pb-6 px-4">
+    <footer class="border-t border-refire-cyan/15 bg-refire-bg pt-12 pb-6 px-4">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
             
             <!-- Address and Timing details -->
-            <div class="nm-flat p-6 rounded-2xl border border-white/40">
-                <h4 class="font-bold text-refire-teal flex items-center gap-2 mb-4">
+            <div class="nm-flat p-6 rounded-2xl border border-refire-cyan/10">
+                <h4 class="font-bold text-refire-light flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-map-pin text-refire-rust"></i>
                     <span class="lang-en">Venue Location</span>
                     <span class="font-devanagari hidden-lang lang-sa">स्थानम्</span>
                 </h4>
-                <p class="text-xs text-refire-dark leading-relaxed font-semibold">
+                <p class="text-xs text-refire-ice leading-relaxed font-semibold">
                     <strong>Main Auditorium,</strong><br>
                     Maharaja Agrasen Institute of Technology,<br>
                     Sector-22, Rohini, New Delhi - 110086
                 </p>
-                <div class="mt-4 pt-3 border-t border-refire-teal/10 flex items-center gap-2">
+                <div class="mt-4 pt-3 border-t border-refire-cyan/15 flex items-center gap-2">
                     <i class="fa-regular fa-clock text-refire-rust text-sm"></i>
                     <span class="text-xs text-refire-cyan font-bold">10:00 AM – 4:30 PM (Daily)</span>
                 </div>
             </div>
 
-            <!-- Coordination Contact Person details (Updated details to Dr. Bhoomi Gupta) -->
-            <div class="nm-flat p-6 rounded-2xl border border-white/40">
-                <h4 class="font-bold text-refire-teal flex items-center gap-2 mb-4">
+            <!-- Coordination Contact Person details (Dr. Bhoomi Gupta) -->
+            <div class="nm-flat p-6 rounded-2xl border border-refire-cyan/10">
+                <h4 class="font-bold text-refire-light flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-address-card text-refire-rust"></i>
                     <span class="lang-en">Contact Coordinator</span>
                     <span class="font-devanagari hidden-lang lang-sa">सम्पर्क सूत्रम्</span>
                 </h4>
-                <div class="space-y-3 text-xs text-refire-dark font-medium">
+                <div class="space-y-3 text-xs text-refire-ice font-medium">
                     <p>
                         <span class="block text-[10px] text-refire-cyan font-bold uppercase tracking-wider lang-en">Organizing Secretary & Contact</span>
                         <span class="block text-[10px] font-devanagari text-refire-cyan font-bold hidden-lang lang-sa">सह-समन्वयिका</span>
-                        <strong>Dr. Bhoomi Gupta</strong>
+                        <strong class="text-refire-light">Dr. Bhoomi Gupta</strong>
                     </p>
                     <p class="text-[10px] text-refire-cyan font-bold leading-normal">Associate Professor and Head, Department of CSE and ITE</p>
                     <p class="flex items-center gap-2">
-                        <i class="fa-solid fa-envelope text-refire-teal text-sm"></i>
+                        <i class="fa-solid fa-envelope text-refire-cyan text-sm"></i>
                         <a href="mailto:bhoomigupta@mait.ac.in" class="hover:text-refire-rust underline font-semibold">bhoomigupta@mait.ac.in</a>
                     </p>
                     <p class="flex items-center gap-2">
-                        <i class="fa-solid fa-phone text-refire-teal text-sm"></i>
+                        <i class="fa-solid fa-phone text-refire-cyan text-sm"></i>
                         <a href="tel:+919205956674" class="hover:text-refire-rust font-semibold">+91 9205956674</a>
                     </p>
                 </div>
             </div>
 
             <!-- Quick Map Simulated Area -->
-            <div class="nm-flat p-6 rounded-2xl flex flex-col justify-between border border-white/40">
-                <h4 class="font-bold text-refire-teal flex items-center gap-2 mb-2">
+            <div class="nm-flat p-6 rounded-2xl flex flex-col justify-between border border-refire-cyan/10">
+                <h4 class="font-bold text-refire-light flex items-center gap-2 mb-2">
                     <i class="fa-solid fa-route text-refire-rust"></i>
                     <span class="lang-en">Explore Directions</span>
                     <span class="font-devanagari hidden-lang lang-sa">मार्गदर्शनम्</span>
                 </h4>
                 <p class="text-[11px] text-refire-cyan font-bold mb-4 lang-en">Easily accessible via Rohini Sector 21 / Rithala metro stations.</p>
                 <p class="text-[10px] font-devanagari text-refire-cyan font-bold mb-4 hidden-lang lang-sa">रोहिणी सेक्टर २१ / रिठाला मेट्रो स्टेशनतः सुलभः मार्गः।</p>
-                <div class="nm-inset p-2 rounded-xl text-center text-xs font-bold text-refire-teal hover:text-refire-rust transition-all cursor-pointer">
+                <div class="nm-inset p-2 rounded-xl text-center text-xs font-bold text-refire-cyan hover:text-refire-rust transition-all cursor-pointer border border-refire-cyan/15">
                     <a href="https://maps.google.com/?q=Maharaja+Agrasen+Institute+of+Technology" target="_blank">
                         <i class="fa-solid fa-square-arrow-up-right mr-1"></i>
                         <span class="lang-en">Open Google Map</span>
@@ -1107,14 +1110,14 @@
         </div>
 
         <!-- Footnote legal & copyrights -->
-        <div class="max-w-7xl mx-auto border-t border-refire-teal/10 pt-6 flex flex-col md:flex-row justify-between items-center text-center gap-4">
-            <p class="text-[11px] text-refire-cyan font-bold">
+        <div class="max-w-7xl mx-auto border-t border-refire-cyan/15 pt-6 flex flex-col md:flex-row justify-between items-center text-center gap-4">
+            <p class="text-[11px] text-refire-ice font-bold">
                 &copy; 2026 Maharaja Agrasen Institute of Technology. All Rights Reserved. Created under the AICTE VAANI Initiative.
             </p>
             <div class="flex gap-4 text-[11px] text-refire-cyan font-bold">
-                <a href="https://mait.ac.in" target="_blank" class="hover:text-refire-teal underline">MAIT Portal</a>
+                <a href="https://mait.ac.in" target="_blank" class="hover:text-refire-light underline">MAIT Portal</a>
                 <span class="text-refire-cyan/30">|</span>
-                <a href="https://www.aicte-india.org" target="_blank" class="hover:text-refire-teal underline">AICTE Portal</a>
+                <a href="https://www.aicte-india.org" target="_blank" class="hover:text-refire-light underline">AICTE Portal</a>
             </div>
         </div>
     </footer>
@@ -1259,8 +1262,8 @@
         // Shows non-alert, sleek user notifications
         function showInteractiveClipboardToast(msg) {
             const toast = document.createElement("div");
-            toast.className = "fixed bottom-5 right-5 z-50 nm-flat p-4 rounded-xl text-xs font-bold text-refire-teal border-l-4 border-refire-rust shadow-xl transition-all opacity-100";
-            toast.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> ${msg}`;
+            toast.className = "fixed bottom-5 right-5 z-50 nm-flat p-4 rounded-xl text-xs font-bold text-refire-light border-l-4 border-refire-rust shadow-xl transition-all opacity-100";
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> ${msg}`;
             document.body.appendChild(toast);
             setTimeout(() => {
                 toast.classList.add('opacity-0');
