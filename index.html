@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samanvaya 2026 - Vedic Ecological Wisdom & Modern Tech</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for premium Sanskrit & English typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for beautiful icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dusk: {
+                            dark: '#1a090d',       // Near black / Deep Maroon
+                            plum: '#6e3943',       // Muted Plum/Berry
+                            terracotta: '#b36243',   // Burnt Orange/Terracotta
+                            slate: '#8f9fa9',       // Slate gray
+                            ice: '#dbe3ec',         // Light ice blue
+                            bg: '#eef2f5'           // Base Soft Gray-Blue for Neumorphism
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        devanagari: ['Noto Serif Devanagari', 'serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Neumorphic Styling & Transitions -->
+    <style>
+        body {
+            background-color: #eef2f5;
+            color: #1a090d;
+        }
+
+        /* Neumorphic Shadows based on Dusk Color Palette hints */
+        .nm-flat {
+            background: #eef2f5;
+            box-shadow: 6px 6px 12px #cfd4d9, -6px -6px 12px #ffffff;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .nm-flat-accent {
+            background: #fdfdfd;
+            box-shadow: 6px 6px 12px rgba(110, 57, 43, 0.1), -6px -6px 12px #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .nm-inset {
+            background: #eef2f5;
+            box-shadow: inset 4px 4px 8px #cfd4d9, inset -4px -4px 8px #ffffff;
+        }
+
+        .nm-button {
+            background: #eef2f5;
+            box-shadow: 5px 5px 10px #cfd4d9, -5px -5px 10px #ffffff;
+            transition: all 0.2s ease;
+        }
+
+        .nm-button:hover {
+            box-shadow: 2px 2px 5px #cfd4d9, -2px -2px 5px #ffffff;
+            transform: translateY(1px);
+        }
+
+        .nm-button:active {
+            box-shadow: inset 3px 3px 6px #cfd4d9, inset -3px -3px 6px #ffffff;
+            transform: translateY(2px);
+        }
+
+        /* Custom active indicator or accent highlights */
+        .nm-active {
+            box-shadow: inset 3px 3px 6px #cfd4d9, inset -3px -3px 6px #ffffff;
+            color: #b36243;
+        }
+
+        /* Bilingual display controller */
+        .lang-en, .lang-sa {
+            transition: opacity 0.4s ease;
+        }
+
+        /* Hide elements dynamically */
+        .hidden-lang {
+            display: none !important;
+        }
+
+        /* Customize scrollbars for a beautiful look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #eef2f5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8f9fa9;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6e3943;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen">
+
+    <!-- Floating Navigation Bar -->
+    <nav class="sticky top-0 z-50 px-4 py-3 md:py-4 bg-[#eef2f5]/90 backdrop-blur-md border-b border-white/40">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Brand Mark / Theme Title -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full nm-flat flex items-center justify-center text-dusk-plum">
+                    <i class="fa-solid fa-leaf text-lg animate-pulse"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-dusk-plum text-sm md:text-base block tracking-wider lang-en">SAMANVAYA 2026</span>
+                    <span class="font-bold font-devanagari text-dusk-plum text-sm md:text-base hidden-lang tracking-wider lang-sa">समन्वयः २०२६</span>
+                    <span class="text-xs text-dusk-slate block leading-none lang-en">Vedic Ecology & Technology</span>
+                    <span class="text-xs text-dusk-slate font-devanagari hidden-lang leading-none lang-sa">वैदिकपर्यावरणं च प्रौद्योगिकी</span>
+                </div>
+            </div>
+
+            <!-- Quick Links (Desktop) -->
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="#about" class="text-sm font-semibold text-dusk-plum hover:text-dusk-terracotta transition-colors lang-en">About</a>
+                <a href="#about" class="text-sm font-semibold font-devanagari text-dusk-plum hover:text-dusk-terracotta transition-colors hidden-lang lang-sa">अवलोकनम्</a>
+                
+                <a href="#schedule" class="text-sm font-semibold text-dusk-plum hover:text-dusk-terracotta transition-colors lang-en">Schedule</a>
+                <a href="#schedule" class="text-sm font-semibold font-devanagari text-dusk-plum hover:text-dusk-terracotta transition-colors hidden-lang lang-sa">अनुसूची</a>
+                
+                <a href="#speakers" class="text-sm font-semibold text-dusk-plum hover:text-dusk-terracotta transition-colors lang-en">Speakers</a>
+                <a href="#speakers" class="text-sm font-semibold font-devanagari text-dusk-plum hover:text-dusk-terracotta transition-colors hidden-lang lang-sa">वक्तारः</a>
+                
+                <a href="#committees" class="text-sm font-semibold text-dusk-plum hover:text-dusk-terracotta transition-colors lang-en">Committee</a>
+                <a href="#committees" class="text-sm font-semibold font-devanagari text-dusk-plum hover:text-dusk-terracotta transition-colors hidden-lang lang-sa">समितिः</a>
+                
+                <a href="#registration" class="text-sm font-semibold text-dusk-plum hover:text-dusk-terracotta transition-colors lang-en">Register</a>
+                <a href="#registration" class="text-sm font-semibold font-devanagari text-dusk-plum hover:text-dusk-terracotta transition-colors hidden-lang lang-sa">पञ्जीकरणम्</a>
+            </div>
+
+            <!-- Language and Interaction Control -->
+            <div class="flex items-center gap-3">
+                <!-- Dual Language Selector Slider -->
+                <div class="nm-inset p-1 rounded-full flex items-center relative w-32 h-10">
+                    <button onclick="switchLanguage('en')" id="btn-lang-en" class="w-1/2 text-xs font-bold rounded-full py-1 z-10 transition-all text-dusk-terracotta nm-active">
+                        EN
+                    </button>
+                    <button onclick="switchLanguage('sa')" id="btn-lang-sa" class="w-1/2 text-xs font-bold font-devanagari rounded-full py-1 z-10 transition-all text-dusk-slate">
+                        संस्कृतम्
+                    </button>
+                </div>
+
+                <!-- Registration Quick Action Button -->
+                <a href="#registration" class="nm-button px-4 py-2 rounded-xl text-xs md:text-sm font-bold text-dusk-terracotta hover:text-dusk-plum">
+                    <i class="fa-solid fa-file-signature mr-1"></i>
+                    <span class="lang-en">Apply</span>
+                    <span class="font-devanagari hidden-lang lang-sa">पञ्जीकरणम्</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Hero & Organization Logos Grid -->
+    <header class="py-12 px-4 max-w-7xl mx-auto">
+        <!-- Logo Bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 items-center">
+            <!-- MAIT LOGO -->
+            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300">
+                <img src="Screenshot 2026-07-19 at 7.16.12 PM.png" alt="MAIT Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/eef2f5/6e3943?text=MAIT'">
+                <p class="text-[10px] md:text-xs font-bold text-dusk-plum">MAIT</p>
+                <p class="text-[9px] text-dusk-slate tracking-tight lang-en">Maharaja Agrasen Institute of Tech.</p>
+                <p class="text-[9px] text-dusk-slate font-devanagari tracking-tight hidden-lang lang-sa">महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्</p>
+            </div>
+            
+            <!-- MATES LOGO -->
+            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300">
+                <img src="Screenshot 2026-07-19 at 7.16.20 PM.png" alt="MATES Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/eef2f5/6e3943?text=MATES'">
+                <p class="text-[10px] md:text-xs font-bold text-dusk-plum">MATES</p>
+                <p class="text-[9px] text-dusk-slate tracking-tight lang-en">Maharaja Agrasen Technical Ed. Society</p>
+                <p class="text-[9px] text-dusk-slate font-devanagari tracking-tight hidden-lang lang-sa">महाराजा अग्रसेन प्राविधिक शिक्षा समितिः</p>
+            </div>
+
+            <!-- AICTE LOGO -->
+            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300">
+                <img src="All_India_Council_for_Technical_Education_logo.png" alt="AICTE Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/eef2f5/6e3943?text=AICTE'">
+                <p class="text-[10px] md:text-xs font-bold text-dusk-plum">AICTE Sponsored</p>
+                <p class="text-[9px] text-dusk-slate tracking-tight lang-en">All India Council for Technical Education</p>
+                <p class="text-[9px] text-dusk-slate font-devanagari tracking-tight hidden-lang lang-sa">अखिल भारतीय तकनीकी शिक्षा परिषद</p>
+            </div>
+
+            <!-- ATAL LOGO -->
+            <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300">
+                <img src="ATAL logo.png" alt="ATAL Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/eef2f5/6e3943?text=ATAL'">
+                <p class="text-[10px] md:text-xs font-bold text-dusk-plum">ATAL Academy</p>
+                <p class="text-[9px] text-dusk-slate tracking-tight lang-en">AICTE Training & Learning Academy</p>
+                <p class="text-[9px] text-dusk-slate font-devanagari tracking-tight hidden-lang lang-sa">एआईसीटीई प्रशिक्षण तथा शिक्षण अकादमी</p>
+            </div>
+        </div>
+
+        <!-- Seminar Headline & Banner Card -->
+        <div class="nm-flat p-6 md:p-12 rounded-3xl relative overflow-hidden">
+            <!-- Semi-transparent decorative pattern -->
+            <div class="absolute right-0 top-0 w-64 h-64 bg-dusk-plum/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute left-10 bottom-0 w-80 h-80 bg-dusk-terracotta/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Top Tagline & Motto -->
+            <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-8 border-b border-dusk-slate/20 pb-6">
+                <div class="text-center md:text-left">
+                    <span class="inline-block bg-dusk-plum/10 text-dusk-plum text-xs px-3 py-1 rounded-full font-semibold mb-2 uppercase tracking-widest lang-en">
+                        AICTE - Vibrant Advocacy for Advancement and Nurturing of Indian Languages (VANIL)
+                    </span>
+                    <span class="inline-block bg-dusk-plum/10 text-dusk-plum text-xs px-3 py-1 font-devanagari rounded-full font-semibold mb-2 uppercase tracking-widest hidden-lang lang-sa">
+                        भारतीय भाषाणां संवर्धनं तथा संरक्षणाय एआईसीटीई-प्रयासः
+                    </span>
+                    <h3 class="text-sm font-semibold italic text-dusk-terracotta lang-en">Two Days National Seminar</h3>
+                    <h3 class="text-sm font-semibold font-devanagari italic text-dusk-terracotta hidden-lang lang-sa">द्विदिवसीय-राष्ट्रीय-संगोष्ठी</h3>
+                </div>
+                
+                <!-- Motto of MAIT -->
+                <div class="nm-inset px-4 py-2 rounded-2xl text-center border-l-4 border-dusk-terracotta">
+                    <p class="font-devanagari text-xs md:text-sm text-dusk-plum font-bold tracking-wide">"उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः"</p>
+                    <p class="text-[9px] md:text-[10px] text-dusk-slate lang-en">Success is achieved by effort, not mere desires</p>
+                    <p class="text-[9px] md:text-[10px] text-dusk-slate font-devanagari hidden-lang lang-sa">परिश्रमेणैव कार्याणि सिध्यन्ति, केवलं मनोरथैः न</p>
+                </div>
+            </div>
+
+            <!-- Main Title of Seminar -->
+            <div class="text-center my-6">
+                <!-- English Version Title -->
+                <div class="lang-en max-w-4xl mx-auto">
+                    <h1 class="text-3xl md:text-5xl font-black text-dusk-plum leading-tight mb-4 tracking-tight">
+                        SAMANVAYA
+                    </h1>
+                    <p class="text-lg md:text-2xl font-serif text-dusk-terracotta font-semibold leading-relaxed">
+                        Integrating Vedic Ecological Wisdom with Modern Technology for Holistic Disaster Resilience
+                    </p>
+                </div>
+
+                <!-- Sanskrit Version Title -->
+                <div class="hidden-lang lang-sa max-w-4xl mx-auto font-devanagari">
+                    <h1 class="text-3xl md:text-5xl font-black text-dusk-plum leading-tight mb-4 tracking-wide">
+                        समन्वयः
+                    </h1>
+                    <p class="text-xl md:text-2xl font-bold text-dusk-terracotta leading-relaxed">
+                        समग्र आपद्-प्रतिरोधक्षमतायै वैदिक पर्यावरण प्रज्ञायाः आधुनिक प्रौद्योगिक्या सह एकीकरणम्
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dynamic Countdown Component -->
+            <div class="mt-10 mb-6 flex justify-center">
+                <div class="nm-inset p-4 md:p-6 rounded-2xl flex items-center gap-6 md:gap-12 text-center">
+                    <div>
+                        <span id="countdown-days" class="block text-xl md:text-3xl font-extrabold text-dusk-plum">00</span>
+                        <span class="text-[10px] md:text-xs text-dusk-slate uppercase tracking-wider lang-en">Days</span>
+                        <span class="text-[10px] md:text-xs text-dusk-slate font-devanagari hidden-lang lang-sa">दिनानि</span>
+                    </div>
+                    <div class="text-dusk-slate/40 text-xl font-bold">:</div>
+                    <div>
+                        <span id="countdown-hours" class="block text-xl md:text-3xl font-extrabold text-dusk-plum">00</span>
+                        <span class="text-[10px] md:text-xs text-dusk-slate uppercase tracking-wider lang-en">Hours</span>
+                        <span class="text-[10px] md:text-xs text-dusk-slate font-devanagari hidden-lang lang-sa">होराः</span>
+                    </div>
+                    <div class="text-dusk-slate/40 text-xl font-bold">:</div>
+                    <div>
+                        <span id="countdown-minutes" class="block text-xl md:text-3xl font-extrabold text-dusk-plum">00</span>
+                        <span class="text-[10px] md:text-xs text-dusk-slate uppercase tracking-wider lang-en">Minutes</span>
+                        <span class="text-[10px] md:text-xs text-dusk-slate font-devanagari hidden-lang lang-sa">निमेषाः</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Meta Info Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                <!-- Date -->
+                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-dusk-plum/10 flex items-center justify-center text-dusk-plum">
+                        <i class="fa-solid fa-calendar-days text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] text-dusk-slate uppercase tracking-wider lang-en">Event Dates</span>
+                        <span class="block text-[10px] font-devanagari text-dusk-slate hidden-lang lang-sa">कार्यक्रमस्य तिथयः</span>
+                        <span class="font-bold text-dusk-plum lang-en">July 27-28, 2026</span>
+                        <span class="font-bold font-devanagari text-dusk-plum hidden-lang lang-sa">२७-२८ जुलाई २०२६</span>
+                    </div>
+                </div>
+
+                <!-- Venue -->
+                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-dusk-terracotta/10 flex items-center justify-center text-dusk-terracotta">
+                        <i class="fa-solid fa-map-location-dot text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] text-dusk-slate uppercase tracking-wider lang-en">Location</span>
+                        <span class="block text-[10px] font-devanagari text-dusk-slate hidden-lang lang-sa">स्थानम्</span>
+                        <span class="font-bold text-dusk-plum block truncate max-w-[200px] lang-en">Main Auditorium, MAIT</span>
+                        <span class="font-bold font-devanagari text-dusk-plum block truncate max-w-[200px] hidden-lang lang-sa">मुख्य-सभागारः, MAIT</span>
+                    </div>
+                </div>
+
+                <!-- Organizing Body -->
+                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-dusk-slate/20 flex items-center justify-center text-dusk-plum">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] text-dusk-slate uppercase tracking-wider lang-en">Organized By</span>
+                        <span class="block text-[10px] font-devanagari text-dusk-slate hidden-lang lang-sa">आयोजकः</span>
+                        <span class="font-bold text-dusk-plum lang-en">Department of ITE</span>
+                        <span class="font-bold font-devanagari text-dusk-plum hidden-lang lang-sa">इनफार्मेशन टेक्नोलॉजी विभागः</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About and Overview Sections -->
+    <main class="max-w-7xl mx-auto px-4 pb-20 space-y-16">
+        
+        <!-- Two Column Overview Block -->
+        <section id="about" class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            
+            <!-- Seminar Overview Card -->
+            <div class="nm-flat p-6 md:p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="p-3 rounded-2xl bg-dusk-plum/10 text-dusk-plum">
+                            <i class="fa-solid fa-book-open text-xl"></i>
+                        </span>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-dusk-plum lang-en">Seminar Overview</h2>
+                            <h2 class="text-xl md:text-2xl font-bold font-devanagari text-dusk-plum hidden-lang lang-sa">अवलोकनम् (Overview)</h2>
+                            <p class="text-xs text-dusk-slate lang-en">Integrating Ancient & Modern Systems</p>
+                            <p class="text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">प्राचीन-नवीन-ज्ञानयोः समन्वयः</p>
+                        </div>
+                    </div>
+
+                    <!-- English Description -->
+                    <div class="text-sm text-dusk-dark leading-relaxed space-y-4 lang-en">
+                        <p>
+                            This theme explores the integration of <strong>Vedic ecological wisdom</strong> with <strong>modern technology</strong> to build comprehensive disaster resilience. Vedic literature emphasizes the protection of nature, the balance of water, forests, and land, and sustainable ways of living.
+                        </p>
+                        <p>
+                            Modern technologies such as geoinformatics, artificial intelligence, and remote sensing enable effective disaster prediction, monitoring, and impact reduction. By combining these two knowledge systems, it becomes possible to preserve environmental balance, strengthen communities, and promote sustainable development.
+                        </p>
+                    </div>
+
+                    <!-- Sanskrit Description -->
+                    <div class="text-base font-devanagari text-dusk-dark leading-relaxed space-y-4 hidden-lang lang-sa">
+                        <p>
+                            अयं विषयः वैदिक-पर्यावरण-प्रज्ञायाः तथा आधुनिक-प्रौद्योगिक्याः समन्वयेन समग्र आपद्-प्रतिरोधक्षमतायाः विकासं प्रतिपादयति। वैदिक-साहित्ये प्रकृतेः संरक्षणम्, जल-वन-भूमि-सन्तुलनम्, तथा सतत-जीवन-पद्धतयः विशेषतया वर्णिताः सन्ति।
+                        </p>
+                        <p>
+                            आधुनिक-प्रौद्योगिकी, यथा भू-स्थानिकसूचनाविज्ञानम्, कृत्रिमबुद्धिमत्ता, दूरसंवेदी-प्रणाल्यः च, आपदां पूर्वानुमानं, निगमनं, प्रभाव-न्यूननं च सुलभं कुर्वन्ति। एतयोः समन्वयेन पर्यावरण-सन्तुलनस्य संरक्षणं, समुदाय-शक्तीकरणं, तथा स्थायि-विकासस्य संवर्धनं सम्भवति।
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-dusk-slate/10 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-dusk-slate lang-en">Focus Areas: Geoinformatics, AI, Vedic Wisdom</span>
+                    <span class="text-xs font-semibold font-devanagari text-dusk-slate hidden-lang lang-sa">मुख्यबिन्दवः: भू-स्थानिकविज्ञानम्, ए.आई., वैदिकप्रज्ञा</span>
+                </div>
+            </div>
+
+            <!-- About MAIT Card -->
+            <div class="nm-flat p-6 md:p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="p-3 rounded-2xl bg-dusk-terracotta/10 text-dusk-terracotta">
+                            <i class="fa-solid fa-university text-xl"></i>
+                        </span>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-dusk-plum lang-en">About the Institute</h2>
+                            <h2 class="text-xl md:text-2xl font-bold font-devanagari text-dusk-plum hidden-lang lang-sa">संस्थानस्य विषय (MAIT)</h2>
+                            <p class="text-xs text-dusk-slate lang-en">Maharaja Agrasen Institute of Technology</p>
+                            <p class="text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्</p>
+                        </div>
+                    </div>
+
+                    <!-- English About MAIT -->
+                    <div class="text-sm text-dusk-dark leading-relaxed space-y-4 lang-en">
+                        <p>
+                            Maharaja Agrasen Institute of Technology, New Delhi was established in 1999 with a vision to develop engineering fraternity of academic excellence and ethical values by imparting best engineering education to its students through an optimal infrastructure, well-equipped labs, and competent faculty.
+                        </p>
+                        <p>
+                            MAIT is consistently stepping forward to establish itself as a best engineering institution among self-financing institutes in India through its industry and entrepreneurship relevant education and training programs.
+                        </p>
+                    </div>
+
+                    <!-- Sanskrit About MAIT -->
+                    <div class="text-base font-devanagari text-dusk-dark leading-relaxed space-y-4 hidden-lang lang-sa">
+                        <p>
+                            महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्, नवदिल्ली, १९९९ तमे वर्षे इष्टतम-आधारभूत-संरचनायाः, सुसज्जित-प्रयोगशालानां सक्षम-आचार्यवर्गस्य च माध्यमेन स्वछात्रेभ्यः श्रेष्ठतमं अभियांत्रिकी-शिक्षणं प्रदाय शैक्षणिक-उत्कृष्टतायाः नैतिक-मूल्यानां च अभियांत्रिकी-बिरादरीं विकसितुं दृष्ट्या स्थापितम् आसीत्।
+                        </p>
+                        <p>
+                            MAIT स्वस्य उद्योग-उद्यमिता-प्रासंगिक शिक्षण-प्रशिक्षण-कार्यक्रमेण भारते स्व-वित्तपोषण-संस्थानेषु श्रेष्ठतम-अभियांत्रिकी-संस्थानरूपेण स्वयं स्थापयितुं निरन्तरं अग्रे गच्छति। अस्य पूर्वछात्राः उद्योगे, शिक्षाविद्यायाम्, अनुसन्धाने, व्यवसाये च स्वस्य उपलब्धिभिः स्वयं प्रतिष्ठिताः सन्ति।
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-dusk-slate/10 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-dusk-slate lang-en">Established in 1999 • Delhi</span>
+                    <span class="text-xs font-semibold font-devanagari text-dusk-slate hidden-lang lang-sa">स्थापना वर्ष: १९९९ • नवदिल्ली</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Session-wise Schedule Block -->
+        <section id="schedule" class="nm-flat p-6 md:p-10 rounded-3xl">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-dusk-slate/15 pb-6">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-black text-dusk-plum lang-en">Seminar Schedule</h2>
+                    <h2 class="text-2xl md:text-3xl font-black font-devanagari text-dusk-plum hidden-lang lang-sa">सेमिनार अनुसूची</h2>
+                    <p class="text-sm text-dusk-slate mt-1 lang-en">Detailed structure of academic sessions across both days</p>
+                    <p class="text-xs font-devanagari text-dusk-slate mt-1 hidden-lang lang-sa">द्विदिवसीयसत्रस्य विस्तृतविवरणम्</p>
+                </div>
+                
+                <!-- Day Filter Toggles -->
+                <div class="nm-inset p-1 rounded-full flex gap-2">
+                    <button id="day1-tab" onclick="toggleScheduleDay(1)" class="px-5 py-2 rounded-full text-xs font-bold transition-all text-dusk-terracotta nm-active">
+                        <span class="lang-en">Day 1</span>
+                        <span class="font-devanagari hidden-lang lang-sa">प्रथमः दिवसः</span>
+                    </button>
+                    <button id="day2-tab" onclick="toggleScheduleDay(2)" class="px-5 py-2 rounded-full text-xs font-bold transition-all text-dusk-slate hover:text-dusk-plum">
+                        <span class="lang-en">Day 2</span>
+                        <span class="font-devanagari hidden-lang lang-sa">द्वितीयः दिवसः</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- DAY 1 TIMELINE -->
+            <div id="day1-schedule" class="space-y-6">
+                <!-- Session 1 -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-dusk-plum hover:scale-[1.01] duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-dusk-plum font-bold text-sm shrink-0">
+                            I
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded bg-dusk-plum/10 text-dusk-plum text-[10px] font-bold uppercase tracking-wider lang-en">Day 1 Morning • Session I</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-dusk-plum/10 text-dusk-plum text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">प्रथम दिवसः • प्रथम सत्रम्</span>
+                            <h3 class="text-lg font-bold text-dusk-plum mt-1 lang-en">Keynote: Vedic Ecology & Modern Resiliency</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-dusk-plum mt-1 hidden-lang lang-sa">वैदिक पर्यावरण प्रज्ञा च आधुनिक आपद्-प्रतिरोधक्षमता</h3>
+                            <p class="text-sm text-dusk-slate mt-1">
+                                <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
+                                <strong class="text-dusk-terracotta font-semibold">Prof. Girish Chandra Pant</strong> (Former HOD, Dept. of Sanskrit, Jamia Millia Islamia, New Delhi)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="block text-xs text-dusk-slate uppercase lang-en">Time Slot</span>
+                        <span class="block text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">समयः</span>
+                        <span class="font-bold text-dusk-plum text-sm">10:15 AM - 11:30 AM</span>
+                    </div>
+                </div>
+
+                <!-- Session 2 -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-dusk-plum hover:scale-[1.01] duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-dusk-plum font-bold text-sm shrink-0">
+                            II
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded bg-dusk-plum/10 text-dusk-plum text-[10px] font-bold uppercase tracking-wider lang-en">Day 1 Morning • Session II</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-dusk-plum/10 text-dusk-plum text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">प्रथम दिवसः • द्वितीय सत्रम्</span>
+                            <h3 class="text-lg font-bold text-dusk-plum mt-1 lang-en">Concept and Manifestation of Pancha Mahabhuta</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-dusk-plum mt-1 hidden-lang lang-sa">पञ्चमहाभूतानां प्रज्ञा तथा तेषां प्रकटीकरणम्</h3>
+                            <p class="text-sm text-dusk-slate mt-1">
+                                <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
+                                <strong class="text-dusk-terracotta font-semibold">Dr. Madhubala Singh</strong> (Professor, Miranda House, University of Delhi)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="block text-xs text-dusk-slate uppercase lang-en">Time Slot</span>
+                        <span class="block text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">समयः</span>
+                        <span class="font-bold text-dusk-plum text-sm">11:45 AM - 01:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- Session 3 -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-dusk-terracotta hover:scale-[1.01] duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-dusk-terracotta font-bold text-sm shrink-0">
+                            III
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded bg-dusk-terracotta/10 text-dusk-terracotta text-[10px] font-bold uppercase tracking-wider lang-en">Day 1 Afternoon • Session III</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-dusk-terracotta/10 text-dusk-terracotta text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">प्रथम दिवसः • तृतीय सत्रम्</span>
+                            <h3 class="text-lg font-bold text-dusk-plum mt-1 lang-en">Vedic Literature and Sustainability Systems</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-dusk-plum mt-1 hidden-lang lang-sa">वैदिकसाहित्यं सततविकासव्यवस्था च</h3>
+                            <p class="text-sm text-dusk-slate mt-1">
+                                <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
+                                <strong class="text-dusk-terracotta font-semibold">Mr. Krishna Mohan Pandey</strong> (Associate Professor, Jawaharlal Nehru University)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="block text-xs text-dusk-slate uppercase lang-en">Time Slot</span>
+                        <span class="block text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">समयः</span>
+                        <span class="font-bold text-dusk-plum text-sm">01:45 PM - 03:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- Session 4 -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-dusk-terracotta hover:scale-[1.01] duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-dusk-terracotta font-bold text-sm shrink-0">
+                            IV
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded bg-dusk-terracotta/10 text-dusk-terracotta text-[10px] font-bold uppercase tracking-wider lang-en">Day 1 Afternoon • Session IV</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-dusk-terracotta/10 text-dusk-terracotta text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">प्रथम दिवसः • चतुर्थ सत्रम्</span>
+                            <h3 class="text-lg font-bold text-dusk-plum mt-1 lang-en">Physics & Applied Geosciences inside Vedic Framework</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-dusk-plum mt-1 hidden-lang lang-sa">प्रायोगिक-विज्ञानस्य परिप्रेक्ष्यं वैदिकभूमिका च</h3>
+                            <p class="text-sm text-dusk-slate mt-1">
+                                <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
+                                <strong class="text-dusk-terracotta font-semibold">Dr. Namrata Sharma</strong> (Department of Applied Science, MAIT)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="block text-xs text-dusk-slate uppercase lang-en">Time Slot</span>
+                        <span class="block text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">समयः</span>
+                        <span class="font-bold text-dusk-plum text-sm">03:15 PM - 04:30 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 2 TIMELINE -->
+            <div id="day2-schedule" class="space-y-6 hidden-lang">
+                <!-- Session 5 -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-dusk-plum hover:scale-[1.01] duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-dusk-plum font-bold text-sm shrink-0">
+                            V
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded bg-dusk-plum/10 text-dusk-plum text-[10px] font-bold uppercase tracking-wider lang-en">Day 2 Morning • Session V</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-dusk-plum/10 text-dusk-plum text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">द्वितीय दिवसः • पञ्चम सत्रम्</span>
+                            <h3 class="text-lg font-bold text-dusk-plum mt-1 lang-en">Ancient Ecological Preservation & Sacred Groves</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-dusk-plum mt-1 hidden-lang lang-sa">प्राचीनपर्यावरणसंरक्षणम् देववनानि च</h3>
+                            <p class="text-sm text-dusk-slate mt-1">
+                                <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
+                                <strong class="text-dusk-terracotta font-semibold">Prof. Om Bimali</strong> (Professor, Department of Sanskrit, University of Delhi)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="block text-xs text-dusk-slate uppercase lang-en">Time Slot</span>
+                        <span class="block text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">समयः</span>
+                        <span class="font-bold text-dusk-plum text-sm">10:00 AM - 11:15 AM</span>
+                    </div>
+                </div>
+
+                <!-- Session 6 -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-dusk-plum hover:scale-[1.01] duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-dusk-plum font-bold text-sm shrink-0">
+                            VI
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded bg-dusk-plum/10 text-dusk-plum text-[10px] font-bold uppercase tracking-wider lang-en">Day 2 Morning • Session VI</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-dusk-plum/10 text-dusk-plum text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">द्वितीय दिवसः • षष्ठ सत्रम्</span>
+                            <h3 class="text-lg font-bold text-dusk-plum mt-1 lang-en">Language Modeling and NLP for Vedic Sanskrit Text Mining</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-dusk-plum mt-1 hidden-lang lang-sa">संस्कृतग्रन्थानां कृते भाषा-प्रतिरूपणं तथा एन.एल.पी.</h3>
+                            <p class="text-sm text-dusk-slate mt-1">
+                                <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
+                                <strong class="text-dusk-terracotta font-semibold">Prof. Subhash Chandra</strong> (Professor, Department of Sanskrit, University of Delhi)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="block text-xs text-dusk-slate uppercase lang-en">Time Slot</span>
+                        <span class="block text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">समयः</span>
+                        <span class="font-bold text-dusk-plum text-sm">11:30 AM - 12:45 PM</span>
+                    </div>
+                </div>
+
+                <!-- Session 7 -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-dusk-terracotta hover:scale-[1.01] duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-dusk-terracotta font-bold text-sm shrink-0">
+                            VII
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded bg-dusk-terracotta/10 text-dusk-terracotta text-[10px] font-bold uppercase tracking-wider lang-en">Day 2 Afternoon • Session VII</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-dusk-terracotta/10 text-dusk-terracotta text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">द्वितीय दिवसः • सप्तम सत्रम्</span>
+                            <h3 class="text-lg font-bold text-dusk-plum mt-1 lang-en">IT Disaster Recovery Infrastructure & Best Practices</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-dusk-plum mt-1 hidden-lang lang-sa">आईटी आपद्-उद्धार आधारभूत-संरचना</h3>
+                            <p class="text-sm text-dusk-slate mt-1">
+                                <span class="lang-en">Speaker:</span><span class="font-devanagari hidden-lang lang-sa">वक्ता:</span> 
+                                <strong class="text-dusk-terracotta font-semibold">Prof. Neeraj Gupta</strong> (Associate Director, Kyndryl)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="block text-xs text-dusk-slate uppercase lang-en">Time Slot</span>
+                        <span class="block text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">समयः</span>
+                        <span class="font-bold text-dusk-plum text-sm">01:30 PM - 02:45 PM</span>
+                    </div>
+                </div>
+
+                <!-- Session 8 -->
+                <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-dusk-terracotta hover:scale-[1.01] duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-dusk-terracotta font-bold text-sm shrink-0">
+                            VIII
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-1 rounded bg-dusk-terracotta/10 text-dusk-terracotta text-[10px] font-bold uppercase tracking-wider lang-en">Day 2 Afternoon • Session VIII</span>
+                            <span class="inline-block px-2.5 py-1 font-devanagari rounded bg-dusk-terracotta/10 text-dusk-terracotta text-[10px] font-bold uppercase tracking-wider hidden-lang lang-sa">द्वितीय दिवसः • अष्टम सत्रम्</span>
+                            <h3 class="text-lg font-bold text-dusk-plum mt-1 lang-en">Geoinformatics & Satellite Remote Sensing for Earth Care</h3>
+                            <h3 class="text-lg font-bold font-devanagari text-dusk-plum mt-1 hidden-lang lang-sa">भू-स्थानिकप्रौद्योगिकी तथा सुदूरसंवेदनम्</h3>
+                            <p class="text-sm text-dusk-slate mt-1">
+                                <span class="lang-en">Speakers:</span><span class="font-devanagari hidden-lang lang-sa">वक्तारौ:</span> 
+                                <strong class="text-dusk-terracotta font-semibold">Prof. Daya Shankar</strong> & <strong class="text-dusk-terracotta font-semibold">Dr. Ravindra Nath Tiwari</strong> (Netra Institute of Geoinformatics, Management & Technologies)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nm-inset px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="block text-xs text-dusk-slate uppercase lang-en">Time Slot</span>
+                        <span class="block text-xs font-devanagari text-dusk-slate hidden-lang lang-sa">समयः</span>
+                        <span class="font-bold text-dusk-plum text-sm">03:00 PM - 04:15 PM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Speakers Grid Section -->
+        <section id="speakers" class="space-y-8">
+            <div class="text-center">
+                <h2 class="text-2xl md:text-3xl font-black text-dusk-plum lang-en">Keynote & Invited Speakers</h2>
+                <h2 class="text-2xl md:text-3xl font-black font-devanagari text-dusk-plum hidden-lang lang-sa">मुख्य तथा आमन्त्रित वक्तारः</h2>
+                <p class="text-sm text-dusk-slate mt-2 lang-en">Eminent academicians and industry pathbreakers</p>
+                <p class="text-xs font-devanagari text-dusk-slate mt-1 hidden-lang lang-sa">प्रसिद्धविद्वांसः तथा औद्योगिक-विशेषज्ञाः</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Keynote Speaker -->
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 relative">
+                        <div class="w-full h-full rounded-full bg-dusk-plum/10 flex items-center justify-center text-dusk-plum font-bold text-xl">
+                            MS
+                        </div>
+                        <span class="absolute bottom-0 right-0 bg-dusk-terracotta text-[8px] text-white px-1.5 py-0.5 rounded-full font-bold uppercase">Keynote</span>
+                    </div>
+                    <h3 class="font-bold text-dusk-plum text-base">Dr. Madhubala Singh</h3>
+                    <p class="text-xs font-devanagari font-semibold text-dusk-terracotta">प्राध्यापिका, मिरान्डा हाउस</p>
+                    <p class="text-[10px] text-dusk-slate mt-1 leading-tight">Professor, Miranda House, University of Delhi</p>
+                </div>
+
+                <!-- Speaker 2 -->
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
+                        <div class="w-full h-full rounded-full bg-dusk-plum/10 flex items-center justify-center text-dusk-plum font-bold text-xl">
+                            GP
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-dusk-plum text-base">Prof. Girish Chandra Pant</h3>
+                    <p class="text-xs font-devanagari font-semibold text-dusk-terracotta">पूर्व-विभागाध्यक्षः, संस्कृत-विभागः</p>
+                    <p class="text-[10px] text-dusk-slate mt-1 leading-tight">Former HOD, Dept. of Sanskrit, Jamia Millia Islamia</p>
+                </div>
+
+                <!-- Speaker 3 -->
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
+                        <div class="w-full h-full rounded-full bg-dusk-plum/10 flex items-center justify-center text-dusk-plum font-bold text-xl">
+                            KP
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-dusk-plum text-base">Mr. Krishna M. Pandey</h3>
+                    <p class="text-xs font-devanagari font-semibold text-dusk-terracotta">सह-प्राध्यापकः, जेएनयू</p>
+                    <p class="text-[10px] text-dusk-slate mt-1 leading-tight">Associate Professor, Jawaharlal Nehru University</p>
+                </div>
+
+                <!-- Speaker 4 -->
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
+                        <div class="w-full h-full rounded-full bg-dusk-plum/10 flex items-center justify-center text-dusk-plum font-bold text-xl">
+                            OB
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-dusk-plum text-base">Prof. Om Bimali</h3>
+                    <p class="text-xs font-devanagari font-semibold text-dusk-terracotta">प्राध्यापकः, संस्कृत-विभागः</p>
+                    <p class="text-[10px] text-dusk-slate mt-1 leading-tight">Professor, Department of Sanskrit, Delhi University</p>
+                </div>
+
+                <!-- Speaker 5 -->
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
+                        <div class="w-full h-full rounded-full bg-dusk-plum/10 flex items-center justify-center text-dusk-plum font-bold text-xl">
+                            SC
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-dusk-plum text-base">Prof. Subhash Chandra</h3>
+                    <p class="text-xs font-devanagari font-semibold text-dusk-terracotta">प्राध्यापकः, संस्कृत-विभागः</p>
+                    <p class="text-[10px] text-dusk-slate mt-1 leading-tight">Professor, Department of Sanskrit, Delhi University</p>
+                </div>
+
+                <!-- Speaker 6 -->
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
+                        <div class="w-full h-full rounded-full bg-dusk-plum/10 flex items-center justify-center text-dusk-plum font-bold text-xl">
+                            US
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-dusk-plum text-base">Dr. Uma Shankar</h3>
+                    <p class="text-xs font-devanagari font-semibold text-dusk-terracotta">प्राध्यापकः, संस्कृत-विभागः</p>
+                    <p class="text-[10px] text-dusk-slate mt-1 leading-tight">Professor, Department of Sanskrit, Delhi University</p>
+                </div>
+
+                <!-- Speaker 7 -->
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
+                        <div class="w-full h-full rounded-full bg-dusk-plum/10 flex items-center justify-center text-dusk-plum font-bold text-xl">
+                            NG
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-dusk-plum text-base">Prof. Neeraj Gupta</h3>
+                    <p class="text-xs font-devanagari font-semibold text-dusk-terracotta">सह-निदेशकः, किन्ड्रिल्</p>
+                    <p class="text-[10px] text-dusk-slate mt-1 leading-tight">Associate Director, Kyndryl</p>
+                </div>
+
+                <!-- Speaker 8 -->
+                <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4">
+                        <div class="w-full h-full rounded-full bg-dusk-plum/10 flex items-center justify-center text-dusk-plum font-bold text-xl">
+                            RT
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-dusk-plum text-base">Dr. Ravindra Nath Tiwari</h3>
+                    <p class="text-xs font-devanagari font-semibold text-dusk-terracotta">वैज्ञानिकः, नेत्र-संस्थानम्</p>
+                    <p class="text-[10px] text-dusk-slate mt-1 leading-tight">Netra Institute of Geoinformatics</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Committee Block -->
+        <section id="committees" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Patrons Panel -->
+            <div class="nm-flat p-6 rounded-3xl lg:col-span-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-dusk-plum flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-crown text-dusk-terracotta"></i>
+                        <span class="lang-en">Advisory & Patrons</span>
+                        <span class="font-devanagari hidden-lang lang-sa">संरक्षकाः मुख्यपदाधिकारिणश्च</span>
+                    </h3>
+
+                    <div class="space-y-4 text-xs">
+                        <div class="p-3 nm-inset rounded-xl">
+                            <span class="font-bold text-dusk-terracotta block lang-en">Chief Patron</span>
+                            <span class="font-bold font-devanagari text-dusk-terracotta block hidden-lang lang-sa">मुख्य संरक्षकः</span>
+                            <span class="text-dusk-plum font-semibold">Dr. Nand Kishore Garg</span>
+                            <p class="text-[10px] text-dusk-slate">Founder Chairman & Chief Advisor MATES, Chancellor MAU</p>
+                        </div>
+
+                        <div class="p-3 nm-inset rounded-xl">
+                            <span class="font-bold text-dusk-terracotta block lang-en">Patrons</span>
+                            <span class="font-bold font-devanagari text-dusk-terracotta block hidden-lang lang-sa">संरक्षकाः</span>
+                            <ul class="text-dusk-plum font-semibold space-y-1 mt-1">
+                                <li>Sh. Vineet Kumar Lohia <span class="text-[10px] text-dusk-slate font-normal">(Chairman, MATES)</span></li>
+                                <li>Shri S. P. Aggarwal <span class="text-[10px] text-dusk-slate font-normal">(Executive Chairman, MATES)</span></li>
+                                <li>Prof. M. L. Goyal <span class="text-[10px] text-dusk-slate font-normal">(Vice Chairman Academics, MATES)</span></li>
+                                <li>Prof. Vikram Bali <span class="text-[10px] text-dusk-slate font-normal">(Director, MAIT)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-3 nm-inset rounded-xl text-center bg-dusk-bg">
+                    <span class="text-[11px] font-bold text-dusk-plum lang-en">Sponsored under the aegis of AICTE VANIL</span>
+                    <span class="text-[10px] font-devanagari font-bold text-dusk-plum hidden-lang lang-sa">अखिल भारतीय तकनीकी शिक्षा परिषद (एआईसीटीई) द्वारा समर्पितम्</span>
+                </div>
+            </div>
+
+            <!-- Program Execution & Organizing Committee -->
+            <div class="nm-flat p-6 rounded-3xl lg:col-span-1">
+                <h3 class="text-lg font-bold text-dusk-plum flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-users text-dusk-terracotta"></i>
+                    <span class="lang-en">Organizing Team</span>
+                    <span class="font-devanagari hidden-lang lang-sa">आयोजन समितिः</span>
+                </h3>
+
+                <div class="space-y-3 text-xs">
+                    <div class="p-3 nm-inset rounded-xl">
+                        <span class="font-bold text-dusk-terracotta block lang-en">Coordinator</span>
+                        <span class="font-bold font-devanagari text-dusk-terracotta block hidden-lang lang-sa">समन्वयकः</span>
+                        <span class="text-dusk-plum font-semibold">Prof. Sachin Gupta</span>
+                        <p class="text-[10px] text-dusk-slate">Dean (Research & Innovation), MAIT</p>
+                    </div>
+
+                    <div class="p-3 nm-inset rounded-xl">
+                        <span class="font-bold text-dusk-terracotta block lang-en">Co-Coordinator</span>
+                        <span class="font-bold font-devanagari text-dusk-terracotta block hidden-lang lang-sa">सह-समन्वयकः</span>
+                        <span class="text-dusk-plum font-semibold">Dr. Bhoomi Gupta</span>
+                        <p class="text-[10px] text-dusk-slate">Head of Department, ITE</p>
+                    </div>
+
+                    <div class="p-3 nm-inset rounded-xl">
+                        <span class="font-bold text-dusk-terracotta block lang-en">Organizing Secretary & Contact</span>
+                        <span class="font-bold font-devanagari text-dusk-terracotta block hidden-lang lang-sa">आयोजन सचिवः च सम्पर्कः</span>
+                        <span class="text-dusk-plum font-semibold">Ms. Ruchi Bhatt</span>
+                        <p class="text-[10px] text-dusk-slate">Assistant Professor, Department of ITE</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advisory Committee -->
+            <div class="nm-flat p-6 rounded-3xl lg:col-span-1">
+                <h3 class="text-lg font-bold text-dusk-plum flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-graduation-cap text-dusk-terracotta"></i>
+                    <span class="lang-en">Advisory Council</span>
+                    <span class="font-devanagari hidden-lang lang-sa">सलाहकार-समितिः</span>
+                </h3>
+
+                <div class="p-4 nm-inset rounded-2xl h-[280px] overflow-y-auto space-y-2">
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Prof. Sunil Mathur</span>
+                        <span class="text-[10px] text-dusk-slate">MAIT</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Prof. V. N. Mathur</span>
+                        <span class="text-[10px] text-dusk-slate">MAIT</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Prof. Puja Singh</span>
+                        <span class="text-[10px] text-dusk-slate">MAIT</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Prof. Amita Goel</span>
+                        <span class="text-[10px] text-dusk-slate">MAIT</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Prof. Harbhajan Bansal</span>
+                        <span class="text-[10px] text-dusk-slate">Dean, Management</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Dr. Vaibhav Jain</span>
+                        <span class="text-[10px] text-dusk-slate">Associate Prof.</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Dr. Amit Gupta</span>
+                        <span class="text-[10px] text-dusk-slate">MAIT</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Dr. V. K. Saini</span>
+                        <span class="text-[10px] text-dusk-slate">MAIT</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-b border-dusk-slate/10">
+                        <span class="text-xs text-dusk-plum font-semibold">Dr. Pooja Gupta</span>
+                        <span class="text-[10px] text-dusk-slate">MAIT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration & Simulated Database Segment -->
+        <section id="registration" class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+            
+            <!-- Registration Form Area -->
+            <div class="lg:col-span-3 nm-flat p-6 md:p-8 rounded-3xl">
+                <div class="mb-6">
+                    <h3 class="text-xl md:text-2xl font-black text-dusk-plum">
+                        <span class="lang-en">Seminar Registration</span>
+                        <span class="font-devanagari hidden-lang lang-sa">पञ्जीकरण-पत्रम्</span>
+                    </h3>
+                    <p class="text-xs text-dusk-slate mt-1 lang-en">Secure your virtual or offline seat. Admission is sponsored.</p>
+                    <p class="text-xs font-devanagari text-dusk-slate mt-1 hidden-lang lang-sa">निःशुल्कं पञ्जीकरणम्। कृपया विवरणं पुरयन्तु।</p>
+                </div>
+
+                <!-- Live Dynamic form -->
+                <form id="samanvaya-form" onsubmit="handleRegistrationSubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-dusk-plum mb-1.5 uppercase tracking-wider">
+                                <span class="lang-en">Full Name *</span>
+                                <span class="font-devanagari hidden-lang lang-sa">पूर्णं नाम *</span>
+                            </label>
+                            <input type="text" id="reg-name" required class="w-full px-4 py-3 rounded-xl nm-inset text-dusk-dark text-sm outline-none focus:ring-1 focus:ring-dusk-terracotta border-0">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-dusk-plum mb-1.5 uppercase tracking-wider">
+                                <span class="lang-en">Mobile Number *</span>
+                                <span class="font-devanagari hidden-lang lang-sa">चलभाष संख्या *</span>
+                            </label>
+                            <input type="tel" id="reg-phone" required class="w-full px-4 py-3 rounded-xl nm-inset text-dusk-dark text-sm outline-none focus:ring-1 focus:ring-dusk-terracotta border-0">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-dusk-plum mb-1.5 uppercase tracking-wider">
+                            <span class="lang-en">Institute / Organization *</span>
+                            <span class="font-devanagari hidden-lang lang-sa">संस्थानम् / संगठनम् *</span>
+                        </label>
+                        <input type="text" id="reg-org" required class="w-full px-4 py-3 rounded-xl nm-inset text-dusk-dark text-sm outline-none focus:ring-1 focus:ring-dusk-terracotta border-0">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-dusk-plum mb-1.5 uppercase tracking-wider">
+                            <span class="lang-en">Postal Address *</span>
+                            <span class="font-devanagari hidden-lang lang-sa">पत्रालय-संकेतः (Address) *</span>
+                        </label>
+                        <textarea id="reg-address" required rows="2" class="w-full px-4 py-3 rounded-xl nm-inset text-dusk-dark text-sm outline-none focus:ring-1 focus:ring-dusk-terracotta border-0 resize-none"></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-dusk-plum mb-1.5 uppercase tracking-wider">
+                                <span class="lang-en">Place / City *</span>
+                                <span class="font-devanagari hidden-lang lang-sa">स्थानम् *</span>
+                            </label>
+                            <input type="text" id="reg-place" required class="w-full px-4 py-3 rounded-xl nm-inset text-dusk-dark text-sm outline-none focus:ring-1 focus:ring-dusk-terracotta border-0">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-dusk-plum mb-1.5 uppercase tracking-wider">
+                                <span class="lang-en">Date of Submission *</span>
+                                <span class="font-devanagari hidden-lang lang-sa">दिनांक *</span>
+                            </label>
+                            <input type="date" id="reg-date" required class="w-full px-4 py-3 rounded-xl nm-inset text-dusk-dark text-sm outline-none focus:ring-1 focus:ring-dusk-terracotta border-0">
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full nm-button py-3.5 px-6 rounded-2xl text-sm font-extrabold text-dusk-terracotta hover:text-dusk-plum uppercase tracking-wider">
+                            <span class="lang-en"><i class="fa-solid fa-paper-plane mr-2"></i>Submit Application</span>
+                            <span class="font-devanagari hidden-lang lang-sa"><i class="fa-solid fa-paper-plane mr-2"></i>आवेदनं प्रेषयन्तु</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Status Banner instead of alert -->
+                <div id="status-alert" class="hidden mt-4 p-4 rounded-xl nm-inset border-l-4 border-emerald-500 text-xs text-emerald-800 flex justify-between items-center">
+                    <div>
+                        <strong class="block lang-en">Registration successful!</strong>
+                        <strong class="block font-devanagari hidden-lang lang-sa">पञ्जीकरणं सफलम्!</strong>
+                        <span class="lang-en">Your unique entry pass ticket has been generated on the right card panel.</span>
+                        <span class="font-devanagari hidden-lang lang-sa">दक्षिणतः पञ्जीकरण-पत्रम् प्राप्तुं शक्नुवन्ति।</span>
+                    </div>
+                    <button onclick="closeStatusAlert()" class="text-dusk-slate hover:text-dusk-plum"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <!-- Virtual Ticket Generation Side-Panel -->
+            <div class="lg:col-span-2 nm-flat p-6 rounded-3xl flex flex-col justify-between border border-dashed border-dusk-slate/30 relative">
+                <div>
+                    <span class="absolute top-4 right-4 text-[10px] font-mono tracking-widest text-dusk-slate uppercase">Ticket Pass</span>
+                    <h4 class="text-sm font-extrabold text-dusk-plum mb-4">
+                        <span class="lang-en">Admission Voucher</span>
+                        <span class="font-devanagari hidden-lang lang-sa">प्रवेश पत्रम्</span>
+                    </h4>
+
+                    <!-- Actual Ticket Card -->
+                    <div id="ticket-card" class="nm-inset p-4 rounded-2xl relative overflow-hidden text-xs">
+                        <div class="border-b border-dashed border-dusk-slate/30 pb-3 mb-3 text-center">
+                            <span class="text-[10px] text-dusk-terracotta block font-bold tracking-wider lang-en">SAMANVAYA 2026</span>
+                            <span class="text-[10px] font-devanagari text-dusk-terracotta block font-bold tracking-wider hidden-lang lang-sa">समन्वयः २०२६</span>
+                            <span class="text-[9px] text-dusk-slate block">MAIT Sector-22, Rohini, Delhi</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div>
+                                <span class="block text-[8px] uppercase text-dusk-slate lang-en">Admitted Candidate</span>
+                                <span class="block text-[8px] font-devanagari uppercase text-dusk-slate hidden-lang lang-sa">अभ्यर्थी</span>
+                                <span id="ticket-name" class="font-extrabold text-dusk-plum text-sm">-</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>
+                                    <span class="block text-[8px] uppercase text-dusk-slate lang-en">Organization</span>
+                                    <span class="block text-[8px] font-devanagari uppercase text-dusk-slate hidden-lang lang-sa">संगठनम्</span>
+                                    <span id="ticket-org" class="font-bold text-dusk-dark truncate block">-</span>
+                                </div>
+                                <div>
+                                    <span class="block text-[8px] uppercase text-dusk-slate lang-en">Reg ID</span>
+                                    <span class="block text-[8px] font-devanagari uppercase text-dusk-slate hidden-lang lang-sa">पञ्जीकरण सं.</span>
+                                    <span id="ticket-id" class="font-mono text-dusk-terracotta font-bold">#SMN2026-PENDING</span>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-dusk-slate/10">
+                                <div>
+                                    <span class="block text-[8px] uppercase text-dusk-slate lang-en">Seat Category</span>
+                                    <span class="block text-[8px] font-devanagari uppercase text-dusk-slate hidden-lang lang-sa">स्थान श्रेणी</span>
+                                    <span class="font-bold text-emerald-600 uppercase">Delegate / प्रतिनिधि</span>
+                                </div>
+                                <div>
+                                    <span class="block text-[8px] uppercase text-dusk-slate lang-en">Venue Hall</span>
+                                    <span class="block text-[8px] font-devanagari uppercase text-dusk-slate hidden-lang lang-sa">स्थानम्</span>
+                                    <span class="font-bold text-dusk-plum">Main Auditorium</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Barcode Simulation for premium visual aesthetic -->
+                        <div class="mt-4 pt-3 border-t border-dashed border-dusk-slate/30 flex flex-col items-center">
+                            <div class="flex items-center gap-[2px] h-8 bg-white p-1 rounded">
+                                <div class="w-1 h-full bg-black"></div>
+                                <div class="w-[2px] h-full bg-black"></div>
+                                <div class="w-[1px] h-full bg-black"></div>
+                                <div class="w-1 h-full bg-black"></div>
+                                <div class="w-[2px] h-full bg-black"></div>
+                                <div class="w-1 h-full bg-black"></div>
+                                <div class="w-[3px] h-full bg-black"></div>
+                                <div class="w-1 h-full bg-black"></div>
+                                <div class="w-[1px] h-full bg-black"></div>
+                                <div class="w-1 h-full bg-black"></div>
+                                <div class="w-[2px] h-full bg-black"></div>
+                                <div class="w-[3px] h-full bg-black"></div>
+                                <div class="w-1 h-full bg-black"></div>
+                            </div>
+                            <span class="text-[7px] font-mono mt-1 text-dusk-slate">VALIDATED AICTE VANIL SEMINAR DELEGATE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex gap-3">
+                    <button onclick="window.print()" class="w-1/2 nm-button py-2.5 rounded-xl text-xs font-bold text-dusk-plum hover:text-dusk-terracotta">
+                        <i class="fa-solid fa-print mr-1"></i>
+                        <span class="lang-en">Print Pass</span>
+                        <span class="font-devanagari hidden-lang lang-sa">मुद्रणम्</span>
+                    </button>
+                    <button onclick="simulateCopyPass()" class="w-1/2 nm-button py-2.5 rounded-xl text-xs font-bold text-dusk-plum hover:text-dusk-terracotta">
+                        <i class="fa-solid fa-copy mr-1"></i>
+                        <span class="lang-en">Copy Details</span>
+                        <span class="font-devanagari hidden-lang lang-sa">प्रतिलिपिः</span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Venue & Contact Block Footer -->
+    <footer class="border-t border-dusk-slate/20 bg-dusk-bg/50 pt-12 pb-6 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+            
+            <!-- Address and Timing details -->
+            <div class="nm-flat p-6 rounded-2xl">
+                <h4 class="font-bold text-dusk-plum flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-map-pin text-dusk-terracotta"></i>
+                    <span class="lang-en">Venue Location</span>
+                    <span class="font-devanagari hidden-lang lang-sa">स्थानम्</span>
+                </h4>
+                <p class="text-xs text-dusk-dark leading-relaxed">
+                    <strong>Main Auditorium,</strong><br>
+                    Maharaja Agrasen Institute of Technology,<br>
+                    Sector-22, Rohini, New Delhi - 110086
+                </p>
+                <div class="mt-4 pt-3 border-t border-dusk-slate/15 flex items-center gap-2">
+                    <i class="fa-regular fa-clock text-dusk-terracotta text-sm"></i>
+                    <span class="text-xs text-dusk-slate font-medium">10:00 AM – 4:30 PM (Daily)</span>
+                </div>
+            </div>
+
+            <!-- Coordination Contact Person details -->
+            <div class="nm-flat p-6 rounded-2xl">
+                <h4 class="font-bold text-dusk-plum flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-address-card text-dusk-terracotta"></i>
+                    <span class="lang-en">Contact Coordinator</span>
+                    <span class="font-devanagari hidden-lang lang-sa">सम्पर्क सूत्रम्</span>
+                </h4>
+                <div class="space-y-3 text-xs text-dusk-dark">
+                    <p>
+                        <span class="block text-[10px] text-dusk-slate uppercase tracking-wider lang-en">Organizing Co-Coordinator</span>
+                        <span class="block text-[10px] font-devanagari text-dusk-slate hidden-lang lang-sa">सह-समन्वयिका</span>
+                        <strong>Ms. Ruchi Bhatt</strong>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-dusk-plum text-sm"></i>
+                        <a href="mailto:ruchibhatt@mait.ac.in" class="hover:text-dusk-terracotta underline">ruchibhatt@mait.ac.in</a>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-dusk-plum text-sm"></i>
+                        <a href="tel:+919205956674" class="hover:text-dusk-terracotta">+91 9205956674</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Map Simulated Area -->
+            <div class="nm-flat p-6 rounded-2xl flex flex-col justify-between">
+                <h4 class="font-bold text-dusk-plum flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-route text-dusk-terracotta"></i>
+                    <span class="lang-en">Explore Directions</span>
+                    <span class="font-devanagari hidden-lang lang-sa">मार्गदर्शनम्</span>
+                </h4>
+                <p class="text-[11px] text-dusk-slate mb-4 lang-en">Easily accessible via Rohini Sector 21 / Rithala metro stations.</p>
+                <p class="text-[10px] font-devanagari text-dusk-slate mb-4 hidden-lang lang-sa">रोहिणी सेक्टर २१ / रिठाला मेट्रो स्टेशनतः सुलभः मार्गः।</p>
+                <div class="nm-inset p-2 rounded-xl text-center text-xs font-bold text-dusk-plum bg-dusk-ice/40 hover:text-dusk-terracotta transition-all cursor-pointer">
+                    <a href="https://maps.google.com/?q=Maharaja+Agrasen+Institute+of+Technology" target="_blank">
+                        <i class="fa-solid fa-square-arrow-up-right mr-1"></i>
+                        <span class="lang-en">Open Google Map</span>
+                        <span class="font-devanagari hidden-lang lang-sa">मानचित्रं उद्घाटयन्तु</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footnote legal & copyrights -->
+        <div class="max-w-7xl mx-auto border-t border-dusk-slate/15 pt-6 flex flex-col md:flex-row justify-between items-center text-center gap-4">
+            <p class="text-[11px] text-dusk-slate">
+                &copy; 2026 Maharaja Agrasen Institute of Technology. All Rights Reserved. Created under the AICTE VANIL Initiative.
+            </p>
+            <div class="flex gap-4 text-[11px] text-dusk-slate">
+                <a href="https://mait.ac.in" target="_blank" class="hover:text-dusk-plum underline">MAIT Portal</a>
+                <span class="text-dusk-slate/30">|</span>
+                <a href="https://www.aicte-india.org" target="_blank" class="hover:text-dusk-plum underline">AICTE Portal</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client State Management & Interactive Functionalities -->
+    <script>
+        // Set dynamic countdown target date to July 27, 2026 10:00:00 IST
+        const targetDate = new Date("July 27, 2026 10:00:00").getTime();
+
+        function startCountdown() {
+            const timer = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById("countdown-days").innerText = "00";
+                    document.getElementById("countdown-hours").innerText = "00";
+                    document.getElementById("countdown-minutes").innerText = "00";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById("countdown-days").innerText = String(days).padStart(2, '0');
+                document.getElementById("countdown-hours").innerText = String(hours).padStart(2, '0');
+                document.getElementById("countdown-minutes").innerText = String(minutes).padStart(2, '0');
+            }, 1000);
+        }
+
+        // Language toggle controller
+        function switchLanguage(lang) {
+            const elementsEN = document.querySelectorAll('.lang-en');
+            const elementsSA = document.querySelectorAll('.lang-sa');
+            const btnEN = document.getElementById('btn-lang-en');
+            const btnSA = document.getElementById('btn-lang-sa');
+
+            if (lang === 'en') {
+                elementsEN.forEach(el => el.classList.remove('hidden-lang'));
+                elementsSA.forEach(el => el.classList.add('hidden-lang'));
+                btnEN.classList.add('nm-active', 'text-dusk-terracotta');
+                btnEN.classList.remove('text-dusk-slate');
+                btnSA.classList.remove('nm-active', 'text-dusk-terracotta');
+                btnSA.classList.add('text-dusk-slate');
+            } else if (lang === 'sa') {
+                elementsSA.forEach(el => el.classList.remove('hidden-lang'));
+                elementsEN.forEach(el => el.classList.add('hidden-lang'));
+                btnSA.classList.add('nm-active', 'text-dusk-terracotta');
+                btnSA.classList.remove('text-dusk-slate');
+                btnEN.classList.remove('nm-active', 'text-dusk-terracotta');
+                btnEN.classList.add('text-dusk-slate');
+            }
+        }
+
+        // Toggle Schedule Day Segment
+        function toggleScheduleDay(dayNum) {
+            const day1Block = document.getElementById('day1-schedule');
+            const day2Block = document.getElementById('day2-schedule');
+            const tab1 = document.getElementById('day1-tab');
+            const tab2 = document.getElementById('day2-tab');
+
+            if (dayNum === 1) {
+                day1Block.classList.remove('hidden-lang');
+                day2Block.classList.add('hidden-lang');
+                tab1.classList.add('nm-active', 'text-dusk-terracotta');
+                tab1.classList.remove('text-dusk-slate');
+                tab2.classList.remove('nm-active', 'text-dusk-terracotta');
+                tab2.classList.add('text-dusk-slate');
+            } else {
+                day2Block.classList.remove('hidden-lang');
+                day1Block.classList.add('hidden-lang');
+                tab2.classList.add('nm-active', 'text-dusk-terracotta');
+                tab2.classList.remove('text-dusk-slate');
+                tab1.classList.remove('nm-active', 'text-dusk-terracotta');
+                tab1.classList.add('text-dusk-slate');
+            }
+        }
+
+        // Handles Registration Submissions locally
+        function handleRegistrationSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('reg-name').value;
+            const org = document.getElementById('reg-org').value;
+            
+            // Set dynamic values on ticket
+            document.getElementById('ticket-name').innerText = name;
+            document.getElementById('ticket-org').innerText = org;
+            
+            // Randomly simulate registration code format
+            const randCode = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('ticket-id').innerText = "#SMN2026-" + randCode;
+
+            // Show simulated feedback banner
+            const alertBox = document.getElementById('status-alert');
+            alertBox.classList.remove('hidden');
+
+            // Scroll slightly to let candidate view the success
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function closeStatusAlert() {
+            document.getElementById('status-alert').classList.add('hidden');
+        }
+
+        // Clipboard Copy Action for virtual ticket
+        function simulateCopyPass() {
+            const name = document.getElementById('ticket-name').innerText;
+            const org = document.getElementById('ticket-org').innerText;
+            const regId = document.getElementById('ticket-id').innerText;
+
+            if (name === "-" || org === "-") {
+                // If form isn't submitted yet
+                const textToCopy = "Samanvaya 2026 Seminar Registration Desk. Venue: MAIT Main Auditorium, Sector-22, Rohini, Delhi. Registration Link is live!";
+                executeClipboardCopy(textToCopy);
+                showInteractiveClipboardToast("Awaiting your registration. General info copied!");
+                return;
+            }
+
+            const textToCopy = `Delegate Pass: ${name}\nOrganization: ${org}\nRegistration Code: ${regId}\nEvent: SAMANVAYA 2026\nVenue: Main Auditorium, MAIT Rohini, Delhi\nDate: 27-28 July 2026`;
+            executeClipboardCopy(textToCopy);
+            showInteractiveClipboardToast("Delegate Admission info copied to clipboard!");
+        }
+
+        // Fallback for secure navigator clipboard copying inside context constraints
+        function executeClipboardCopy(text) {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.style.position = "fixed";
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand("copy");
+            } catch (err) {
+                console.error("Copy failed", err);
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // Shows non-alert, sleek user notifications
+        function showInteractiveClipboardToast(msg) {
+            const toast = document.createElement("div");
+            toast.className = "fixed bottom-5 right-5 z-50 nm-flat p-4 rounded-xl text-xs font-bold text-dusk-plum border-l-4 border-dusk-terracotta shadow-xl transition-all opacity-100";
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> ${msg}`;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('opacity-0');
+                setTimeout(() => document.body.removeChild(toast), 400);
+            }, 3000);
+        }
+
+        // Initialize state variables and actions on load
+        window.onload = function() {
+            startCountdown();
+            // Default input date set to seminar first day date (July 27, 2026)
+            document.getElementById('reg-date').value = "2026-07-27";
+        }
+    </script>
+</body>
+</html>
