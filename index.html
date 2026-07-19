@@ -206,117 +206,119 @@
             </div>
         </div>
 
-        <!-- Seminar Headline & Banner Card -->
-        <div class="nm-flat p-6 md:p-12 rounded-3xl relative overflow-hidden border border-saman-rose/20">
-            <!-- Semi-transparent decorative pattern with updated color palette shades -->
-            <div class="absolute right-0 top-0 w-64 h-64 bg-saman-wine/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute left-10 bottom-0 w-80 h-80 bg-saman-rose/10 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- Seminar Headline & Banner Card with Integrated Animated Canvas Flow background -->
+        <div id="hero-banner-container" class="nm-flat p-6 md:p-12 rounded-3xl relative overflow-hidden border border-saman-rose/20">
+            <!-- TetheredFlow Canvas Backdrop -->
+            <canvas id="tethered-flow-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0" style="mix-blend-mode: screen; opacity: 0.85;"></canvas>
 
-            <!-- Top Tagline & Motto -->
-            <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-8 border-b border-saman-rose/20 pb-6">
-                <div class="text-center md:text-left">
-                    <span class="inline-block bg-saman-plum/40 text-saman-cream text-xs px-3 py-1 rounded-full font-semibold mb-2 uppercase tracking-widest lang-en border border-saman-wine/30">
-                        AICTE - Vibrant Advocacy for Advancement and Nurturing of Indian Languages (VAANI)
-                    </span>
-                    <span class="inline-block bg-saman-plum/40 text-saman-cream text-xs px-3 py-1 font-devanagari rounded-full font-semibold mb-2 uppercase tracking-widest hidden-lang lang-sa border border-saman-wine/30">
-                        भारतीय भाषाणां संवर्धनं तथा संरक्षणाय एआईसीटीई-प्रयासः (वाणी)
-                    </span>
-                    <h3 class="text-sm font-bold italic text-saman-amber lang-en">Two Days National Seminar</h3>
-                    <h3 class="text-sm font-bold font-devanagari italic text-saman-amber hidden-lang lang-sa">द्विदिवसीय-राष्ट्रीय-संगोष्ठी</h3>
-                </div>
-                
-                <!-- Motto of MAIT -->
-                <div class="nm-inset px-4 py-2 rounded-2xl text-center border-l-4 border-saman-rose">
-                    <p class="font-devanagari text-xs md:text-sm text-saman-light font-bold tracking-wide">"उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः"</p>
-                    <p class="text-[9px] md:text-[10px] text-saman-cream font-semibold lang-en">Success is achieved by effort, not mere desires</p>
-                    <p class="text-[9px] md:text-[10px] text-saman-cream font-semibold font-devanagari hidden-lang lang-sa">परिश्रमेणैव कार्याणि सिध्यन्ति, केवलं मनोरथैः न</p>
-                </div>
-            </div>
-
-            <!-- Main Title of Seminar -->
-            <div class="text-center my-6">
-                <!-- English Version Title -->
-                <div class="lang-en max-w-4xl mx-auto">
-                    <h1 class="text-3xl md:text-5xl font-black text-saman-light leading-tight mb-4 tracking-tight">
-                        SAMANVAYA
-                    </h1>
-                    <p class="text-lg md:text-2xl font-serif text-saman-amber font-semibold leading-relaxed">
-                        Integrating Vedic Ecological Wisdom with Modern Technology for Holistic Disaster Resilience
-                    </p>
-                </div>
-
-                <!-- Sanskrit Version Title -->
-                <div class="hidden-lang lang-sa max-w-4xl mx-auto font-devanagari">
-                    <h1 class="text-3xl md:text-5xl font-black text-saman-light leading-tight mb-4 tracking-wide">
-                        समन्वयः
-                    </h1>
-                    <p class="text-xl md:text-2xl font-bold text-saman-amber leading-relaxed">
-                        समग्र आपद्-प्रतिरोधक्षमतायै वैदिक पर्यावरण प्रज्ञायाः आधुनिक प्रौद्योगिक्या सह एकीकरणम्
-                    </p>
-                </div>
-            </div>
-
-            <!-- Dynamic Countdown Component -->
-            <div class="mt-10 mb-6 flex justify-center">
-                <div class="nm-inset p-4 md:p-6 rounded-2xl flex items-center gap-6 md:gap-12 text-center">
-                    <div>
-                        <span id="countdown-days" class="block text-xl md:text-3xl font-extrabold text-saman-rose">00</span>
-                        <span class="text-[10px] md:text-xs text-saman-cream font-bold uppercase tracking-wider lang-en">Days</span>
-                        <span class="text-[10px] md:text-xs text-saman-cream font-bold font-devanagari hidden-lang lang-sa">दिनानि</span>
+            <!-- Relative Hero Foreground Contents -->
+            <div class="relative z-10">
+                <!-- Top Tagline & Motto -->
+                <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-8 border-b border-saman-rose/20 pb-6">
+                    <div class="text-center md:text-left">
+                        <span class="inline-block bg-saman-plum/40 text-saman-cream text-xs px-3 py-1 rounded-full font-semibold mb-2 uppercase tracking-widest lang-en border border-saman-wine/30">
+                            AICTE - Vibrant Advocacy for Advancement and Nurturing of Indian Languages (VAANI)
+                        </span>
+                        <span class="inline-block bg-saman-plum/40 text-saman-cream text-xs px-3 py-1 font-devanagari rounded-full font-semibold mb-2 uppercase tracking-widest hidden-lang lang-sa border border-saman-wine/30">
+                            भारतीय भाषाणां संवर्धनं तथा संरक्षणाय एआईसीटीई-प्रयासः (वाणी)
+                        </span>
+                        <h3 class="text-sm font-bold italic text-saman-amber lang-en">Two Days National Seminar</h3>
+                        <h3 class="text-sm font-bold font-devanagari italic text-saman-amber hidden-lang lang-sa">द्विदिवसीय-राष्ट्रीय-संगोष्ठी</h3>
                     </div>
-                    <div class="text-saman-cream/40 text-xl font-bold">:</div>
-                    <div>
-                        <span id="countdown-hours" class="block text-xl md:text-3xl font-extrabold text-saman-rose">00</span>
-                        <span class="text-[10px] md:text-xs text-saman-cream font-bold uppercase tracking-wider lang-en">Hours</span>
-                        <span class="text-[10px] md:text-xs text-saman-cream font-bold font-devanagari hidden-lang lang-sa">होराः</span>
-                    </div>
-                    <div class="text-saman-cream/40 text-xl font-bold">:</div>
-                    <div>
-                        <span id="countdown-minutes" class="block text-xl md:text-3xl font-extrabold text-saman-rose">00</span>
-                        <span class="text-[10px] md:text-xs text-saman-cream font-bold uppercase tracking-wider lang-en">Minutes</span>
-                        <span class="text-[10px] md:text-xs text-saman-cream font-bold font-devanagari hidden-lang lang-sa">निमेषाः</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Meta Info Row -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-                <!-- Date -->
-                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
-                    <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-amber">
-                        <i class="fa-solid fa-calendar-days text-xl"></i>
-                    </div>
-                    <div>
-                        <span class="block text-[10px] text-saman-cream font-bold uppercase tracking-wider lang-en">Event Dates</span>
-                        <span class="block text-[10px] font-devanagari text-saman-cream font-bold hidden-lang lang-sa">कार्यक्रमस्य तिथयः</span>
-                        <span class="font-bold text-saman-light lang-en">July 27-28, 2026</span>
-                        <span class="font-bold font-devanagari text-saman-light hidden-lang lang-sa">२७-२८ जुलाई २०२६</span>
+                    
+                    <!-- Motto of MAIT -->
+                    <div class="nm-inset px-4 py-2 rounded-2xl text-center border-l-4 border-saman-rose">
+                        <p class="font-devanagari text-xs md:text-sm text-saman-light font-bold tracking-wide">"उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः"</p>
+                        <p class="text-[9px] md:text-[10px] text-saman-cream font-semibold lang-en">Success is achieved by effort, not mere desires</p>
+                        <p class="text-[9px] md:text-[10px] text-saman-cream font-semibold font-devanagari hidden-lang lang-sa">परिश्रमेणैव कार्याणि सिध्यन्ति, केवलं मनोरथैः न</p>
                     </div>
                 </div>
 
-                <!-- Venue -->
-                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
-                    <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-rose">
-                        <i class="fa-solid fa-map-location-dot text-xl"></i>
+                <!-- Main Title of Seminar -->
+                <div class="text-center my-6">
+                    <!-- English Version Title -->
+                    <div class="lang-en max-w-4xl mx-auto">
+                        <h1 class="text-3xl md:text-5xl font-black text-saman-light leading-tight mb-4 tracking-tight">
+                            SAMANVAYA
+                        </h1>
+                        <p class="text-lg md:text-2xl font-serif text-saman-amber font-semibold leading-relaxed">
+                            Integrating Vedic Ecological Wisdom with Modern Technology for Holistic Disaster Resilience
+                        </p>
                     </div>
-                    <div>
-                        <span class="block text-[10px] text-saman-cream font-bold uppercase tracking-wider lang-en">Location</span>
-                        <span class="block text-[10px] font-devanagari text-saman-cream font-bold hidden-lang lang-sa">स्थानम्</span>
-                        <span class="font-bold text-saman-light block truncate max-w-[200px] lang-en">Main Auditorium, MAIT</span>
-                        <span class="font-bold font-devanagari text-saman-light block truncate max-w-[200px] hidden-lang lang-sa">मुख्य-सभागारः, MAIT</span>
+
+                    <!-- Sanskrit Version Title -->
+                    <div class="hidden-lang lang-sa max-w-4xl mx-auto font-devanagari">
+                        <h1 class="text-3xl md:text-5xl font-black text-saman-light leading-tight mb-4 tracking-wide">
+                            समन्वयः
+                        </h1>
+                        <p class="text-xl md:text-2xl font-bold text-saman-amber leading-relaxed">
+                            समग्र आपद्-प्रतिरोधक्षमतायै वैदिक पर्यावरण प्रज्ञायाः आधुनिक प्रौद्योगिक्या सह एकीकरणम्
+                        </p>
                     </div>
                 </div>
 
-                <!-- Organizing Body -->
-                <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
-                    <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-amber">
-                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                <!-- Dynamic Countdown Component -->
+                <div class="mt-10 mb-6 flex justify-center">
+                    <div class="nm-inset p-4 md:p-6 rounded-2xl flex items-center gap-6 md:gap-12 text-center">
+                        <div>
+                            <span id="countdown-days" class="block text-xl md:text-3xl font-extrabold text-saman-rose">00</span>
+                            <span class="text-[10px] md:text-xs text-saman-cream font-bold uppercase tracking-wider lang-en">Days</span>
+                            <span class="text-[10px] md:text-xs text-saman-cream font-bold font-devanagari hidden-lang lang-sa">दिनानि</span>
+                        </div>
+                        <div class="text-saman-cream/40 text-xl font-bold">:</div>
+                        <div>
+                            <span id="countdown-hours" class="block text-xl md:text-3xl font-extrabold text-saman-rose">00</span>
+                            <span class="text-[10px] md:text-xs text-saman-cream font-bold uppercase tracking-wider lang-en">Hours</span>
+                            <span class="text-[10px] md:text-xs text-saman-cream font-bold font-devanagari hidden-lang lang-sa">होराः</span>
+                        </div>
+                        <div class="text-saman-cream/40 text-xl font-bold">:</div>
+                        <div>
+                            <span id="countdown-minutes" class="block text-xl md:text-3xl font-extrabold text-saman-rose">00</span>
+                            <span class="text-[10px] md:text-xs text-saman-cream font-bold uppercase tracking-wider lang-en">Minutes</span>
+                            <span class="text-[10px] md:text-xs text-saman-cream font-bold font-devanagari hidden-lang lang-sa">निमेषाः</span>
+                        </div>
                     </div>
-                    <div>
-                        <span class="block text-[10px] text-saman-cream font-bold uppercase tracking-wider lang-en">Organized By</span>
-                        <span class="block text-[10px] font-devanagari text-saman-cream font-bold hidden-lang lang-sa">आयोजकः</span>
-                        <span class="font-bold text-saman-light lang-en">Department of ITE</span>
-                        <span class="font-bold font-devanagari text-saman-light hidden-lang lang-sa">इनफार्मेशन टेक्नोलॉजी विभागः</span>
+                </div>
+
+                <!-- Quick Meta Info Row -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                    <!-- Date -->
+                    <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
+                        <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-amber">
+                            <i class="fa-solid fa-calendar-days text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-saman-cream font-bold uppercase tracking-wider lang-en">Event Dates</span>
+                            <span class="block text-[10px] font-devanagari text-saman-cream font-bold hidden-lang lang-sa">कार्यक्रमस्य तिथयः</span>
+                            <span class="font-bold text-saman-light lang-en">July 27-28, 2026</span>
+                            <span class="font-bold font-devanagari text-saman-light hidden-lang lang-sa">२७-२८ जुलाई २०२६</span>
+                        </div>
+                    </div>
+
+                    <!-- Venue -->
+                    <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
+                        <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-rose">
+                            <i class="fa-solid fa-map-location-dot text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-saman-cream font-bold uppercase tracking-wider lang-en">Location</span>
+                            <span class="block text-[10px] font-devanagari text-saman-cream font-bold hidden-lang lang-sa">स्थानम्</span>
+                            <span class="font-bold text-saman-light block truncate max-w-[200px] lang-en">Main Auditorium, MAIT</span>
+                            <span class="font-bold font-devanagari text-saman-light block truncate max-w-[200px] hidden-lang lang-sa">मुख्य-सभागारः, MAIT</span>
+                        </div>
+                    </div>
+
+                    <!-- Organizing Body -->
+                    <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
+                        <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-amber">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-saman-cream font-bold uppercase tracking-wider lang-en">Organized By</span>
+                            <span class="block text-[10px] font-devanagari text-saman-cream font-bold hidden-lang lang-sa">आयोजकः</span>
+                            <span class="font-bold text-saman-light lang-en">Department of ITE</span>
+                            <span class="font-bold font-devanagari text-saman-light hidden-lang lang-sa">इनफार्मेशन टेक्नोलॉजी विभागः</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -847,7 +849,7 @@
                     </div>
                     <div class="flex items-center justify-between py-1 border-b border-saman-rose/10">
                         <span class="text-xs text-saman-light font-semibold">Dr. Vaibhav Jain</span>
-                        <span class="text-[10px] text-saman-amber font-semibold">MAIT</span>
+                        <span class="text-[10px] text-saman-amber font-semibold">Associate Prof.</span>
                     </div>
                     <div class="flex items-center justify-between py-1 border-b border-saman-rose/10">
                         <span class="text-xs text-saman-light font-semibold">Dr. Amit Gupta</span>
@@ -1270,7 +1272,367 @@
                 setTimeout(() => document.body.removeChild(toast), 400);
             }, 3000);
         }
+    </script>
 
+    <!-- TetheredFlow Pure JS Engine Integration -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('tethered-flow-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = canvas.parentElement.clientWidth;
+            let height = canvas.height = canvas.parentElement.clientHeight;
+            
+            let time = 0;
+            let animationFrame;
+            
+            // Soft theme colors with subtle transparency for high-end backdrop consistency
+            // Quiet stillness, freedom from expectation, nourished by source
+            const colorHeaven = 'rgba(233, 188, 185, '; // Cream pink base (#E9BCB9)
+            const colorEarth = 'rgba(163, 64, 84, ';   // Rose highlight base (#A34054)
+            const colorVibe = 'rgba(237, 158, 89, ';    // Warm Amber accent base (#ED9E59)
+            const colorPath = 'rgba(233, 188, 185, 0.05)';
+            const colorConn = 'rgba(163, 64, 84, 0.09)';
+            const colorEmanation = 'rgba(237, 158, 89, 0.06)';
+
+            // Create nodes - each finding its own quiet stillness
+            class Node {
+                constructor(x, y, size, type) {
+                    this.x = x;
+                    this.y = y;
+                    this.originX = x;
+                    this.originY = y;
+                    this.size = size;
+                    this.type = type; // 'heaven', 'earth', or 'vibe'
+                    this.speed = Math.random() * 0.006 + 0.003;
+                    this.direction = Math.random() * Math.PI * 2;
+                    this.angle = Math.random() * Math.PI * 2;
+                    this.connections = [];
+                    this.opacity = Math.random() * 0.3 + 0.15;
+                    this.phase = Math.random() * Math.PI * 2;
+                    this.flowOffset = Math.random() * 100;
+                    this.pulseSpeed = Math.random() * 0.02 + 0.008;
+                    this.moveRange = Math.random() * 20 + 10;
+                    
+                    // Shape variables
+                    this.shapeType = Math.random() > 0.6 ? 'rect' : 'line';
+                    this.rotation = Math.random() * Math.PI;
+                    this.rotationSpeed = (Math.random() - 0.5) * 0.006;
+                }
+                
+                update() {
+                    // Update position with noise-based flow
+                    const noiseX = Math.sin(time * this.speed + this.phase) * this.moveRange;
+                    const noiseY = Math.cos(time * this.speed * 0.7 + this.phase) * this.moveRange;
+                    
+                    // Different movement patterns based on type
+                    if (this.type === 'heaven') {
+                        this.x = this.originX + noiseX;
+                        this.y = this.originY + noiseY * 0.7;
+                    } else if (this.type === 'earth') {
+                        this.x = this.originX + noiseX * 0.6 + Math.sin(time * 0.01 + this.flowOffset) * 8;
+                        this.y = this.originY + noiseY * 0.8;
+                    } else if (this.type === 'vibe') {
+                        this.x = this.originX + Math.sin(time * 0.015) * 15;
+                        this.y = this.originY + Math.cos(time * 0.02) * 15;
+                        this.size = 5 + Math.sin(time * 0.03 + this.phase) * 1.5;
+                    }
+                    
+                    this.rotation += this.rotationSpeed;
+                }
+                
+                draw() {
+                    if (this.type === 'heaven') {
+                        ctx.fillStyle = colorHeaven + this.opacity + ')';
+                    } else if (this.type === 'earth') {
+                        ctx.fillStyle = colorEarth + this.opacity + ')';
+                    } else { // vibe
+                        ctx.fillStyle = colorVibe + (this.opacity + 0.35) + ')';
+                    }
+                    
+                    ctx.save();
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.rotation);
+                    
+                    if (this.shapeType === 'rect') {
+                        const pulseSize = this.size * (1 + Math.sin(time * this.pulseSpeed) * 0.2);
+                        ctx.fillRect(-pulseSize/2, -pulseSize/2, pulseSize, pulseSize);
+                    } else {
+                        const pulseLength = this.size * 2 * (1 + Math.sin(time * this.pulseSpeed) * 0.2);
+                        ctx.fillRect(-pulseLength/2, -0.5, pulseLength, 1);
+                    }
+                    
+                    ctx.restore();
+                }
+            }
+            
+            // Create a flowing path - nourishment flowing from source
+            class FlowingPath {
+                constructor(startX, startY, endX, endY, heightRange, speed) {
+                    this.startX = startX;
+                    this.startY = startY;
+                    this.endX = endX;
+                    this.endY = endY;
+                    this.heightRange = heightRange;
+                    this.speed = speed;
+                    this.points = [];
+                    this.opacity = 0.06;
+                    
+                    // Generate control points
+                    this.controlPoints = [];
+                    const segments = 3;
+                    for (let i = 0; i < segments; i++) {
+                        this.controlPoints.push({
+                            x: this.startX + (this.endX - this.startX) * ((i + 1) / (segments + 1)),
+                            y: this.startY + (this.endY - this.startY) * ((i + 1) / (segments + 1)),
+                            offsetX: Math.random() * 80 - 40,
+                            offsetY: Math.random() * 80 - 40,
+                            phaseOffset: Math.random() * Math.PI * 2
+                        });
+                    }
+                }
+                
+                update() {
+                    for (const point of this.controlPoints) {
+                        point.currentOffsetX = Math.sin(time * this.speed + point.phaseOffset) * point.offsetX;
+                        point.currentOffsetY = Math.cos(time * this.speed + point.phaseOffset) * point.offsetY;
+                    }
+                    
+                    this.points = [{ x: this.startX, y: this.startY }];
+                    
+                    for (const point of this.controlPoints) {
+                        this.points.push({
+                            x: point.x + point.currentOffsetX,
+                            y: point.y + point.currentOffsetY
+                        });
+                    }
+                    
+                    this.points.push({ x: this.endX, y: this.endY });
+                }
+                
+                draw() {
+                    ctx.strokeStyle = colorPath;
+                    ctx.lineWidth = 0.6;
+                    ctx.beginPath();
+                    ctx.moveTo(this.points[0].x, this.points[0].y);
+                    
+                    for (let i = 1; i < this.points.length - 2; i++) {
+                        const xc = (this.points[i].x + this.points[i + 1].x) / 2;
+                        const yc = (this.points[i].y + this.points[i + 1].y) / 2;
+                        ctx.quadraticCurveTo(this.points[i].x, this.points[i].y, xc, yc);
+                    }
+                    
+                    const last = this.points.length - 1;
+                    ctx.quadraticCurveTo(
+                        this.points[last - 1].x,
+                        this.points[last - 1].y,
+                        this.points[last].x,
+                        this.points[last].y
+                    );
+                    
+                    ctx.stroke();
+                }
+            }
+            
+            let nodes = [];
+            let flowingPaths = [];
+            
+            const initNodes = (w, h) => {
+                nodes = [];
+                // Upper region (heaven) - sparser
+                const numHeaven = Math.min(18, Math.floor(w * 0.02));
+                for (let i = 0; i < numHeaven; i++) {
+                    const x = Math.random() * w * 0.8 + w * 0.1;
+                    const y = Math.random() * h * 0.35;
+                    const size = Math.random() * 3 + 1.5;
+                    nodes.push(new Node(x, y, size, 'heaven'));
+                }
+                
+                // Middle band - asymmetrically distributed
+                const numEarth1 = Math.min(12, Math.floor(w * 0.015));
+                for (let i = 0; i < numEarth1; i++) {
+                    const bias = Math.random() * Math.random(); 
+                    const x = w * bias * 0.7 + w * 0.1;
+                    const y = h * 0.35 + Math.random() * h * 0.2;
+                    const size = Math.random() * 3 + 1.5;
+                    nodes.push(new Node(x, y, size, 'earth'));
+                }
+                
+                // Lower region (earth) - denser
+                const numEarth2 = Math.min(22, Math.floor(w * 0.025));
+                for (let i = 0; i < numEarth2; i++) {
+                    const x = Math.random() * w * 0.75 + w * 0.12;
+                    const y = h * 0.55 + Math.random() * h * 0.35;
+                    const size = Math.random() * 3 + 1.5;
+                    nodes.push(new Node(x, y, size, 'earth'));
+                }
+                
+                // Special node (The Vibe Coder / Energy Node) - positioned at left center
+                nodes.push(new Node(w * 0.12, h * 0.45, 5, 'vibe'));
+            };
+            
+            // Initialize flowing paths
+            const initFlowingPaths = (w, h) => {
+                flowingPaths = [];
+                if (nodes.length === 0) return;
+                const vibe = nodes[nodes.length - 1];
+                
+                const numPaths = Math.min(10, Math.floor(w * 0.01));
+                for (let i = 0; i < numPaths; i++) {
+                    const endX = w * (0.65 + Math.random() * 0.28);
+                    const endY = Math.random() * h;
+                    flowingPaths.push(new FlowingPath(
+                        vibe.x, vibe.y, 
+                        endX, endY, 
+                        40 + Math.random() * 40,
+                        0.015 + Math.random() * 0.008
+                    ));
+                }
+                
+                // Add boundary flowing path (heaven/earth division)
+                flowingPaths.push(new FlowingPath(
+                    0, h * 0.45,
+                    w, h * 0.45,
+                    15,
+                    0.008
+                ));
+            };
+            
+            // Create connections between nodes
+            const createConnections = () => {
+                for (let i = 0; i < nodes.length; i++) {
+                    nodes[i].connections = [];
+                    
+                    for (let j = 0; j < nodes.length; j++) {
+                        if (i !== j) {
+                            const dx = nodes[i].x - nodes[j].x;
+                            const dy = nodes[i].y - nodes[j].y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            
+                            let maxDistance = 75;
+                            if (i === nodes.length - 1 || j === nodes.length - 1) {
+                                maxDistance = 160;
+                            }
+                            
+                            if (distance < maxDistance) {
+                                nodes[i].connections.push({
+                                    to: j,
+                                    distance: distance,
+                                    opacity: (1 - (distance / maxDistance)) * 0.25
+                                });
+                            }
+                        }
+                    }
+                }
+            };
+            
+            // Draw all connection pathways
+            const drawConnections = () => {
+                for (let i = 0; i < nodes.length; i++) {
+                    const node = nodes[i];
+                    
+                    for (const conn of node.connections) {
+                        const targetNode = nodes[conn.to];
+                        if (!targetNode) continue;
+
+                        ctx.beginPath();
+                        ctx.moveTo(node.x, node.y);
+                        
+                        const midX = (node.x + targetNode.x) / 2;
+                        const midY = (node.y + targetNode.y) / 2;
+                        
+                        const flowOffsetX = Math.sin(time * 0.015 + i * 0.1) * 8;
+                        const flowOffsetY = Math.cos(time * 0.015 + i * 0.1) * 8;
+                        
+                        ctx.quadraticCurveTo(
+                            midX + flowOffsetX,
+                            midY + flowOffsetY,
+                            targetNode.x,
+                            targetNode.y
+                        );
+                        
+                        ctx.strokeStyle = colorConn;
+                        ctx.lineWidth = 0.4;
+                        ctx.stroke();
+                    }
+                }
+            };
+            
+            // Responsive scale handler
+            function resize() {
+                const parent = canvas.parentElement;
+                if (!parent) return;
+                width = canvas.width = parent.clientWidth;
+                height = canvas.height = parent.clientHeight;
+                
+                initNodes(width, height);
+                initFlowingPaths(width, height);
+                createConnections();
+            }
+            
+            const animate = () => {
+                time += 0.35;
+                
+                // Clear canvas with subtle alpha for beautiful frame trail effect
+                ctx.clearRect(0, 0, width, height);
+                
+                for (const path of flowingPaths) {
+                    path.update();
+                    path.draw();
+                }
+                
+                for (const node of nodes) {
+                    node.update();
+                }
+                
+                if (Math.floor(time) % 40 === 0) {
+                    createConnections();
+                }
+                
+                drawConnections();
+                
+                for (const node of nodes) {
+                    node.draw();
+                }
+                
+                // Draw energy emanation circle over vibe node
+                if (nodes.length > 0) {
+                    const vibe = nodes[nodes.length - 1];
+                    ctx.save();
+                    ctx.translate(vibe.x, vibe.y);
+                    
+                    const numLines = 15;
+                    for (let i = 0; i < numLines; i++) {
+                        const angle = i / numLines * Math.PI * 2;
+                        const length = 15 + Math.sin(angle * 2.5 + time * 0.03) * 8;
+                        
+                        ctx.strokeStyle = colorEmanation;
+                        ctx.lineWidth = 0.6;
+                        ctx.beginPath();
+                        ctx.moveTo(0, 0);
+                        ctx.lineTo(
+                            Math.cos(angle) * length,
+                            Math.sin(angle) * length
+                        );
+                        ctx.stroke();
+                    }
+                    ctx.restore();
+                }
+                
+                animationFrame = requestAnimationFrame(animate);
+            };
+
+            // Hook responsive dynamic triggers
+            window.addEventListener('resize', resize);
+            
+            // Boot sequence
+            resize();
+            animate();
+        })();
+    </script>
+
+    <script>
         // Initialize state variables and actions on load
         window.onload = function() {
             startCountdown();
