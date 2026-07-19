@@ -22,7 +22,7 @@
                 extend: {
                     colors: {
                         saman: {
-                            darkBg: '#1B1931',    // Dark Purple-Navy Background
+                            darkBg: '#1B1931',    // Dark Purple-Navy Background from image_a272eb.png
                             plum: '#44174E',      // Deep Plum Card Base
                             wine: '#662249',      // Deep Wine Accent Color
                             rose: '#A34054',      // Soft Rose Accent Highlight
@@ -209,7 +209,7 @@
         <!-- Seminar Headline & Banner Card with Integrated Animated Canvas Flow background -->
         <div id="hero-banner-container" class="nm-flat p-6 md:p-12 rounded-3xl relative overflow-hidden border border-saman-rose/20">
             <!-- TetheredFlow Canvas Backdrop -->
-            <canvas id="tethered-flow-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0" style="mix-blend-mode: screen; opacity: 0.85;"></canvas>
+            <canvas id="tethered-flow-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0" style="mix-blend-mode: screen; opacity: 1.0;"></canvas>
 
             <!-- Relative Hero Foreground Contents -->
             <div class="relative z-10">
@@ -1274,7 +1274,7 @@
         }
     </script>
 
-    <!-- TetheredFlow Pure JS Engine Integration -->
+    <!-- TetheredFlow Pure JS Engine Integration with Increased Contrast and Visibility -->
     <script>
         (function() {
             const canvas = document.getElementById('tethered-flow-canvas');
@@ -1287,14 +1287,15 @@
             let time = 0;
             let animationFrame;
             
-            // Soft theme colors with subtle transparency for high-end backdrop consistency
-            // Quiet stillness, freedom from expectation, nourished by source
+            // Soft theme colors with increased visibility settings (nourished by source)
             const colorHeaven = 'rgba(233, 188, 185, '; // Cream pink base (#E9BCB9)
             const colorEarth = 'rgba(163, 64, 84, ';   // Rose highlight base (#A34054)
             const colorVibe = 'rgba(237, 158, 89, ';    // Warm Amber accent base (#ED9E59)
-            const colorPath = 'rgba(233, 188, 185, 0.05)';
-            const colorConn = 'rgba(163, 64, 84, 0.09)';
-            const colorEmanation = 'rgba(237, 158, 89, 0.06)';
+            
+            // Amplified path, connection, and emanation opacity for premium high-contrast view
+            const colorPath = 'rgba(233, 188, 185, 0.28)';   // Enhanced from 0.05
+            const colorConn = 'rgba(163, 64, 84, 0.38)';   // Enhanced from 0.09
+            const colorEmanation = 'rgba(237, 158, 89, 0.32)'; // Enhanced from 0.06
 
             // Create nodes - each finding its own quiet stillness
             class Node {
@@ -1309,7 +1310,8 @@
                     this.direction = Math.random() * Math.PI * 2;
                     this.angle = Math.random() * Math.PI * 2;
                     this.connections = [];
-                    this.opacity = Math.random() * 0.3 + 0.15;
+                    // Increased particle opacity spectrum (ranges from 0.35 to 0.75 for crisp visibility)
+                    this.opacity = Math.random() * 0.4 + 0.35;
                     this.phase = Math.random() * Math.PI * 2;
                     this.flowOffset = Math.random() * 100;
                     this.pulseSpeed = Math.random() * 0.02 + 0.008;
@@ -1347,7 +1349,7 @@
                         ctx.fillStyle = colorHeaven + this.opacity + ')';
                     } else if (this.type === 'earth') {
                         ctx.fillStyle = colorEarth + this.opacity + ')';
-                    } else { // vibe
+                    } else { // vibe (vivid amber highlight node)
                         ctx.fillStyle = colorVibe + (this.opacity + 0.35) + ')';
                     }
                     
