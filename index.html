@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samanvaya 2026 - Vedic Ecological Wisdom & Modern Tech</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts for premium Sanskrit & English typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for beautiful icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
@@ -22,7 +19,7 @@
                 extend: {
                     colors: {
                         saman: {
-                            darkBg: '#1B1931',    // Dark Purple-Navy Background from image_a272eb.png
+                            darkBg: '#1B1931',    // Dark Purple-Navy Background
                             plum: '#44174E',      // Deep Plum Card Base
                             wine: '#662249',      // Deep Wine Accent Color
                             rose: '#A34054',      // Soft Rose Accent Highlight
@@ -117,7 +114,6 @@
 
     <nav class="sticky top-0 z-50 px-4 py-3 md:py-4 bg-[#1B1931]/90 backdrop-blur-md border-b border-saman-rose/20">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Brand Mark / Theme Title -->
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full nm-flat flex items-center justify-center text-saman-amber">
                     <i class="fa-solid fa-leaf text-lg animate-pulse"></i>
@@ -130,7 +126,6 @@
                 </div>
             </div>
 
-            <!-- Quick Links (Desktop) -->
             <div class="hidden lg:flex items-center gap-6">
                 <a href="#about" class="text-sm font-semibold text-saman-cream hover:text-saman-amber transition-colors lang-en">About</a>
                 <a href="#about" class="text-sm font-semibold font-devanagari text-saman-cream hover:text-saman-amber transition-colors hidden-lang lang-sa">अवलोकनम्</a>
@@ -148,9 +143,7 @@
                 <a href="#registration" class="text-sm font-semibold font-devanagari text-saman-cream hover:text-saman-amber transition-colors hidden-lang lang-sa">पञ्जीकरणम्</a>
             </div>
 
-            <!-- Language & Action Control panel -->
             <div class="flex items-center gap-3">
-                <!-- Dual Language Selector Slider -->
                 <div class="nm-inset p-1 rounded-full flex items-center relative w-32 h-10">
                     <button onclick="switchLanguage('en')" id="btn-lang-en" class="w-1/2 text-xs font-bold rounded-full py-1 z-10 transition-all text-saman-amber nm-active">
                         EN
@@ -160,7 +153,6 @@
                     </button>
                 </div>
 
-                <!-- Registration Quick Action Button -->
                 <a href="#registration" class="nm-button px-4 py-2 rounded-xl text-xs md:text-sm font-bold text-saman-amber hover:text-saman-cream">
                     <i class="fa-solid fa-file-signature mr-1"></i>
                     <span class="lang-en">Apply</span>
@@ -171,9 +163,7 @@
     </nav>
 
     <header class="py-12 px-4 max-w-7xl mx-auto">
-        <!-- Logo Bar -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 items-center">
-            <!-- MAIT LOGO -->
             <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300 border border-saman-rose/10">
                 <img src="MAITlogo.png" alt="MAIT Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-lg filter brightness-95" onerror="this.onerror=null; this.src='https://placehold.co/150x150/1b1931/E9BCB9?text=MAIT'">
                 <p class="text-[10px] md:text-xs font-bold text-saman-cream">MAIT</p>
@@ -181,7 +171,6 @@
                 <p class="text-[9px] text-saman-cream font-devanagari font-medium tracking-tight hidden-lang lang-sa">महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्</p>
             </div>
             
-            <!-- MATES LOGO -->
             <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300 border border-saman-rose/10">
                 <img src="MATESlogo.png" alt="MATES Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-lg filter brightness-95" onerror="this.onerror=null; this.src='https://placehold.co/150x150/1b1931/E9BCB9?text=MATES'">
                 <p class="text-[10px] md:text-xs font-bold text-saman-cream">MATES</p>
@@ -189,7 +178,6 @@
                 <p class="text-[9px] text-saman-cream font-devanagari font-medium tracking-tight hidden-lang lang-sa">महाराजा अग्रसेन प्राविधिक शिक्षा समितिः</p>
             </div>
 
-            <!-- AICTE LOGO -->
             <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300 border border-saman-rose/10">
                 <img src="All_India_Council_for_Technical_Education_logo.png" alt="AICTE Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-lg" onerror="this.onerror=null; this.src='https://placehold.co/150x150/1b1931/E9BCB9?text=AICTE'">
                 <p class="text-[10px] md:text-xs font-bold text-saman-cream">AICTE Sponsored</p>
@@ -197,7 +185,6 @@
                 <p class="text-[9px] text-saman-cream font-devanagari font-medium tracking-tight hidden-lang lang-sa">अखिल भारतीय तकनीकी शिक्षा परिषद</p>
             </div>
 
-            <!-- ATAL LOGO -->
             <div class="nm-flat p-4 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-105 duration-300 border border-saman-rose/10">
                 <img src="ATAL logo.png" alt="ATAL Logo" class="h-16 md:h-20 object-contain mb-2 drop-shadow-lg" onerror="this.onerror=null; this.src='https://placehold.co/150x150/1b1931/E9BCB9?text=ATAL'">
                 <p class="text-[10px] md:text-xs font-bold text-saman-cream">ATAL Academy</p>
@@ -206,14 +193,10 @@
             </div>
         </div>
 
-        <!-- Seminar Headline & Banner Card with Integrated Animated Canvas Flow background -->
         <div id="hero-banner-container" class="nm-flat p-6 md:p-12 rounded-3xl relative overflow-hidden border border-saman-rose/20">
-            <!-- TetheredFlow Canvas Backdrop -->
             <canvas id="tethered-flow-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0" style="mix-blend-mode: screen; opacity: 1.0;"></canvas>
 
-            <!-- Relative Hero Foreground Contents -->
             <div class="relative z-10">
-                <!-- Top Tagline & Motto -->
                 <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-8 border-b border-saman-rose/20 pb-6">
                     <div class="text-center md:text-left">
                         <span class="inline-block bg-saman-plum/40 text-saman-cream text-xs px-3 py-1 rounded-full font-semibold mb-2 uppercase tracking-widest lang-en border border-saman-wine/30">
@@ -226,7 +209,6 @@
                         <h3 class="text-sm font-bold font-devanagari italic text-saman-amber hidden-lang lang-sa">द्विदिवसीय-राष्ट्रीय-संगोष्ठी</h3>
                     </div>
                     
-                    <!-- Motto of MAIT -->
                     <div class="nm-inset px-4 py-2 rounded-2xl text-center border-l-4 border-saman-rose">
                         <p class="font-devanagari text-xs md:text-sm text-saman-light font-bold tracking-wide">"उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः"</p>
                         <p class="text-[9px] md:text-[10px] text-saman-cream font-semibold lang-en">Success is achieved by effort, not mere desires</p>
@@ -234,9 +216,7 @@
                     </div>
                 </div>
 
-                <!-- Main Title of Seminar -->
                 <div class="text-center my-6">
-                    <!-- English Version Title -->
                     <div class="lang-en max-w-4xl mx-auto">
                         <h1 class="text-3xl md:text-5xl font-black text-saman-light leading-tight mb-4 tracking-tight">
                             SAMANVAYA
@@ -246,7 +226,6 @@
                         </p>
                     </div>
 
-                    <!-- Sanskrit Version Title -->
                     <div class="hidden-lang lang-sa max-w-4xl mx-auto font-devanagari">
                         <h1 class="text-3xl md:text-5xl font-black text-saman-light leading-tight mb-4 tracking-wide">
                             समन्वयः
@@ -257,7 +236,6 @@
                     </div>
                 </div>
 
-                <!-- Dynamic Countdown Component -->
                 <div class="mt-10 mb-6 flex justify-center">
                     <div class="nm-inset p-4 md:p-6 rounded-2xl flex items-center gap-6 md:gap-12 text-center">
                         <div>
@@ -280,9 +258,7 @@
                     </div>
                 </div>
 
-                <!-- Quick Meta Info Row -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-                    <!-- Date -->
                     <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
                         <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-amber">
                             <i class="fa-solid fa-calendar-days text-xl"></i>
@@ -290,12 +266,11 @@
                         <div>
                             <span class="block text-[10px] text-saman-cream font-bold uppercase tracking-wider lang-en">Event Dates</span>
                             <span class="block text-[10px] font-devanagari text-saman-cream font-bold hidden-lang lang-sa">कार्यक्रमस्य तिथयः</span>
-                            <span class="font-bold text-saman-light lang-en">July 27-28, 2026</span>
-                            <span class="font-bold font-devanagari text-saman-light hidden-lang lang-sa">२७-२८ जुलाई २०२६</span>
+                            <span class="font-bold text-saman-light lang-en">5th - 6th October 2026</span>
+                            <span class="font-bold font-devanagari text-saman-light hidden-lang lang-sa">५-६ अक्टोबर् २०२६</span>
                         </div>
                     </div>
 
-                    <!-- Venue -->
                     <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
                         <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-rose">
                             <i class="fa-solid fa-map-location-dot text-xl"></i>
@@ -308,7 +283,6 @@
                         </div>
                     </div>
 
-                    <!-- Organizing Body -->
                     <div class="nm-flat-accent p-4 rounded-2xl flex items-center gap-4 border border-saman-rose/10">
                         <div class="w-12 h-12 rounded-xl bg-saman-wine/30 flex items-center justify-center text-saman-amber">
                             <i class="fa-solid fa-graduation-cap text-xl"></i>
@@ -316,8 +290,8 @@
                         <div>
                             <span class="block text-[10px] text-saman-cream font-bold uppercase tracking-wider lang-en">Organized By</span>
                             <span class="block text-[10px] font-devanagari text-saman-cream font-bold hidden-lang lang-sa">आयोजकः</span>
-                            <span class="font-bold text-saman-light lang-en">Department of ITE</span>
-                            <span class="font-bold font-devanagari text-saman-light hidden-lang lang-sa">इनफार्मेशन टेक्नोलॉजी विभागः</span>
+                            <span class="font-bold text-saman-light lang-en">Department of CSE & ITE</span>
+                            <span class="font-bold font-devanagari text-saman-light hidden-lang lang-sa">सी.एस.ई. तथा आई.टी. विभागः</span>
                         </div>
                     </div>
                 </div>
@@ -325,13 +299,9 @@
         </div>
     </header>
 
-    <!-- About and Overview Sections -->
     <main class="max-w-7xl mx-auto px-4 pb-20 space-y-16">
         
-        <!-- Two Column Overview Block -->
         <section id="about" class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            
-            <!-- Seminar Overview Card -->
             <div class="nm-flat p-6 md:p-8 rounded-3xl flex flex-col justify-between border border-saman-rose/10">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
@@ -346,7 +316,6 @@
                         </div>
                     </div>
 
-                    <!-- English Description -->
                     <div class="text-sm text-saman-cream leading-relaxed space-y-4 lang-en font-medium">
                         <p>
                             This theme explores the integration of <strong>Vedic ecological wisdom</strong> with <strong>modern technology</strong> to build comprehensive disaster resilience. Vedic literature emphasizes the protection of nature, the balance of water, forests, and land, and sustainable ways of living.
@@ -356,7 +325,6 @@
                         </p>
                     </div>
 
-                    <!-- Sanskrit Description -->
                     <div class="text-base font-devanagari text-saman-cream leading-relaxed space-y-4 hidden-lang lang-sa">
                         <p>
                             अयं विषयः वैदिक-पर्यावरण-प्रज्ञायाः तथा आधुनिक-प्रौद्योगिक्याः समन्वयेन समग्र आपद्-
@@ -375,7 +343,6 @@
                 </div>
             </div>
 
-            <!-- About MAIT Card -->
             <div class="nm-flat p-6 md:p-8 rounded-3xl flex flex-col justify-between border border-saman-rose/10">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
@@ -390,7 +357,6 @@
                         </div>
                     </div>
 
-                    <!-- English About MAIT -->
                     <div class="text-sm text-saman-cream leading-relaxed space-y-4 lang-en font-medium">
                         <p>
                             Maharaja Agrasen Institute of Technology, New Delhi was established in 1999 with a vision to develop engineering fraternity of academic excellence and ethical values by imparting best engineering education to its students through an optimal infrastructure, well-equipped labs, and competent faculty.
@@ -400,13 +366,12 @@
                         </p>
                     </div>
 
-                    <!-- Sanskrit About MAIT -->
                     <div class="text-base font-devanagari text-saman-cream leading-relaxed space-y-4 hidden-lang lang-sa">
                         <p>
                             महाराजा अग्रसेन प्रौद्योगिकी संस्थानम्, नवदिल्ली, १९९९ तमे वर्षे इष्टतम-आधारभूत-संरचनायाः, सुसज्जित-प्रयोगशालानां सक्षम-आचार्यवर्गस्य च माध्यमेन स्वछात्रेभ्यः श्रेष्ठतमं अभियांत्रिकी-शिक्षणं प्रदाय शैक्षणिक-उत्कृष्टतायाः नैतिक-मूल्यानां च अभियांत्रिकी-बिरादरीं विकसितुं दृष्ट्या स्थापितम् आसीत्।
                         </p>
                         <p>
-                            MAIT स्वस्य उद्योग-उद्यमिता-प्रासंगिक शिक्षण-प्रशिक्षण-कार्यक्रमेण भारते स्व-वित्तपोषण-संस्थानेषु श्रेष्ठतम-अभियांत्रिकी-संस्थानरूपेण स्वयं स्थापयितुं निरन्तरं अग्रे गच्छति। अस्य पूर्वछात्राः उद्योगे, शिक्षाविद्यायाम्, अनुसन्धाने, व्यवसाये च स्वस्य उपलब्धिभिः स्वयं प्रतिष्ठिताः सन्ति।
+                            MAIT स्वस्य उद्योग-उद्यमिता-प्रासंगिक शिक्षण-प्रशिक्षण-कार्यक्रमेण भारते स्व-वित्तपोषण-संस्थानेषु श्रेष्ठतम-अभियांत्रिकी-संस्थानरूपेण स्वयं स्थापयितुं निरन्तरं अग्रे गच्छति।
                         </p>
                     </div>
                 </div>
@@ -416,35 +381,30 @@
                     <span class="text-xs font-semibold font-devanagari text-saman-amber hidden-lang lang-sa">स्थापना वर्ष: १९९९ • नवदिल्ली</span>
                 </div>
             </div>
-
         </section>
 
-        <!-- Session-wise Schedule Block -->
         <section id="schedule" class="nm-flat p-6 md:p-10 rounded-3xl border border-saman-rose/10">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-saman-rose/15 pb-6">
                 <div>
                     <h2 class="text-2xl md:text-3xl font-black text-saman-light lang-en">Seminar Schedule</h2>
                     <h2 class="text-2xl md:text-3xl font-black font-devanagari text-saman-light hidden-lang lang-sa">सेमिनार अनुसूची</h2>
-                    <p class="text-sm text-saman-cream mt-1 font-medium lang-en">Detailed structure of academic sessions across both days</p>
+                    <p class="text-sm text-saman-cream mt-1 font-medium lang-en">Detailed structure of academic sessions across both days (5th-6th October 2026)</p>
                     <p class="text-xs font-devanagari text-saman-cream mt-1 hidden-lang lang-sa">द्विदिवसीयसत्रस्य विस्तृतविवरणम्</p>
                 </div>
                 
-                <!-- Day Filter Toggles -->
                 <div class="nm-inset p-1 rounded-full flex gap-2">
                     <button id="day1-tab" onclick="toggleScheduleDay(1)" class="px-5 py-2 rounded-full text-xs font-bold transition-all text-saman-amber nm-active">
-                        <span class="lang-en">Day 1</span>
+                        <span class="lang-en">Day 1 (Oct 5)</span>
                         <span class="font-devanagari hidden-lang lang-sa">प्रथमः दिवसः</span>
                     </button>
                     <button id="day2-tab" onclick="toggleScheduleDay(2)" class="px-5 py-2 rounded-full text-xs font-bold transition-all text-saman-rose hover:text-saman-light">
-                        <span class="lang-en">Day 2</span>
+                        <span class="lang-en">Day 2 (Oct 6)</span>
                         <span class="font-devanagari hidden-lang lang-sa">द्वितीयः दिवसः</span>
                     </button>
                 </div>
             </div>
 
-            <!-- DAY 1 TIMELINE (Interchanged Speaker Order Applied) -->
             <div id="day1-schedule" class="space-y-6">
-                <!-- Session 1 (Interchanged: Dr. Madhubala Singh) -->
                 <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-saman-rose hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
                         <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-saman-amber font-bold text-sm shrink-0">
@@ -468,7 +428,6 @@
                     </div>
                 </div>
 
-                <!-- Session 2 (Interchanged: Prof. Girish Chandra Pant) -->
                 <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-saman-rose hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
                         <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-saman-amber font-bold text-sm shrink-0">
@@ -492,7 +451,6 @@
                     </div>
                 </div>
 
-                <!-- Session 3 -->
                 <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-saman-wine hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
                         <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-saman-rose font-bold text-sm shrink-0">
@@ -516,7 +474,6 @@
                     </div>
                 </div>
 
-                <!-- Session 4 -->
                 <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-saman-wine hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
                         <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-saman-rose font-bold text-sm shrink-0">
@@ -541,9 +498,7 @@
                 </div>
             </div>
 
-            <!-- DAY 2 TIMELINE -->
             <div id="day2-schedule" class="space-y-6 hidden-lang">
-                <!-- Session 5 -->
                 <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-saman-rose hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
                         <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-saman-amber font-bold text-sm shrink-0">
@@ -567,7 +522,6 @@
                     </div>
                 </div>
 
-                <!-- Session 6 -->
                 <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-saman-rose hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
                         <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-saman-amber font-bold text-sm shrink-0">
@@ -591,7 +545,6 @@
                     </div>
                 </div>
 
-                <!-- Session 7 -->
                 <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-saman-wine hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
                         <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-saman-rose font-bold text-sm shrink-0">
@@ -615,7 +568,6 @@
                     </div>
                 </div>
 
-                <!-- Session 8 -->
                 <div class="nm-flat-accent p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-saman-wine hover:scale-[1.01] duration-200">
                     <div class="flex items-start gap-4">
                         <div class="nm-inset w-12 h-12 rounded-xl flex items-center justify-center text-saman-rose font-bold text-sm shrink-0">
@@ -641,7 +593,6 @@
             </div>
         </section>
 
-        <!-- Featured Speakers Grid Section -->
         <section id="speakers" class="space-y-8">
             <div class="text-center">
                 <h2 class="text-2xl md:text-3xl font-black text-saman-light lang-en">Keynote & Invited Speakers</h2>
@@ -651,7 +602,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Keynote Speaker -->
                 <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-saman-rose/10">
                     <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 relative border border-saman-rose/10">
                         <div class="w-full h-full rounded-full bg-saman-plum/60 flex items-center justify-center text-saman-amber font-bold text-xl">
@@ -664,7 +614,6 @@
                     <p class="text-[10px] text-saman-cream mt-1 leading-tight font-semibold">Professor, Miranda House, University of Delhi</p>
                 </div>
 
-                <!-- Speaker 2 -->
                 <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-saman-rose/10">
                     <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-saman-rose/10">
                         <div class="w-full h-full rounded-full bg-saman-plum/60 flex items-center justify-center text-saman-amber font-bold text-xl">
@@ -676,7 +625,6 @@
                     <p class="text-[10px] text-saman-cream mt-1 leading-tight font-semibold">Former HOD, Dept. of Sanskrit, Jamia Millia Islamia</p>
                 </div>
 
-                <!-- Speaker 3 -->
                 <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-saman-rose/10">
                     <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-saman-rose/10">
                         <div class="w-full h-full rounded-full bg-saman-plum/60 flex items-center justify-center text-saman-amber font-bold text-xl">
@@ -688,7 +636,6 @@
                     <p class="text-[10px] text-saman-cream mt-1 leading-tight font-semibold">Associate Professor, Jawaharlal Nehru University</p>
                 </div>
 
-                <!-- Speaker 4 -->
                 <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-saman-rose/10">
                     <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-saman-rose/10">
                         <div class="w-full h-full rounded-full bg-saman-plum/60 flex items-center justify-center text-saman-amber font-bold text-xl">
@@ -700,7 +647,6 @@
                     <p class="text-[10px] text-saman-cream mt-1 leading-tight font-semibold">Professor, Department of Sanskrit, Delhi University</p>
                 </div>
 
-                <!-- Speaker 5 -->
                 <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-saman-rose/10">
                     <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-saman-rose/10">
                         <div class="w-full h-full rounded-full bg-saman-plum/60 flex items-center justify-center text-saman-amber font-bold text-xl">
@@ -712,7 +658,6 @@
                     <p class="text-[10px] text-saman-cream mt-1 leading-tight font-semibold">Professor, Department of Sanskrit, Delhi University</p>
                 </div>
 
-                <!-- Speaker 6 (Replaced with Dr. Namrata Sharma) -->
                 <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-saman-rose/10">
                     <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-saman-rose/10">
                         <div class="w-full h-full rounded-full bg-saman-plum/60 flex items-center justify-center text-saman-amber font-bold text-xl">
@@ -724,7 +669,6 @@
                     <p class="text-[10px] text-saman-cream mt-1 leading-tight font-semibold">Department of Applied Science, MAIT</p>
                 </div>
 
-                <!-- Speaker 7 -->
                 <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-saman-rose/10">
                     <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-saman-rose/10">
                         <div class="w-full h-full rounded-full bg-saman-plum/60 flex items-center justify-center text-saman-amber font-bold text-xl">
@@ -736,7 +680,6 @@
                     <p class="text-[10px] text-saman-cream mt-1 leading-tight font-semibold">Associate Director, Kyndryl</p>
                 </div>
 
-                <!-- Speaker 8 -->
                 <div class="nm-flat p-5 rounded-2xl flex flex-col items-center text-center border border-saman-rose/10">
                     <div class="w-20 h-20 rounded-full nm-inset p-1.5 mb-4 border border-saman-rose/10">
                         <div class="w-full h-full rounded-full bg-saman-plum/60 flex items-center justify-center text-saman-amber font-bold text-xl">
@@ -750,10 +693,7 @@
             </div>
         </section>
 
-        <!-- Committee Block -->
         <section id="committees" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- Patrons Panel (Updated to include Prof. S.S. Deswal and Prof. Harbhajan Bansal) -->
             <div class="nm-flat p-6 rounded-3xl lg:col-span-1 flex flex-col justify-between border border-saman-rose/10">
                 <div>
                     <h3 class="text-lg font-bold text-saman-light flex items-center gap-2 mb-4">
@@ -777,7 +717,7 @@
                                 <li>Sh. Vineet Kumar Lohia <span class="text-[10px] text-saman-cream font-normal block">(Chairman, MATES)</span></li>
                                 <li>Prof. M. L. Goyal <span class="text-[10px] text-saman-cream font-normal block">(Vice Chairman Academics, MATES)</span></li>
                                 <li>Prof. Vikram Bali <span class="text-[10px] text-saman-cream font-normal block">(Director, MAIT)</span></li>
-                                <li>Prof. S.S. Deswal <span class="text-[10px] text-saman-cream font-normal block">(Dean, MAIT)</span></li>
+                                <li>Prof. S.S. Deswal <span class="text-[10px] text-saman-cream font-normal block">(Addl. Director, MAIT)</span></li>
                                 <li>Prof. Harbhajan Bansal <span class="text-[10px] text-saman-cream font-normal block">(Dean Management, MAIT)</span></li>
                             </ul>
                         </div>
@@ -790,7 +730,6 @@
                 </div>
             </div>
 
-            <!-- Program Execution & Organizing Committee -->
             <div class="nm-flat p-6 rounded-3xl lg:col-span-1 border border-saman-rose/10">
                 <h3 class="text-lg font-bold text-saman-light flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-users text-saman-amber"></i>
@@ -809,20 +748,19 @@
                     <div class="p-3 nm-inset rounded-xl">
                         <span class="font-bold text-saman-rose block lang-en">Co-Coordinator</span>
                         <span class="font-bold font-devanagari text-saman-rose block hidden-lang lang-sa">सह-समन्वयकः</span>
-                        <span class="text-saman-light font-semibold">Dr. Bhoomi Gupta</span>
-                        <p class="text-[10px] text-saman-cream">Head of Department, ITE</p>
+                        <span class="text-saman-light font-semibold">Prof. Bhoomi Gupta</span>
+                        <p class="text-[10px] text-saman-cream">HoD CSE and ITE, MAIT</p>
                     </div>
 
                     <div class="p-3 nm-inset rounded-xl">
                         <span class="font-bold text-saman-rose block lang-en">Organizing Secretary & Contact</span>
                         <span class="font-bold font-devanagari text-saman-rose block hidden-lang lang-sa">आयोजन सचिवः च सम्पर्कः</span>
-                        <span class="text-saman-light font-extrabold text-xs">Dr. Bhoomi Gupta</span>
-                        <p class="text-[10px] text-saman-cream font-bold mt-1 leading-normal">Associate Professor and Head, Department of CSE and ITE</p>
+                        <span class="text-saman-light font-extrabold text-xs">Prof. Bhoomi Gupta</span>
+                        <p class="text-[10px] text-saman-cream font-bold mt-1 leading-normal">HoD CSE and ITE, MAIT</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Advisory Committee (Harbhajan Bansal removed from here) -->
             <div class="nm-flat p-6 rounded-3xl lg:col-span-1 border border-saman-rose/10">
                 <h3 class="text-lg font-bold text-saman-light flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-graduation-cap text-saman-amber"></i>
@@ -867,21 +805,44 @@
             </div>
         </section>
 
-        <!-- Registration & Simulated Database Segment -->
         <section id="registration" class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-            
-            <!-- Registration Form Area -->
             <div class="lg:col-span-3 nm-flat p-6 md:p-8 rounded-3xl border border-saman-rose/10">
                 <div class="mb-6">
                     <h3 class="text-xl md:text-2xl font-black text-saman-light">
                         <span class="lang-en">Seminar Registration</span>
                         <span class="font-devanagari hidden-lang lang-sa">पञ्जीकरण-पत्रम्</span>
                     </h3>
-                    <p class="text-xs text-saman-amber font-bold mt-1 lang-en">Secure your virtual or offline seat. Admission is sponsored.</p>
-                    <p class="text-xs font-devanagari text-saman-amber font-bold mt-1 hidden-lang lang-sa">निःशुल्कं पञ्जीकरणम्। कृपया विवरणं पुरयन्तु।</p>
+                    
+                    <div class="mt-3 flex flex-wrap items-center gap-3">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-tag"></i> Free Registration (No Charges)
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-saman-plum/60 text-saman-amber border border-saman-rose/30 text-xs font-bold">
+                            <i class="fa-solid fa-clock"></i> Last Date: 25th September 2026
+                        </span>
+                    </div>
+
+                    <p class="text-xs text-saman-cream font-medium mt-3 lang-en">Secure your virtual or offline seat. There are absolutely <strong>no charges</strong> for this event.</p>
+                    <p class="text-xs font-devanagari text-saman-cream font-medium mt-1 hidden-lang lang-sa">अस्य कार्यक्रमस्य कृते किमपि शुल्कं नास्ति (निःशुल्कम्)। अन्तिमदिनांकः: २५ सितम्बर २०२६।</p>
                 </div>
 
-                <!-- Live Dynamic form -->
+                <div class="mb-6 p-4 rounded-2xl nm-inset border border-saman-rose/20 flex flex-col sm:flex-row items-center gap-5">
+                    <a href="https://forms.google.com" target="_blank" class="shrink-0 group">
+                        <img src="QRCode.png" alt="Scan QR Code to Register via Google Form" class="w-28 h-28 object-contain rounded-xl p-1 bg-white nm-flat group-hover:scale-105 duration-200" onerror="this.onerror=null; this.src='https://placehold.co/120x120/white/1b1931?text=QRCode.png'">
+                    </a>
+                    <div class="text-center sm:text-left space-y-1">
+                        <span class="text-xs font-bold uppercase text-saman-amber tracking-wider block">Scan or Click to Register</span>
+                        <h4 class="text-sm font-extrabold text-saman-light">Official Google Registration Form</h4>
+                        <p class="text-xs text-saman-cream">Scan this QR code with your phone camera or click the button below to submit your details directly via Google Forms.</p>
+                        <div class="pt-2">
+                            <a href="https://forms.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-saman-amber hover:text-saman-cream underline">
+                                <span>Go to Google Form</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <form id="samanvaya-form" onsubmit="handleRegistrationSubmit(event)" class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
@@ -941,7 +902,6 @@
                     </div>
                 </form>
 
-                <!-- Status Banner inside form -->
                 <div id="status-alert" class="hidden mt-4 p-4 rounded-xl nm-inset border-l-4 border-emerald-500 text-xs text-emerald-300 flex justify-between items-center">
                     <div>
                         <strong class="block lang-en">Registration successful!</strong>
@@ -953,7 +913,6 @@
                 </div>
             </div>
 
-            <!-- Virtual Ticket Generation Side-Panel -->
             <div class="lg:col-span-2 nm-flat p-6 rounded-3xl flex flex-col justify-between border border-dashed border-saman-rose/30 relative">
                 <div>
                     <span class="absolute top-4 right-4 text-[10px] font-mono tracking-widest text-saman-rose uppercase font-bold">Ticket Pass</span>
@@ -962,12 +921,12 @@
                         <span class="font-devanagari hidden-lang lang-sa">प्रवेश पत्रम्</span>
                     </h4>
 
-                    <!-- Actual Ticket Card -->
                     <div id="ticket-card" class="nm-inset p-4 rounded-2xl relative overflow-hidden text-xs border border-saman-rose/15">
                         <div class="border-b border-dashed border-saman-rose/30 pb-3 mb-3 text-center">
                             <span class="text-[10px] text-saman-amber block font-bold tracking-wider lang-en">SAMANVAYA 2026</span>
                             <span class="text-[10px] font-devanagari text-saman-amber block font-bold tracking-wider hidden-lang lang-sa">समन्वयः २०२६</span>
                             <span class="text-[9px] text-saman-cream block font-semibold">MAIT Sector-22, Rohini, Delhi</span>
+                            <span class="text-[9px] text-emerald-400 block font-bold mt-1 uppercase tracking-wider">Free Delegate Pass</span>
                         </div>
 
                         <div class="space-y-3">
@@ -992,19 +951,18 @@
 
                             <div class="grid grid-cols-2 gap-2 pt-2 border-t border-saman-rose/10">
                                 <div>
-                                    <span class="block text-[8px] uppercase text-saman-cream font-bold lang-en">Seat Category</span>
-                                    <span class="block text-[8px] font-devanagari uppercase text-saman-cream font-bold hidden-lang lang-sa">स्थान श्रेणी</span>
-                                    <span class="font-bold text-emerald-400 uppercase">Delegate / प्रतिनिधि</span>
+                                    <span class="block text-[8px] uppercase text-saman-cream font-bold lang-en">Event Dates</span>
+                                    <span class="block text-[8px] font-devanagari uppercase text-saman-cream font-bold hidden-lang lang-sa">तिथयः</span>
+                                    <span class="font-bold text-saman-amber uppercase">5-6 Oct 2026</span>
                                 </div>
                                 <div>
-                                    <span class="block text-[8px] uppercase text-saman-cream font-bold lang-en">Venue Hall</span>
-                                    <span class="block text-[8px] font-devanagari uppercase text-saman-cream font-bold hidden-lang lang-sa">स्थानम्</span>
-                                    <span class="font-bold text-saman-light">Main Auditorium</span>
+                                    <span class="block text-[8px] uppercase text-saman-cream font-bold lang-en">Registration Fee</span>
+                                    <span class="block text-[8px] font-devanagari uppercase text-saman-cream font-bold hidden-lang lang-sa">शुल्कम्</span>
+                                    <span class="font-bold text-emerald-400 uppercase">₹0 (Free)</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Barcode Simulation for premium visual aesthetic -->
                         <div class="mt-4 pt-3 border-t border-dashed border-saman-rose/30 flex flex-col items-center">
                             <div class="flex items-center gap-[2px] h-8 bg-white p-1 rounded">
                                 <div class="w-1 h-full bg-black"></div>
@@ -1039,16 +997,13 @@
                     </button>
                 </div>
             </div>
-
         </section>
 
     </main>
 
-    <!-- Venue & Contact Block Footer -->
     <footer class="border-t border-saman-rose/15 bg-saman-darkBg pt-12 pb-6 px-4">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
             
-            <!-- Address and Timing details -->
             <div class="nm-flat p-6 rounded-2xl border border-saman-rose/10">
                 <h4 class="font-bold text-saman-light flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-map-pin text-saman-amber"></i>
@@ -1066,7 +1021,6 @@
                 </div>
             </div>
 
-            <!-- Coordination Contact Person details (Dr. Bhoomi Gupta) -->
             <div class="nm-flat p-6 rounded-2xl border border-saman-rose/10">
                 <h4 class="font-bold text-saman-light flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-address-card text-saman-amber"></i>
@@ -1077,9 +1031,9 @@
                     <p>
                         <span class="block text-[10px] text-saman-rose font-bold uppercase tracking-wider lang-en">Organizing Secretary & Contact</span>
                         <span class="block text-[10px] font-devanagari text-saman-rose font-bold hidden-lang lang-sa">सह-समन्वयिका</span>
-                        <strong class="text-saman-light">Dr. Bhoomi Gupta</strong>
+                        <strong class="text-saman-light">Prof. Bhoomi Gupta</strong>
                     </p>
-                    <p class="text-[10px] text-saman-rose font-bold leading-normal">Associate Professor and Head, Department of CSE and ITE</p>
+                    <p class="text-[10px] text-saman-rose font-bold leading-normal">HoD CSE and ITE, MAIT</p>
                     <p class="flex items-center gap-2">
                         <i class="fa-solid fa-envelope text-saman-rose text-sm"></i>
                         <a href="mailto:bhoomigupta@mait.ac.in" class="hover:text-saman-amber underline font-semibold">bhoomigupta@mait.ac.in</a>
@@ -1091,7 +1045,6 @@
                 </div>
             </div>
 
-            <!-- Quick Map Simulated Area -->
             <div class="nm-flat p-6 rounded-2xl flex flex-col justify-between border border-saman-rose/10">
                 <h4 class="font-bold text-saman-light flex items-center gap-2 mb-2">
                     <i class="fa-solid fa-route text-saman-amber"></i>
@@ -1111,10 +1064,9 @@
 
         </div>
 
-        <!-- Footnote legal & copyrights -->
         <div class="max-w-7xl mx-auto border-t border-saman-rose/15 pt-6 flex flex-col md:flex-row justify-between items-center text-center gap-4">
             <p class="text-[11px] text-saman-cream font-bold">
-                &copy; 2026 Maharaja Agrasen Institute of Technology. All Rights Reserved. Created under the AICTE VAANI Initiative.
+                © 2026 Maharaja Agrasen Institute of Technology. All Rights Reserved. Created under the AICTE VAANI Initiative.
             </p>
             <div class="flex gap-4 text-[11px] text-saman-rose font-bold">
                 <a href="https://mait.ac.in" target="_blank" class="hover:text-saman-light underline">MAIT Portal</a>
@@ -1124,10 +1076,9 @@
         </div>
     </footer>
 
-    <!-- Client State Management & Interactive Functionalities -->
     <script>
-        // Set dynamic countdown target date to July 27, 2026 10:00:00 IST
-        const targetDate = new Date("July 27, 2026 10:00:00").getTime();
+        // Set dynamic countdown target date to October 5, 2026 10:00:00 IST
+        const targetDate = new Date("October 5, 2026 10:00:00").getTime();
 
         function startCountdown() {
             const timer = setInterval(function() {
@@ -1211,15 +1162,12 @@
             document.getElementById('ticket-name').innerText = name;
             document.getElementById('ticket-org').innerText = org;
             
-            // Randomly simulate registration code format
             const randCode = Math.floor(1000 + Math.random() * 9000);
             document.getElementById('ticket-id').innerText = "#SMN2026-" + randCode;
 
-            // Show simulated feedback banner
+            // Show feedback banner
             const alertBox = document.getElementById('status-alert');
             alertBox.classList.remove('hidden');
-
-            // Scroll slightly to let candidate view the success
             alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
@@ -1227,26 +1175,24 @@
             document.getElementById('status-alert').classList.add('hidden');
         }
 
-        // Clipboard Copy Action for virtual ticket
+        // Clipboard Copy Action
         function simulateCopyPass() {
             const name = document.getElementById('ticket-name').innerText;
             const org = document.getElementById('ticket-org').innerText;
             const regId = document.getElementById('ticket-id').innerText;
 
             if (name === "-" || org === "-") {
-                // If form isn't submitted yet
-                const textToCopy = "Samanvaya 2026 Seminar Registration Desk. Venue: MAIT Main Auditorium, Sector-22, Rohini, Delhi. Registration Link is live!";
+                const textToCopy = "Samanvaya 2026 Seminar Registration Desk (Free of Charge). Venue: MAIT Main Auditorium, Sector-22, Rohini, Delhi. Event Dates: 5th-6th October 2026. Last date: 25th September 2026.";
                 executeClipboardCopy(textToCopy);
                 showInteractiveClipboardToast("Awaiting your registration. General info copied!");
                 return;
             }
 
-            const textToCopy = `Delegate Pass: ${name}\nOrganization: ${org}\nRegistration Code: ${regId}\nEvent: SAMANVAYA 2026\nVenue: Main Auditorium, MAIT Rohini, Delhi\nDate: 27-28 July 2026`;
+            const textToCopy = `Delegate Pass: ${name}\nOrganization: ${org}\nRegistration Code: ${regId}\nEvent: SAMANVAYA 2026 (Free of Charge)\nVenue: Main Auditorium, MAIT Rohini, Delhi\nDates: 5th-6th October 2026`;
             executeClipboardCopy(textToCopy);
             showInteractiveClipboardToast("Delegate Admission info copied to clipboard!");
         }
 
-        // Fallback for secure navigator clipboard copying inside context constraints
         function executeClipboardCopy(text) {
             const textarea = document.createElement("textarea");
             textarea.value = text;
@@ -1261,7 +1207,6 @@
             document.body.removeChild(textarea);
         }
 
-        // Shows non-alert, sleek user notifications
         function showInteractiveClipboardToast(msg) {
             const toast = document.createElement("div");
             toast.className = "fixed bottom-5 right-5 z-50 nm-flat p-4 rounded-xl text-xs font-bold text-saman-light border-l-4 border-saman-rose shadow-xl transition-all opacity-100";
@@ -1274,7 +1219,6 @@
         }
     </script>
 
-    <!-- TetheredFlow Pure JS Engine Integration with Increased Contrast and Visibility -->
     <script>
         (function() {
             const canvas = document.getElementById('tethered-flow-canvas');
@@ -1287,17 +1231,14 @@
             let time = 0;
             let animationFrame;
             
-            // Soft theme colors with increased visibility settings (nourished by source)
-            const colorHeaven = 'rgba(233, 188, 185, '; // Cream pink base (#E9BCB9)
-            const colorEarth = 'rgba(163, 64, 84, ';   // Rose highlight base (#A34054)
-            const colorVibe = 'rgba(237, 158, 89, ';    // Warm Amber accent base (#ED9E59)
+            const colorHeaven = 'rgba(233, 188, 185, ';
+            const colorEarth = 'rgba(163, 64, 84, ';
+            const colorVibe = 'rgba(237, 158, 89, ';
             
-            // Amplified path, connection, and emanation opacity for premium high-contrast view
-            const colorPath = 'rgba(233, 188, 185, 0.28)';   // Enhanced from 0.05
-            const colorConn = 'rgba(163, 64, 84, 0.38)';   // Enhanced from 0.09
-            const colorEmanation = 'rgba(237, 158, 89, 0.32)'; // Enhanced from 0.06
+            const colorPath = 'rgba(233, 188, 185, 0.28)';
+            const colorConn = 'rgba(163, 64, 84, 0.38)';
+            const colorEmanation = 'rgba(237, 158, 89, 0.32)';
 
-            // Create nodes - each finding its own quiet stillness
             class Node {
                 constructor(x, y, size, type) {
                     this.x = x;
@@ -1305,30 +1246,25 @@
                     this.originX = x;
                     this.originY = y;
                     this.size = size;
-                    this.type = type; // 'heaven', 'earth', or 'vibe'
+                    this.type = type;
                     this.speed = Math.random() * 0.006 + 0.003;
                     this.direction = Math.random() * Math.PI * 2;
                     this.angle = Math.random() * Math.PI * 2;
                     this.connections = [];
-                    // Increased particle opacity spectrum (ranges from 0.35 to 0.75 for crisp visibility)
                     this.opacity = Math.random() * 0.4 + 0.35;
                     this.phase = Math.random() * Math.PI * 2;
                     this.flowOffset = Math.random() * 100;
                     this.pulseSpeed = Math.random() * 0.02 + 0.008;
                     this.moveRange = Math.random() * 20 + 10;
-                    
-                    // Shape variables
                     this.shapeType = Math.random() > 0.6 ? 'rect' : 'line';
                     this.rotation = Math.random() * Math.PI;
                     this.rotationSpeed = (Math.random() - 0.5) * 0.006;
                 }
                 
                 update() {
-                    // Update position with noise-based flow
                     const noiseX = Math.sin(time * this.speed + this.phase) * this.moveRange;
                     const noiseY = Math.cos(time * this.speed * 0.7 + this.phase) * this.moveRange;
                     
-                    // Different movement patterns based on type
                     if (this.type === 'heaven') {
                         this.x = this.originX + noiseX;
                         this.y = this.originY + noiseY * 0.7;
@@ -1340,7 +1276,6 @@
                         this.y = this.originY + Math.cos(time * 0.02) * 15;
                         this.size = 5 + Math.sin(time * 0.03 + this.phase) * 1.5;
                     }
-                    
                     this.rotation += this.rotationSpeed;
                 }
                 
@@ -1349,7 +1284,7 @@
                         ctx.fillStyle = colorHeaven + this.opacity + ')';
                     } else if (this.type === 'earth') {
                         ctx.fillStyle = colorEarth + this.opacity + ')';
-                    } else { // vibe (vivid amber highlight node)
+                    } else {
                         ctx.fillStyle = colorVibe + (this.opacity + 0.35) + ')';
                     }
                     
@@ -1364,12 +1299,10 @@
                         const pulseLength = this.size * 2 * (1 + Math.sin(time * this.pulseSpeed) * 0.2);
                         ctx.fillRect(-pulseLength/2, -0.5, pulseLength, 1);
                     }
-                    
                     ctx.restore();
                 }
             }
             
-            // Create a flowing path - nourishment flowing from source
             class FlowingPath {
                 constructor(startX, startY, endX, endY, heightRange, speed) {
                     this.startX = startX;
@@ -1381,7 +1314,6 @@
                     this.points = [];
                     this.opacity = 0.06;
                     
-                    // Generate control points
                     this.controlPoints = [];
                     const segments = 3;
                     for (let i = 0; i < segments; i++) {
@@ -1402,14 +1334,12 @@
                     }
                     
                     this.points = [{ x: this.startX, y: this.startY }];
-                    
                     for (const point of this.controlPoints) {
                         this.points.push({
                             x: point.x + point.currentOffsetX,
                             y: point.y + point.currentOffsetY
                         });
                     }
-                    
                     this.points.push({ x: this.endX, y: this.endY });
                 }
                 
@@ -1432,7 +1362,6 @@
                         this.points[last].x,
                         this.points[last].y
                     );
-                    
                     ctx.stroke();
                 }
             }
@@ -1442,7 +1371,6 @@
             
             const initNodes = (w, h) => {
                 nodes = [];
-                // Upper region (heaven) - sparser
                 const numHeaven = Math.min(18, Math.floor(w * 0.02));
                 for (let i = 0; i < numHeaven; i++) {
                     const x = Math.random() * w * 0.8 + w * 0.1;
@@ -1451,7 +1379,6 @@
                     nodes.push(new Node(x, y, size, 'heaven'));
                 }
                 
-                // Middle band - asymmetrically distributed
                 const numEarth1 = Math.min(12, Math.floor(w * 0.015));
                 for (let i = 0; i < numEarth1; i++) {
                     const bias = Math.random() * Math.random(); 
@@ -1461,7 +1388,6 @@
                     nodes.push(new Node(x, y, size, 'earth'));
                 }
                 
-                // Lower region (earth) - denser
                 const numEarth2 = Math.min(22, Math.floor(w * 0.025));
                 for (let i = 0; i < numEarth2; i++) {
                     const x = Math.random() * w * 0.75 + w * 0.12;
@@ -1470,11 +1396,9 @@
                     nodes.push(new Node(x, y, size, 'earth'));
                 }
                 
-                // Special node (The Vibe Coder / Energy Node) - positioned at left center
                 nodes.push(new Node(w * 0.12, h * 0.45, 5, 'vibe'));
             };
             
-            // Initialize flowing paths
             const initFlowingPaths = (w, h) => {
                 flowingPaths = [];
                 if (nodes.length === 0) return;
@@ -1492,7 +1416,6 @@
                     ));
                 }
                 
-                // Add boundary flowing path (heaven/earth division)
                 flowingPaths.push(new FlowingPath(
                     0, h * 0.45,
                     w, h * 0.45,
@@ -1501,11 +1424,9 @@
                 ));
             };
             
-            // Create connections between nodes
             const createConnections = () => {
                 for (let i = 0; i < nodes.length; i++) {
                     nodes[i].connections = [];
-                    
                     for (let j = 0; j < nodes.length; j++) {
                         if (i !== j) {
                             const dx = nodes[i].x - nodes[j].x;
@@ -1529,11 +1450,9 @@
                 }
             };
             
-            // Draw all connection pathways
             const drawConnections = () => {
                 for (let i = 0; i < nodes.length; i++) {
                     const node = nodes[i];
-                    
                     for (const conn of node.connections) {
                         const targetNode = nodes[conn.to];
                         if (!targetNode) continue;
@@ -1561,7 +1480,6 @@
                 }
             };
             
-            // Responsive scale handler
             function resize() {
                 const parent = canvas.parentElement;
                 if (!parent) return;
@@ -1575,8 +1493,6 @@
             
             const animate = () => {
                 time += 0.35;
-                
-                // Clear canvas with subtle alpha for beautiful frame trail effect
                 ctx.clearRect(0, 0, width, height);
                 
                 for (const path of flowingPaths) {
@@ -1598,7 +1514,6 @@
                     node.draw();
                 }
                 
-                // Draw energy emanation circle over vibe node
                 if (nodes.length > 0) {
                     const vibe = nodes[nodes.length - 1];
                     ctx.save();
@@ -1625,21 +1540,17 @@
                 animationFrame = requestAnimationFrame(animate);
             };
 
-            // Hook responsive dynamic triggers
             window.addEventListener('resize', resize);
-            
-            // Boot sequence
             resize();
             animate();
         })();
     </script>
 
     <script>
-        // Initialize state variables and actions on load
         window.onload = function() {
             startCountdown();
-            // Default input date set to seminar first day date (July 27, 2026)
-            document.getElementById('reg-date').value = "2026-07-27";
+            // Default input date set to seminar first day date (October 5, 2026)
+            document.getElementById('reg-date').value = "2026-10-05";
         }
     </script>
 </body>
